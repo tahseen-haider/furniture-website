@@ -10,18 +10,23 @@ Designed with a focus on **performance**, **scalability**, and **clean UI/UX**.
 This website is built to deliver:
 
 ### **⚡ High Performance**
+
 Powered by **Vite** for instant loading and optimized builds.
 
 ### **🎨 Modern UI**
+
 Styled entirely with **Tailwind CSS**, ensuring consistency and a sleek design across all pages.
 
 ### **🛠️ Strong Code Quality**
+
 Integrated with **ESLint** and **Prettier** to maintain clean, readable, and standardized code.
 
 ### **📱 Fully Responsive**
+
 The layout and components automatically adapt to all screen sizes—from mobile to desktop.
 
 ### **🔐 Scalable Architecture**
+
 Structured using modular React components and JavaScript for reliability and long-term maintainability.
 
 ---
