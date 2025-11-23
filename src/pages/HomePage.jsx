@@ -1,3 +1,5 @@
+import HomeTemplate from '../templates/HomeTemplate';
+
 export default function HomePage() {
-  return <h1 className="text-3xl font-bold text-white">Home Page</h1>;
+  return <HomeTemplate />;
 }
