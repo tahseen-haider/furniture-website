@@ -1,5 +1,5 @@
 import Heading from '../atoms/Heading';
-
+import Image from '../atoms/Image';
 export default function InstagramGallery() {
   return (
     <div className="flex flex-col gap-6">
@@ -9,7 +9,7 @@ export default function InstagramGallery() {
 
       <div className="flex gap-4">
         {[1, 2, 3, 4].map((num) => (
-          <img
+          <Image
             key={num}
             src={`/images/IG-${num}.jpg`}
             alt={`instagram-${num}`}

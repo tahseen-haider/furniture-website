@@ -7,6 +7,12 @@ const variants = {
   F: 'font-normal text-[16px] leading-[35px]',
 };
 
-export default function Paragraph({ children, className = '', variant = 'A' }) {
-  return <p className={`${variants[variant]} ${className}`}>{children}</p>;
+export default function Paragraph({ children, className = '', variant = 'A', maxChars }) {
+  let text = children;
+
+  if (typeof maxChars === 'number' && text.length > maxChars) {
+    text = text.slice(0, maxChars).trimEnd() + '...';
+  }
+
+  return <p className={`${variants[variant]} ${className}`}>{text}</p>;
 }

@@ -20,7 +20,7 @@ export default function BadgeSection() {
   ];
 
   return (
-    <div className="flex justify-between gap-8 h-[150px] px-12 max-w-[1440px] mx-auto bg-(--color-bg-secondary)">
+    <div className="flex justify-between gap-8 h-[150px] px-6 max-w-[1440px] mx-auto">
       {badges.map((b, i) => (
         <Badge key={i} icon={b.icon} title={b.title} description={b.description} />
       ))}

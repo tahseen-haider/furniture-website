@@ -7,10 +7,12 @@ export default function Badge({ icon, title, description }) {
     <div className="flex gap-2 items-center">
       <Icon src={icon} alt={title} className="h-[50px]" />
       <div>
-        <Heading level={4} variant="tertiary">
+        <Heading level={4} variant="tertiary" className="text-(--text-secondary)">
           {title}
         </Heading>
-        <Paragraph variant="F">{description}</Paragraph>
+        <Paragraph variant="F" className="text-(--text-secondary)">
+          {description}
+        </Paragraph>
       </div>
     </div>
   );
