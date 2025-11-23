@@ -1,1 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
+
+:root {
+  /* Apply Montserrat globally */
+  --font-sans: 'Montserrat', sans-serif;
+
+  /* Custom colors */
+  /* Texts */
+  --text-primary: #054c73;
+  --text-tertiary: #666666;
+  --text-secondary: #333333;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+
+  /* Backgrounds */
+  --color-bg-body: #fcfcfc;
+  --color-bg-primary: #054c73;
+  --color-bg-primary-dark: #03344f;
+  --color-bg-secondary: #f2f5ff;
+  --color-bg-tertiary: #dfe9f4;
+}
