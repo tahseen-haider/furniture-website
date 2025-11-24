@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Image, CentralHeading } from '@/components';
 
-export default function InspirationCard({ title, description, imgSrc, imgAlt }) {
+function InspirationCard({ title, description, imgSrc, imgAlt }) {
   return (
     <div className="flex flex-col items-center text-center gap-4 my-14 px-14">
       <CentralHeading title={title} description={description} />
@@ -8,3 +9,12 @@ export default function InspirationCard({ title, description, imgSrc, imgAlt }) 
     </div>
   );
 }
+
+InspirationCard.propTypes = {
+  title: PropTypes.string.isRequired, // heading text
+  description: PropTypes.string.isRequired, // paragraph text
+  imgSrc: PropTypes.string.isRequired, // image URL
+  imgAlt: PropTypes.string.isRequired, // alt text for accessibility
+};
+
+export default InspirationCard;

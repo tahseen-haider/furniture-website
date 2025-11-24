@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Paragraph, Heading, Button, Image } from '@/components';
 
-export default function ProductCard({ product }) {
+function ProductCard({ product }) {
   const { name, price, image, description } = product;
 
   return (
@@ -23,3 +24,14 @@ export default function ProductCard({ product }) {
     </div>
   );
 }
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string.isRequired, // product name
+    price: PropTypes.number.isRequired, // product price
+    image: PropTypes.string.isRequired, // image URL
+    description: PropTypes.string.isRequired, // product description
+  }).isRequired,
+};
+
+export default ProductCard;
