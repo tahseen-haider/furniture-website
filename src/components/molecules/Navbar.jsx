@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Link } from '@/components';
 
-export default function NavBar({ links }) {
+function NavBar({ links }) {
   return (
     <nav>
       <ul className="flex gap-14">
@@ -13,3 +14,14 @@ export default function NavBar({ links }) {
     </nav>
   );
 }
+
+NavBar.propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired, // path or URL
+      title: PropTypes.string.isRequired, // link text
+    })
+  ).isRequired,
+};
+
+export default NavBar;

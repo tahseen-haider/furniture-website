@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { Heading, Image, Paragraph } from '@/components';
 
-export default function InstructionImageCards({ cards }) {
+function InstructionImageCards({ cards }) {
   return (
     <div className="flex gap-4 mt-8">
       {cards.map((card, i) => (
@@ -17,3 +18,15 @@ export default function InstructionImageCards({ cards }) {
     </div>
   );
 }
+
+InstructionImageCards.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string.isRequired, // image URL
+      title: PropTypes.string.isRequired, // heading text and alt
+      desc: PropTypes.string.isRequired, // paragraph description
+    })
+  ).isRequired,
+};
+
+export default InstructionImageCards;

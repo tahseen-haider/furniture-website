@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { CentralHeading, InstructionImageCards } from '@/components';
 
-export default function InstructionSection({ title, description }) {
+function InstructionSection({ title, description }) {
   const cards = [
     {
       title: 'Purchase Securely',
@@ -18,6 +19,7 @@ export default function InstructionSection({ title, description }) {
       src: '/images/Style.png',
     },
   ];
+
   return (
     <div className="flex flex-col items-center text-center gap-4 py-14 px-14 pb-28">
       <CentralHeading title={title} description={description} />
@@ -25,3 +27,10 @@ export default function InstructionSection({ title, description }) {
     </div>
   );
 }
+
+InstructionSection.propTypes = {
+  title: PropTypes.string.isRequired, // heading text
+  description: PropTypes.string.isRequired, // paragraph text
+};
+
+export default InstructionSection;
