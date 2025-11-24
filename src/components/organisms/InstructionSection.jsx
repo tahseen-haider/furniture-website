@@ -1,6 +1,4 @@
-import BrowseImageCards from '../molecules/BrowseImageCards';
-import CentralHeading from '../molecules/CentralHeading';
-import InstructionImageCards from '../molecules/InstructionImageCards';
+import { CentralHeading, InstructionImageCards } from '@/components';
 
 export default function InstructionSection({ title, description }) {
   const cards = [

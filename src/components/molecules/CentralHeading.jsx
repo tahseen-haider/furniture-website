@@ -1,6 +1,4 @@
-import React from 'react';
-import Heading from '../atoms/Heading';
-import Paragraph from '../atoms/Paragraph';
+import { Heading, Paragraph } from '@/components';
 
 export default function CentralHeading({ title, description }) {
   return (

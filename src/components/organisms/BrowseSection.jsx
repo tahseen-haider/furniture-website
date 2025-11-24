@@ -1,6 +1,4 @@
-import Image from '../atoms/Image';
-import BrowseImageCards from '../molecules/BrowseImageCards';
-import CentralHeading from '../molecules/CentralHeading';
+import { BrowseImageCards, CentralHeading } from '@/components';
 
 export default function BrowseSection({ title, description, imgSrc, imgAlt }) {
   const cards = [

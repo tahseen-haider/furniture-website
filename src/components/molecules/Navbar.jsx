@@ -1,4 +1,4 @@
-import Link from '../atoms/Link';
+import { Link } from '@/components';
 
 export default function NavBar({ links }) {
   return (

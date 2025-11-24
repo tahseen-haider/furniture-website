@@ -1,10 +1,8 @@
-import Input from '../atoms/Input';
-import Button from '../atoms/Button';
+import { Input, Button } from '@/components';
 
 export default function FooterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted!');
     e.target.reset();
   };
 

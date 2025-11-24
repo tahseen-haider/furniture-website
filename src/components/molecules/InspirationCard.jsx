@@ -1,5 +1,4 @@
-import Image from '../atoms/Image';
-import CentralHeading from './CentralHeading';
+import { Image, CentralHeading } from '@/components';
 
 export default function InspirationCard({ title, description, imgSrc, imgAlt }) {
   return (

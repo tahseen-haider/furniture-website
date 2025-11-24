@@ -1,9 +1,11 @@
-import InspirationCard from '../components/molecules/InspirationCard';
-import BadgesSection from '../components/organisms/BadgesSection';
-import BrowseSection from '../components/organisms/BrowseSection';
-import HeroSection from '../components/organisms/HeroSection';
-import InfoSection from '../components/organisms/InfoSection';
-import InstructionSection from '../components/organisms/InstructionSection';
+import {
+  InspirationCard,
+  BadgesSection,
+  BrowseSection,
+  HeroSection,
+  InfoSection,
+  InstructionSection,
+} from '@/components';
 
 export default function HomeTemplate() {
   return (

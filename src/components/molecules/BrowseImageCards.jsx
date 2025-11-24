@@ -1,5 +1,4 @@
-import Heading from '../atoms/Heading';
-import Image from '../atoms/Image';
+import { Heading, Image } from '@/components';
 
 export default function BrowseImageCards({ cards }) {
   return (

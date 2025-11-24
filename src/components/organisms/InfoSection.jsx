@@ -1,5 +1,4 @@
-import InfoContentBlock from '../molecules/InfoContentBlock';
-import InfoImageBlock from '../molecules/InfoImageBlock';
+import { InfoContentBlock, InfoImageBlock } from '@/components';
 
 export default function InfoSection() {
   return (

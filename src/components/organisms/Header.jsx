@@ -1,13 +1,11 @@
-import Heading from '../atoms/Heading';
-import Logo from '../atoms/Logo';
-import NavBar from '../molecules/Navbar';
+import { Logo, NavBar } from '@/components';
 
 export default function Header() {
   const navLinks = [
     { title: 'Home', link: '/' },
     { title: 'Services', link: '#' },
     { title: 'Doctors', link: '#' },
-    { title: 'Products', link: '#' },
+    { title: 'Products', link: '/products' },
     { title: 'Gallery', link: '#' },
   ];
 

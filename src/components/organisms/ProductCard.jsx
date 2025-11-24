@@ -1,13 +1,8 @@
-import React from 'react';
-import Paragraph from '../atoms/Paragraph';
-import Heading from '../atoms/Heading';
-import Button from '../atoms/Button';
-import Image from '../atoms/Image';
+import { Paragraph, Heading, Button, Image } from '@/components';
 
 export default function ProductCard({ product }) {
   const { name, price, image, description } = product;
 
-  console.log(image);
   return (
     <div className="border border-(--text-tertiary) rounded-lg overflow-hidden">
       <Image src={image} alt={name} className="w-full h-48 object-cover" />

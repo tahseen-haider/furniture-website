@@ -1,5 +1,5 @@
-import Heading from '../atoms/Heading';
-import Image from '../atoms/Image';
+import { Heading, Image } from '@/components';
+
 export default function InstagramGallery() {
   return (
     <div className="flex flex-col gap-6">
