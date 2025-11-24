@@ -1,6 +1,4 @@
-import Heading from '../atoms/Heading';
-import Paragraph from '../atoms/Paragraph';
-import Button from '../atoms/Button';
+import { Heading, Paragraph, Button } from '@/components';
 
 export default function HeroContentBlock() {
   return (

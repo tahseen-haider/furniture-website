@@ -1,4 +1,4 @@
-import Badge from '../molecules/Badge';
+import { Badge } from '@/components';
 
 export default function BadgeSection() {
   const badges = [

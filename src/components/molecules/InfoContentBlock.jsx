@@ -1,6 +1,5 @@
-import Button from '../atoms/Button';
-import Heading from '../atoms/Heading';
-import Paragraph from '../atoms/Paragraph';
+import { Button, Heading, Paragraph } from '@/components';
+
 export default function InfoContentBlock() {
   return (
     <div className="flex flex-col gap-10 w-1/2">

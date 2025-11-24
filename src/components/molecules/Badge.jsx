@@ -1,6 +1,4 @@
-import Icon from '../atoms/Icon';
-import Heading from '../atoms/Heading';
-import Paragraph from '../atoms/Paragraph';
+import { Icon, Heading, Paragraph } from '@/components';
 
 export default function Badge({ icon, title, description }) {
   return (
