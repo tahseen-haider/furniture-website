@@ -1,6 +1,4 @@
-import FooterSubscribeSection from '../molecules/FooterSubscribeSection';
-import FooterInfoBlock from '../molecules/FooterInfoBlock';
-import InstagramGallery from '../molecules/InstagramGallery';
+import { FooterSubscribeSection, FooterInfoBlock, InstagramGallery } from '@/components';
 
 export default function Footer() {
   return (

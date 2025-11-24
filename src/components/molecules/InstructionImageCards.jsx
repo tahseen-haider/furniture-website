@@ -1,6 +1,4 @@
-import Heading from '../atoms/Heading';
-import Image from '../atoms/Image';
-import Paragraph from '../atoms/Paragraph';
+import { Heading, Image, Paragraph } from '@/components';
 
 export default function InstructionImageCards({ cards }) {
   return (

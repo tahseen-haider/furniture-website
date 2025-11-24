@@ -1,4 +1,4 @@
-import Image from '../atoms/Image';
+import { Image } from '@/components';
 
 export default function InfoImageBlock() {
   return (

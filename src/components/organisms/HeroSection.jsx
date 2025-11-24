@@ -1,4 +1,4 @@
-import HeroContentBlock from '../molecules/HeroContentBlock';
+import { HeroContentBlock } from '@/components';
 
 export default function HeroSection() {
   return (

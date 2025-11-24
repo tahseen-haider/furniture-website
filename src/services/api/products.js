@@ -1,11 +1,9 @@
-import { fetchAPI } from './index';
+import { GET, POST, PUT, DELETE } from './';
 
-export const getAllProducts = () => fetchAPI('products.json');
-
-export const getProductById = (id) =>
-  fetchAPI('products.json').then((products) => products.find((p) => p.id === parseInt(id)));
-
-export const getProductsByCategory = (categoryId) =>
-  fetchAPI('products.json').then((products) =>
-    products.filter((p) => p.categoryId === parseInt(categoryId))
-  );
+export const productAPI = {
+  fetchAll: () => GET('products'),
+  fetchById: (id) => GET(`products/${id}`),
+  create: (data) => POST('products', data),
+  update: (id, data) => PUT(`products/${id}`, data),
+  delete: (id) => DELETE(`products/${id}`),
+};

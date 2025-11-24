@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import ProductsPageTemplate from '../templates/ProductPageTemplate';
-import { getAllProducts } from '../services/api/products';
+import ProductsPageTemplate from '@/templates/ProductPageTemplate';
+import { productAPI } from '@/services';
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAllProducts().then((data) => {
+    productAPI.fetchAll().then((data) => {
       setProducts(data);
       setLoading(false);
     });

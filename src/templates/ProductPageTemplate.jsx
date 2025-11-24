@@ -1,4 +1,4 @@
-import ProductCard from '../components/organisms/ProductCard';
+import { ProductCard } from '@/components';
 
 export default function ProductsPageTemplate({ products = [] }) {
   return (

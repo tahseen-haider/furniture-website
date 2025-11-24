@@ -1,6 +1,4 @@
-import Heading from '../atoms/Heading';
-import Paragraph from '../atoms/Paragraph';
-import FooterForm from './FooterForm';
+import { Heading, Paragraph, FooterForm } from '@/components';
 
 export default function FooterSubscribeSection() {
   return (
