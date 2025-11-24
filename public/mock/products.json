@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Modern Sofa",
+    "categoryId": 1,
+    "price": 499.99,
+    "image": "/images/Living.png",
+    "description": "Comfortable 3-seater modern sofa."
+  },
+  {
+    "id": 2,
+    "name": "Dining Table",
+    "categoryId": 2,
+    "price": 299.99,
+    "image": "/images/Dining.png",
+    "description": "Wooden dining table for 6 people."
+  }
+]
