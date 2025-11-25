@@ -1,4 +1,4 @@
-import { InfoContentBlock, InfoImageBlock } from '@/components';
+import { InfoContentBlock, InfoImageBlock } from '@components';
 
 const InfoSection = () => {
   return (

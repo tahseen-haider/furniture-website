@@ -1,4 +1,4 @@
-import { Heading, Image } from '@/components';
+import { Heading, Image } from '@components';
 
 const InstagramGallery = () => {
   return (

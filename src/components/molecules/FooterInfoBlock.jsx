@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from '@/components';
+import { Heading, Paragraph } from '@components';
 
 const FooterInfoBlock = () => {
   return (

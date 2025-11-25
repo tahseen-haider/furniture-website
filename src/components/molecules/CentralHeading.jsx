@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Heading, Paragraph } from '@/components';
+import { Heading, Paragraph } from '@components';
 
 const CentralHeading = ({ title, description }) => {
   return (

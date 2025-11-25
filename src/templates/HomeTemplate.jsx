@@ -5,7 +5,7 @@ import {
   HeroSection,
   InfoSection,
   InstructionSection,
-} from '@/components';
+} from '@components';
 
 const HomeTemplate = () => {
   return (

@@ -1,4 +1,4 @@
-import { Heading, Paragraph, FooterForm } from '@/components';
+import { Heading, Paragraph, FooterForm } from '@components';
 
 const FooterSubscribeSection = () => {
   return (

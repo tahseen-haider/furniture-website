@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import ProductsPageTemplate from '@/templates/ProductPageTemplate';
-import { productAPI } from '@/services';
+import { ProductsPageTemplate } from '@templates';
+import { productAPI } from '@services';
 
 const ProductsPage = () => {
   const [products, setProducts] = useState([]);

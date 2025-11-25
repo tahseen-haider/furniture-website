@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Heading, Image, Paragraph } from '@/components';
+import { Heading, Image, Paragraph } from '@components';
 
 const InstructionImageCards = ({ cards }) => {
   return (
