@@ -2,7 +2,7 @@ import { Button, Heading, Paragraph } from '@components';
 
 const InfoContentBlock = () => {
   return (
-    <div className="flex flex-col gap-10 w-1/2">
+    <div className="flex flex-col gap-10 w-full lg:w-1/2">
       <Heading variant="secondary" className="text-(--text-secondary)">
         Beautify Your Space
       </Heading>

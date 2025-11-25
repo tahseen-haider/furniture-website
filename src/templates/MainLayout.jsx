@@ -5,7 +5,9 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen min-w-[340px] flex flex-col">
       <Header />
-      <main className="w-full mx-auto">{/* <Outlet /> */}</main>
+      <main className="w-full mx-auto">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
