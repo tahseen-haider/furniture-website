@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Heading, Paragraph } from '@/components';
 
-function CentralHeading({ title, description }) {
+const CentralHeading = ({ title, description }) => {
   return (
     <>
       <Heading level={2} variant="secondary" className="text-(--text-secondary)">
@@ -12,11 +12,11 @@ function CentralHeading({ title, description }) {
       </Paragraph>
     </>
   );
-}
+};
 
 CentralHeading.propTypes = {
-  title: PropTypes.string.isRequired, // heading text
-  description: PropTypes.string.isRequired, // paragraph text
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default CentralHeading;

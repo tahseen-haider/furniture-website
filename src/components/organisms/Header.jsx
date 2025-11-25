@@ -1,6 +1,6 @@
 import { Logo, NavBar } from '@/components';
 
-export default function Header() {
+const Header = () => {
   const navLinks = [
     { title: 'Home', link: '/' },
     { title: 'Services', link: '#' },
@@ -22,4 +22,6 @@ export default function Header() {
       </header>
     </>
   );
-}
+};
+
+export default Header;

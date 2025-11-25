@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from '@/components';
 
-function NavBar({ links }) {
+const NavBar = ({ links }) => {
   return (
     <nav>
       <ul className="flex gap-14">
@@ -13,13 +13,13 @@ function NavBar({ links }) {
       </ul>
     </nav>
   );
-}
+};
 
 NavBar.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
-      link: PropTypes.string.isRequired, // path or URL
-      title: PropTypes.string.isRequired, // link text
+      link: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

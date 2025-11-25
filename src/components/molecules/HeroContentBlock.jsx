@@ -1,6 +1,6 @@
 import { Heading, Paragraph, Button } from '@/components';
 
-export default function HeroContentBlock() {
+const HeroContentBlock = () => {
   return (
     <div className="w-1/2 max-w-[643px] h-[443px] bg-(--color-bg-tertiary) rounded-xl absolute top-1/2 -translate-y-1/2 left-1/2 flex justify-center items-center px-8">
       <div className="flex flex-col gap-4">
@@ -20,4 +20,6 @@ export default function HeroContentBlock() {
       </div>
     </div>
   );
-}
+};
+
+export default HeroContentBlock;

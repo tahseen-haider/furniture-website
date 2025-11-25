@@ -1,5 +1,7 @@
 import HomeTemplate from '@/templates/HomeTemplate';
 
-export default function HomePage() {
+const HomePage = () => {
   return <HomeTemplate />;
-}
+};
+
+export default HomePage;

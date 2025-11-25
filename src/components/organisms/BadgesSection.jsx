@@ -1,6 +1,6 @@
 import { Badge } from '@/components';
 
-export default function BadgeSection() {
+const BadgeSection = () => {
   const badges = [
     {
       icon: '/icons/Truck.svg',
@@ -26,4 +26,6 @@ export default function BadgeSection() {
       ))}
     </div>
   );
-}
+};
+
+export default BadgeSection;

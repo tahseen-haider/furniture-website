@@ -9,7 +9,7 @@ const variants = {
   F: 'font-normal text-[16px] leading-[35px]',
 };
 
-function Paragraph({ children, className = '', variant = 'A', maxChars }) {
+const Paragraph = ({ children, className = '', variant = 'A', maxChars }) => {
   let text = children;
 
   if (typeof maxChars === 'number' && text.length > maxChars) {
@@ -17,13 +17,13 @@ function Paragraph({ children, className = '', variant = 'A', maxChars }) {
   }
 
   return <p className={`${variants[variant]} ${className}`}>{text}</p>;
-}
+};
 
 Paragraph.propTypes = {
-  children: PropTypes.string.isRequired, // text content of paragraph
-  className: PropTypes.string, // optional additional CSS classes
-  variant: PropTypes.oneOf(Object.keys(variants)), // must match defined variants
-  maxChars: PropTypes.number, // optional truncation length
+  children: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
+  maxChars: PropTypes.number,
 };
 
 Paragraph.defaultProps = {

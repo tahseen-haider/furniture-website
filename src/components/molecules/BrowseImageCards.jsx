@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Heading, Image } from '@/components';
 
-function BrowseImageCards({ cards }) {
+const BrowseImageCards = ({ cards }) => {
   return (
     <div className="flex gap-4 mt-8">
       {cards.map((card, i) => (
@@ -14,13 +14,13 @@ function BrowseImageCards({ cards }) {
       ))}
     </div>
   );
-}
+};
 
 BrowseImageCards.propTypes = {
   cards: PropTypes.arrayOf(
     PropTypes.shape({
-      src: PropTypes.string.isRequired, // image source URL
-      title: PropTypes.string.isRequired, // title text for heading and alt
+      src: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

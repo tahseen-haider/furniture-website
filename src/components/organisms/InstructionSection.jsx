@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { CentralHeading, InstructionImageCards } from '@/components';
 
-function InstructionSection({ title, description }) {
+const InstructionSection = ({ title, description }) => {
   const cards = [
     {
       title: 'Purchase Securely',
@@ -26,11 +26,11 @@ function InstructionSection({ title, description }) {
       <InstructionImageCards cards={cards} />
     </div>
   );
-}
+};
 
 InstructionSection.propTypes = {
-  title: PropTypes.string.isRequired, // heading text
-  description: PropTypes.string.isRequired, // paragraph text
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default InstructionSection;
