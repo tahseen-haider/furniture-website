@@ -2,7 +2,7 @@ import { Heading, Paragraph, FooterForm } from '@components';
 
 const FooterSubscribeSection = () => {
   return (
-    <div className="w-full max-w-[1440px] h-[363px] flex flex-col justify-center items-center text-center">
+    <div className="w-full max-w-[1440px] h-[363px] flex flex-col justify-center items-center text-center px-4">
       <Heading level={4} variant="secondary">
         Join Our Mailing List
       </Heading>

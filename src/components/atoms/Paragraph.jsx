@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
 const variants = {
-  A: 'font-medium text-[18px] leading-[39px]',
-  B: 'font-normal text-[20px] leading-[100%] text-center',
-  C: 'font-normal text-[20px] leading-[39px]',
-  D: 'font-normal text-[18px] leading-[28px] text-center',
-  E: 'font-normal text-[20px] leading-[39px] text-center',
-  F: 'font-normal text-[16px] leading-[35px]',
+  A: 'font-medium text-[16px] sm:text-[18px] leading-[39px]',
+  B: 'font-normal text-[18px] sm:text-[20px] leading-[100%] text-center',
+  C: 'font-normal text-[18px] sm:text-[20px] leading-[39px]',
+  D: 'font-normal text-[16px] sm:text-[18px] leading-[28px] text-center',
+  E: 'font-normal text-[18px] sm:text-[20px] leading-[39px] text-center',
+  F: 'font-normal text-[14px] sm:text-[16px] leading-[35px]',
 };
 
 const Paragraph = ({ children, className = '', variant = 'A', maxChars }) => {

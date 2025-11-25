@@ -14,7 +14,7 @@ const HomeTemplate = () => {
       <section className="w-full bg-(--color-bg-secondary)">
         <BadgesSection />
       </section>
-      <InspirationCard
+      {/* <InspirationCard
         title="Inspiration Collection"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         imgSrc="/images/Insp.png"
@@ -30,7 +30,7 @@ const HomeTemplate = () => {
       <InstructionSection
         title="How It Works"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      />
+      /> */}
     </>
   );
 };
