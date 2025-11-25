@@ -2,7 +2,7 @@ import { Heading, Paragraph } from '@components';
 
 const FooterInfoBlock = () => {
   return (
-    <div className="flex flex-col w-1/3">
+    <div className="flex flex-col w-full lg:w-1/3">
       <Heading level={4} variant="tertiary">
         Beauty Care
       </Heading>
