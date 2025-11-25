@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Icon, Heading, Paragraph } from '@/components';
+import { Icon, Heading, Paragraph } from '@components';
 
 const Badge = ({ icon, title, description }) => {
   return (

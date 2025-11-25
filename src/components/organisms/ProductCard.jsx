@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Paragraph, Heading, Button, Image } from '@/components';
+import { Paragraph, Heading, Button, Image } from '@components';
 
 const ProductCard = ({ product }) => {
   const { name, price, image, description } = product;

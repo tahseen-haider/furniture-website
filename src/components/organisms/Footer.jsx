@@ -1,4 +1,4 @@
-import { FooterSubscribeSection, FooterInfoBlock, InstagramGallery } from '@/components';
+import { FooterSubscribeSection, FooterInfoBlock, InstagramGallery } from '@components';
 
 const Footer = () => {
   return (

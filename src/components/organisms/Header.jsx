@@ -1,4 +1,4 @@
-import { Logo, NavBar } from '@/components';
+import { Logo, NavBar } from '@components';
 
 const Header = () => {
   const navLinks = [

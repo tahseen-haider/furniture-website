@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Image, CentralHeading } from '@/components';
+import { Image, CentralHeading } from '@components';
 
 const InspirationCard = ({ title, description, imgSrc, imgAlt }) => {
   return (

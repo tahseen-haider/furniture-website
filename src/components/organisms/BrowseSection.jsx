@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BrowseImageCards, CentralHeading } from '@/components';
+import { BrowseImageCards, CentralHeading } from '@components';
 
 const BrowseSection = ({ title, description }) => {
   const cards = [
