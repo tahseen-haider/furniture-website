@@ -1,6 +1,6 @@
 import { Button, Heading, Paragraph } from '@/components';
 
-export default function InfoContentBlock() {
+const InfoContentBlock = () => {
   return (
     <div className="flex flex-col gap-10 w-1/2">
       <Heading variant="secondary" className="text-(--text-secondary)">
@@ -15,4 +15,6 @@ export default function InfoContentBlock() {
       </Button>
     </div>
   );
-}
+};
+
+export default InfoContentBlock;

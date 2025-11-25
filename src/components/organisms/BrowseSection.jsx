@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { BrowseImageCards, CentralHeading } from '@/components';
 
-function BrowseSection({ title, description }) {
+const BrowseSection = ({ title, description }) => {
   const cards = [
     {
       title: 'Dining',
@@ -23,11 +23,11 @@ function BrowseSection({ title, description }) {
       <BrowseImageCards cards={cards} />
     </div>
   );
-}
+};
 
 BrowseSection.propTypes = {
-  title: PropTypes.string.isRequired, // title for the central heading
-  description: PropTypes.string.isRequired, // description for the central heading
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default BrowseSection;

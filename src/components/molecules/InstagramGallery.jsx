@@ -1,6 +1,6 @@
 import { Heading, Image } from '@/components';
 
-export default function InstagramGallery() {
+const InstagramGallery = () => {
   return (
     <div className="flex flex-col gap-6">
       <Heading level={4} variant="tertiary">
@@ -19,4 +19,6 @@ export default function InstagramGallery() {
       </div>
     </div>
   );
-}
+};
+
+export default InstagramGallery;

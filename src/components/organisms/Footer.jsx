@@ -1,6 +1,6 @@
 import { FooterSubscribeSection, FooterInfoBlock, InstagramGallery } from '@/components';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="w-full min-h-[749px] flex flex-col items-center bg-(--color-bg-secondary)">
       <FooterSubscribeSection />
@@ -13,4 +13,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

@@ -7,7 +7,7 @@ import {
   InstructionSection,
 } from '@/components';
 
-export default function HomeTemplate() {
+const HomeTemplate = () => {
   return (
     <>
       <HeroSection />
@@ -33,4 +33,6 @@ export default function HomeTemplate() {
       />
     </>
   );
-}
+};
+
+export default HomeTemplate;

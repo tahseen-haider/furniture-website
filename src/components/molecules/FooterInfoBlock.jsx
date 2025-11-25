@@ -1,6 +1,6 @@
 import { Heading, Paragraph } from '@/components';
 
-export default function FooterInfoBlock() {
+const FooterInfoBlock = () => {
   return (
     <div className="flex flex-col w-1/3">
       <Heading level={4} variant="tertiary">
@@ -17,4 +17,6 @@ export default function FooterInfoBlock() {
       </Heading>
     </div>
   );
-}
+};
+
+export default FooterInfoBlock;
