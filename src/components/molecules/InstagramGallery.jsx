@@ -7,13 +7,13 @@ const InstagramGallery = () => {
         Instagram Shop
       </Heading>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         {[1, 2, 3, 4].map((num) => (
           <Image
             key={num}
             src={`/images/IG-${num}.jpg`}
             alt={`instagram-${num}`}
-            className="w-[150px] xl:w-[175px]"
+            className="w-2/3 sm:w-[150px] xl:w-[175px]"
           />
         ))}
       </div>
