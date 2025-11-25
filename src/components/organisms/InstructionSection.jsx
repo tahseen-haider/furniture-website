@@ -21,7 +21,7 @@ const InstructionSection = ({ title, description }) => {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center gap-4 py-14 px-14 pb-28">
+    <div className="flex flex-col items-center text-center gap-4 py-14 px-4 md:px-14 pb-28">
       <CentralHeading title={title} description={description} />
       <InstructionImageCards cards={cards} />
     </div>

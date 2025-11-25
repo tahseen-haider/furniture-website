@@ -2,10 +2,14 @@ import { Image } from '@components';
 
 const InfoImageBlock = () => {
   return (
-    <div className="w-1/2">
+    <div className="w-full sm:w-1/2 max-w-[560px]">
       <div className="relative">
-        <Image src="/images/Girl.png" alt="About store" className="relative z-10" />
-        <div className="bg-[#09513B] rounded-full w-[372px] h-[372px] absolute z-0 top-1/2 -translate-y-1/2 right-8" />
+        <Image src="/images/Girl.png" alt="About store" className="relative z-10 w-11/12" />
+        <Image
+          src="/images/Ellipse.png"
+          alt="Ellipse"
+          className="h-1/2 absolute top-1/2 -translate-y-1/2 right-0 z-0"
+        />
       </div>
     </div>
   );
