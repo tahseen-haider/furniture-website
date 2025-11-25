@@ -2,7 +2,7 @@ import {
   InspirationCard,
   BadgesSection,
   BrowseSection,
-  HeroSection,
+  HeroContentBlock,
   InfoSection,
   InstructionSection,
 } from '@components';
@@ -10,17 +10,19 @@ import {
 const HomeTemplate = () => {
   return (
     <>
-      <HeroSection />
+      <section className="relative h-[600px] md:h-[749px] bg-[url(/images/MaskGroup.jpg)] object-cover bg-center flex justify-center items-center p-2">
+        <HeroContentBlock />
+      </section>
       <section className="w-full bg-(--color-bg-secondary)">
         <BadgesSection />
       </section>
-      {/* <InspirationCard
+      <InspirationCard
         title="Inspiration Collection"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         imgSrc="/images/Insp.png"
         imgAlt="Inspiration Collection"
       />
-      <section className="w-full bg-(--color-bg-secondary)">
+      <section className="w-full bg-(--color-bg-secondary) flex justify-center">
         <InfoSection />
       </section>
       <BrowseSection
@@ -30,7 +32,7 @@ const HomeTemplate = () => {
       <InstructionSection
         title="How It Works"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      /> */}
+      />
     </>
   );
 };
