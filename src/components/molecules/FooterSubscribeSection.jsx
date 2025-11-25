@@ -1,6 +1,6 @@
 import { Heading, Paragraph, FooterForm } from '@/components';
 
-export default function FooterSubscribeSection() {
+const FooterSubscribeSection = () => {
   return (
     <div className="w-full max-w-[1440px] h-[363px] flex flex-col justify-center items-center text-center">
       <Heading level={4} variant="secondary">
@@ -15,4 +15,6 @@ export default function FooterSubscribeSection() {
       <FooterForm />
     </div>
   );
-}
+};
+
+export default FooterSubscribeSection;

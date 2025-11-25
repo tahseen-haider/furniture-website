@@ -1,6 +1,6 @@
 import { Input, Button } from '@/components';
 
-export default function FooterForm() {
+const FooterForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     e.target.reset();
@@ -17,4 +17,6 @@ export default function FooterForm() {
       </Button>
     </form>
   );
-}
+};
+
+export default FooterForm;

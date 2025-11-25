@@ -1,6 +1,6 @@
 import { Image } from '@/components';
 
-export default function InfoImageBlock() {
+const InfoImageBlock = () => {
   return (
     <div className="w-1/2">
       <div className="relative">
@@ -9,4 +9,6 @@ export default function InfoImageBlock() {
       </div>
     </div>
   );
-}
+};
+
+export default InfoImageBlock;

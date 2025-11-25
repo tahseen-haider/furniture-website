@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import ProductsPageTemplate from '@/templates/ProductPageTemplate';
 import { productAPI } from '@/services';
 
-export default function ProductsPage() {
+const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,4 +16,6 @@ export default function ProductsPage() {
   if (loading) return <div>Loading products...</div>;
 
   return <ProductsPageTemplate products={products} />;
-}
+};
+
+export default ProductsPage;
