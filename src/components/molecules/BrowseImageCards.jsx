@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Heading, Image } from '@/components';
+import { Heading, Image } from '@components';
 
 const BrowseImageCards = ({ cards }) => {
   return (

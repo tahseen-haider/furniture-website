@@ -1,4 +1,4 @@
-import { HeroContentBlock } from '@/components';
+import { HeroContentBlock } from '@components';
 
 const HeroSection = () => {
   return (

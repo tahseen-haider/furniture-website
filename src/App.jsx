@@ -1,7 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import MainLayout from './templates/MainLayout';
-import HomePage from './pages/HomePage';
-import ProductsPage from './pages/ProductsPage';
+import { MainLayout } from '@templates';
+import { HomePage, ProductsPage } from '@pages';
 
 const App = () => {
   return (

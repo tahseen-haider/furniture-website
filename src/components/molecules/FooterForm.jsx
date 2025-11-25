@@ -1,4 +1,4 @@
-import { Input, Button } from '@/components';
+import { Input, Button } from '@components';
 
 const FooterForm = () => {
   const handleSubmit = (e) => {

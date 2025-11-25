@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Link } from '@/components';
+import { Link } from '@components';
 
 const NavBar = ({ links }) => {
   return (

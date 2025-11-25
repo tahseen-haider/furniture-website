@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CentralHeading, InstructionImageCards } from '@/components';
+import { CentralHeading, InstructionImageCards } from '@components';
 
 const InstructionSection = ({ title, description }) => {
   const cards = [

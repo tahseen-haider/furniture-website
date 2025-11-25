@@ -1,4 +1,4 @@
-import { Button, Heading, Paragraph } from '@/components';
+import { Button, Heading, Paragraph } from '@components';
 
 const InfoContentBlock = () => {
   return (
