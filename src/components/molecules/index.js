@@ -1,4 +1,4 @@
-export { default as Badge } from './Badge';
+export { default as Badge } from './Badge/Badge.jsx';
 export { default as BrowseImageCards } from './BrowseImageCards';
 export { default as CentralHeading } from './CentralHeading';
 export { default as FooterForm } from './FooterForm';
