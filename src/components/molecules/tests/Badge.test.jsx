@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Badge from './Badge';
+import { Badge } from '@components';
 
 describe('Badge', () => {
   it('renders icon, title, and description correctly', () => {
