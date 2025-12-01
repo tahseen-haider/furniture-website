@@ -5,12 +5,12 @@ import { Heading, Icon } from '@components';
 import hamburgerIcon from '/icons/hamburger.svg';
 import closeIcon from '/icons/X.svg';
 
-const NavBar = ({ links }) => {
+const Navbar = ({ links }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <nav className="hidden md:block">
+      <nav id="desktop-nav" className="hidden md:block">
         <ul className="flex gap-14">
           {links.map((link, i) => (
             <li key={i}>
@@ -25,6 +25,7 @@ const NavBar = ({ links }) => {
       </button>
 
       <div
+        id="mobile-nav"
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 z-50
         ${open ? 'translate-x-0' : 'translate-x-full'}`}
       >
@@ -55,7 +56,7 @@ const NavBar = ({ links }) => {
   );
 };
 
-NavBar.propTypes = {
+Navbar.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
       link: PropTypes.string.isRequired,
@@ -64,4 +65,4 @@ NavBar.propTypes = {
   ).isRequired,
 };
 
-export default NavBar;
+export default Navbar;

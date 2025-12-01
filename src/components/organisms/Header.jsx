@@ -1,4 +1,4 @@
-import { Logo, NavBar } from '@components';
+import { Logo, Navbar } from '@components';
 
 const Header = () => {
   const navLinks = [
@@ -17,7 +17,7 @@ const Header = () => {
         <div className="w-full h-full max-w-[1440px] flex gap-10 justify-between items-center mx-auto">
           <Logo />
 
-          <NavBar links={navLinks} />
+          <Navbar links={navLinks} />
         </div>
       </header>
     </>
