@@ -1,4 +1,4 @@
-export { default as Badge } from './Badge/Badge.jsx';
+export { default as Badge } from './Badge.jsx';
 export { default as BrowseImageCards } from './BrowseImageCards';
 export { default as CentralHeading } from './CentralHeading';
 export { default as FooterForm } from './FooterForm';
@@ -9,5 +9,5 @@ export { default as InfoImageBlock } from './InfoImageBlock';
 export { default as InspirationCard } from './InspirationCard';
 export { default as InstagramGallery } from './InstagramGallery';
 export { default as InstructionImageCards } from './InstructionImageCards';
-export { default as NavBar } from './Navbar';
+export { default as Navbar } from './Navbar';
 export { default as ImageCard } from './ImageCard';
