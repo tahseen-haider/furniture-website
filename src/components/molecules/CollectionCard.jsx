@@ -1,5 +1,6 @@
 import { Image, Paragraph } from '@components';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CollectionCard = ({ collection }) => {
   return (
@@ -16,6 +17,14 @@ const CollectionCard = ({ collection }) => {
       </Paragraph>
     </Link>
   );
+};
+
+CollectionCard.propTypes = {
+  collection: PropTypes.shape({
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CollectionCard;

@@ -1,4 +1,5 @@
 import { CollectionCard, Heading } from '@components';
+import PropTypes from 'prop-types';
 
 const CollectionPageTemplate = ({ collections = [] }) => {
   return (
@@ -15,6 +16,17 @@ const CollectionPageTemplate = ({ collections = [] }) => {
       </div>
     </div>
   );
+};
+
+CollectionPageTemplate.propTypes = {
+  collections: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      link: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default CollectionPageTemplate;

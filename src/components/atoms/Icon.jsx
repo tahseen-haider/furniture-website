@@ -10,8 +10,4 @@ Icon.propTypes = {
   className: PropTypes.string,
 };
 
-Icon.defaultProps = {
-  className: '',
-};
-
 export default Icon;

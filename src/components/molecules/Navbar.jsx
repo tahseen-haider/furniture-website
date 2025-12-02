@@ -14,7 +14,9 @@ const Navbar = ({ links }) => {
         <ul className="flex gap-14">
           {links.map((link, i) => (
             <li key={i}>
-              <Link to={link.link}>{link.title}</Link>
+              <Link to={link.link} underline="center">
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -41,7 +43,7 @@ const Navbar = ({ links }) => {
         <ul className="flex flex-col gap-6 p-6">
           {links.map((link, i) => (
             <li key={i}>
-              <Link to={link.link} onClick={() => setOpen(false)}>
+              <Link to={link.link} underline="center" onClick={() => setOpen(false)}>
                 {link.title}
               </Link>
             </li>

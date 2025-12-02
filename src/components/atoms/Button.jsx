@@ -19,9 +19,4 @@ Button.propTypes = {
   rounded: PropTypes.bool,
 };
 
-Button.defaultProps = {
-  className: '',
-  rounded: false,
-};
-
 export default Button;
