@@ -7,7 +7,7 @@ const FooterInfoBlock = () => {
         Beauty Care
       </Heading>
 
-      <Paragraph variant="F" className="text-(--text-light) mt-8 mb-4">
+      <Paragraph variant="F" className="text-(--color-text-inverse) mt-8 mb-4">
         Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
         nostrud exercitation ullamco laboris.
       </Paragraph>

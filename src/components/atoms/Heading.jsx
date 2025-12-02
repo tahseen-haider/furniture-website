@@ -3,8 +3,8 @@ import { Underline } from '@components';
 
 const variants = {
   primary: 'text-[40px] lg:text-[52px] leading-[65px] font-bold',
-  secondary: 'text-[26px] sm:text-[46px] font-medium',
-  tertiary: 'text-[20px] sm:text-[24px] font-semibold',
+  secondary: 'text-[36px] lg:text-[52px] font-normal',
+  tertiary: 'text-[20px] md:text-[24px] font-semibold',
 };
 
 const Heading = ({ children, level = 1, variant = 'primary', className = '', underline }) => {
