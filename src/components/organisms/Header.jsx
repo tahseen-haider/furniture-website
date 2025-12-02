@@ -2,11 +2,11 @@ import { Logo, Navbar } from '@components';
 
 const Header = () => {
   const navLinks = [
-    { title: 'Home', link: '/' },
-    { title: 'Services', link: '#' },
-    { title: 'Doctors', link: '#' },
-    { title: 'Products', link: '/products' },
-    { title: 'Gallery', link: '#' },
+    { title: 'Shop', link: '/collections' },
+    { title: 'Spaces', link: '#' },
+    { title: 'Our Services', link: '#' },
+    { title: 'Our Projects', link: '#' },
+    { title: 'Contact', link: '#' },
   ];
 
   return (
