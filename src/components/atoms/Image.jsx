@@ -10,8 +10,4 @@ Image.propTypes = {
   className: PropTypes.string,
 };
 
-Image.defaultProps = {
-  className: '',
-};
-
 export default Image;
