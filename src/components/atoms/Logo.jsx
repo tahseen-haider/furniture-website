@@ -4,7 +4,7 @@ import { Heading } from '@components';
 const Logo = () => {
   return (
     <Link to="/">
-      <Heading level={1} className="text-(--text-primary)" variant="secondary">
+      <Heading level={1} className="text-(--color-brand-primary)" variant="secondary">
         Furniture
       </Heading>
     </Link>
