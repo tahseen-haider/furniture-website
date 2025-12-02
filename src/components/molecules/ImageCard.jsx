@@ -28,12 +28,12 @@ const ImageCard = ({ src, title, desc, index, showNum }) => {
       </div>
       {showNum && <div className="h-2" />}
       {title && (
-        <Heading variant="tertiary" className="text-(--text-secondary)">
+        <Heading variant="tertiary" className="text-(--color-text-secondary)">
           {title}
         </Heading>
       )}
       {desc && (
-        <Paragraph variant="D" className="text-(--text-tertiary)">
+        <Paragraph variant="D" className="text-(--color-text-tertiary)">
           {desc}
         </Paragraph>
       )}

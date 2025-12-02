@@ -1,22 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import 'tailwindcss';
 
 :root {
   /* Apply Montserrat globally */
-  --font-sans: 'Montserrat', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
 
-  /* Custom colors */
-  /* Texts */
-  --text-primary: #054c73;
-  --text-tertiary: #666666;
-  --text-secondary: #333333;
-  --text-light: #ffffff;
-  --text-dark: #000000;
+  /* Brand */
+  --color-brand-primary: #054c73;
+  --color-brand-primary-dark: #03344f;
+  --color-brand-secondary: #f2f5ff;
+  --color-brand-tertiary: #dfe9f4;
 
-  /* Backgrounds */
-  --color-bg-body: #fcfcfc;
-  --color-bg-primary: #054c73;
-  --color-bg-primary-dark: #03344f;
-  --color-bg-secondary: #f2f5ff;
-  --color-bg-tertiary: #dfe9f4;
+  /* Surface / Backgrounds */
+  --color-surface-0: #ffffff;
+  --color-surface-50: #fcfcfc;
+  --color-surface-100: #f2f5ff;
+  --color-surface-200: #dfe9f4;
+
+  /* Text */
+  --color-text-primary: #054c73;
+  --color-text-secondary: #333333;
+  --color-text-tertiary: #666666;
+  --color-text-inverse: #ffffff;
+  --color-text-dark: #000000;
+}
+
+body {
+  color: var(--color-text-secondary);
 }

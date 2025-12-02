@@ -13,7 +13,7 @@ const Link = ({ to, children, className = '', underline, ...props }) => {
     >
       <span className="relative inline-block">
         {children}
-        {underlineEnabled && <Underline direction={underline} />}
+        {underlineEnabled && <Underline direction={underline} marginTop={1} />}
       </span>
     </RouterLink>
   );

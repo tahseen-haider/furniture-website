@@ -13,7 +13,7 @@ const HomeTemplate = () => {
       <section className="relative h-[600px] md:h-[749px] bg-[url(/images/MaskGroup.jpg)] object-cover bg-center flex justify-center items-center p-2">
         <HeroContentBlock />
       </section>
-      <section className="w-full bg-(--color-bg-secondary)">
+      <section className="w-full bg-(--color-surface-100)">
         <BadgesSection />
       </section>
       <InspirationCard
@@ -22,7 +22,7 @@ const HomeTemplate = () => {
         imgSrc="/images/Insp.png"
         imgAlt="Inspiration Collection"
       />
-      <section className="w-full bg-(--color-bg-secondary) flex justify-center">
+      <section className="w-full bg-(--color-surface-100) flex justify-center">
         <InfoSection />
       </section>
       <BrowseSection

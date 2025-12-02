@@ -6,10 +6,10 @@ const Badge = ({ icon, title, description }) => {
     <div className="flex gap-2 items-center">
       <Icon src={icon} alt={title} className="h-[50px]" />
       <div>
-        <Heading level={4} variant="tertiary" className="text-(--text-secondary)">
+        <Heading level={4} variant="tertiary" className="text-(--color-text-secondary)">
           {title}
         </Heading>
-        <Paragraph variant="F" className="text-(--text-secondary)">
+        <Paragraph variant="F" className="text-(--color-text-secondary)">
           {description}
         </Paragraph>
       </div>
