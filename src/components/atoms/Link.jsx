@@ -26,9 +26,4 @@ Link.propTypes = {
   underline: PropTypes.oneOf(['left', 'center', 'right']),
 };
 
-Link.defaultProps = {
-  className: '',
-  underline: null,
-};
-
 export default Link;
