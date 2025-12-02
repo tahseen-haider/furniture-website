@@ -11,3 +11,4 @@ export { default as InstagramGallery } from './InstagramGallery';
 export { default as InstructionImageCards } from './InstructionImageCards';
 export { default as Navbar } from './Navbar';
 export { default as ImageCard } from './ImageCard';
+export { default as CollectionCard } from './CollectionCard';

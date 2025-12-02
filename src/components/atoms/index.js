@@ -6,3 +6,4 @@ export { default as Logo } from './Logo';
 export { default as Paragraph } from './Paragraph';
 export { default as Input } from './Input';
 export { default as Icon } from './Icon';
+export { default as Underline } from './Underline';
