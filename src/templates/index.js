@@ -1,4 +1,5 @@
 export { default as MainLayout } from './MainLayout';
 export { default as HomeTemplate } from './HomeTemplate';
-export { default as ProductsPageTemplate } from './ProductsPageTemplate';
-export { default as CollectionPageTemplate } from './CollectionPageTemplate';
+export { default as ProductsListTemplate } from './ProductsListTemplate';
+export { default as CollectionsPageTemplate } from './CollectionsPageTemplate';
+export { default as ListingPageTemplate } from './ListingPageTemplate';
