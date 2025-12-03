@@ -11,9 +11,9 @@ const App = () => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/collections" element={<CollectionPage />} />
-          <Route path="/collections/:product" element={<ProductsPage />} />
+          <Route path="/collections/:categoryName" element={<ProductsPage />} />
           <Route path="/products" element={<CollectionPage />} />
-          <Route path="/products/:product" element={<ProductsPage />} />
+          <Route path="/products/:categoryName" element={<ProductsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

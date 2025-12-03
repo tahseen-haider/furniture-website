@@ -13,8 +13,8 @@ const Header = () => {
     <>
       <div className="h-20 md:h-[122px]" />
 
-      <header className="w-full h-20 md:h-[122px] bg-white px-16 fixed top-0 left-0 min-w-[340px] z-50">
-        <div className="w-full h-full max-w-[1440px] flex gap-10 justify-between items-center mx-auto">
+      <header className="w-full h-20 md:h-[122px] bg-white px-16 fixed top-0 left-0 min-w-[340px] z-50 border-b border-gray-300">
+        <div className="w-full h-full max-w-[1920px] flex gap-10 justify-between items-center mx-auto">
           <Logo />
 
           <Navbar links={navLinks} />

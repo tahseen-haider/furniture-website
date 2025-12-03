@@ -9,10 +9,10 @@ const CollectionCard = ({ collection }) => {
         <Image
           src={collection?.image}
           alt={collection?.title}
-          className="group-hover:scale-110 w-full object-cover aspect-square transition-transform duration-400"
+          className="group-hover:scale-105 w-full object-cover aspect-square transition-transform duration-600 ease-out"
         />
       </div>
-      <Paragraph underline="center" variant="G" className="leading-none mt-2">
+      <Paragraph underline="center" variant="G" className="leading-none mt-5">
         {collection?.title}
       </Paragraph>
     </Link>
