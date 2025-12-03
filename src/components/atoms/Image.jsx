@@ -1,7 +1,19 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const Image = ({ src, alt, className = '' }) => {
-  return <img src={src} alt={alt} className={className} />;
+  const [imgSrc, setImgSrc] = useState(src);
+
+  return (
+    <img
+      src={imgSrc || '/images/placeholder.jpg'}
+      alt={alt}
+      className={className}
+      onError={() => {
+        setImgSrc('/images/placeholder.jpg');
+      }}
+    />
+  );
 };
 
 Image.propTypes = {

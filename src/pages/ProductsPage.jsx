@@ -1,21 +1,22 @@
-import { useEffect, useState } from 'react';
-import { ProductsPageTemplate } from '@templates';
-import { productAPI } from '@services';
+import { ProductsListTemplate, ListingPageTemplate } from '@templates';
+
+import { useParams } from 'react-router-dom';
 
 const ProductsPage = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { categoryName } = useParams();
 
-  useEffect(() => {
-    productAPI.fetchAll().then((data) => {
-      setProducts(data);
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) return <div>Loading products...</div>;
-
-  return <ProductsPageTemplate products={products} />;
+  return (
+    <ListingPageTemplate
+      title={
+        categoryName
+          .split('-')
+          .map((word) => word[0].toUpperCase() + word.slice(1, word.length))
+          .join(' ') + ' | Furniture'
+      }
+    >
+      <ProductsListTemplate categoryName={categoryName} />
+    </ListingPageTemplate>
+  );
 };
 
 export default ProductsPage;

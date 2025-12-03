@@ -16,6 +16,8 @@
   --color-surface-50: #fcfcfc;
   --color-surface-100: #f2f5ff;
   --color-surface-200: #dfe9f4;
+  --color-surface-300: #f1f1f1;
+  --color-surface-400: #e9e8e8;
 
   /* Text */
   --color-text-primary: #054c73;
@@ -27,4 +29,5 @@
 
 body {
   color: var(--color-text-secondary);
+  background-color: var(--color-surface-300);
 }
