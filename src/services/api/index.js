@@ -2,7 +2,7 @@ const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/mock';
 
 export async function http(method, endpoint, body) {
   try {
-    const url = BASE_URL === '/mock' ? `${BASE_URL}/${endpoint}.json` : `${BASE_URL}/${endpoint}`;
+    const url = BASE_URL === '/mock' ? `${BASE_URL}/${endpoint}.json` : `${BASE_URL}${endpoint}`;
 
     const options = {
       method,
@@ -20,7 +20,7 @@ export async function http(method, endpoint, body) {
   }
 }
 
-export const GET = (endpoint) => http('GET', endpoint);
+export const GET = (endpoint, body) => http('GET', endpoint, body);
 export const POST = (endpoint, body) => http('POST', endpoint, body);
 export const PUT = (endpoint, body) => http('PUT', endpoint, body);
 export const DELETE = (endpoint) => http('DELETE', endpoint);

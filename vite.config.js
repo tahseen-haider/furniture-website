@@ -20,6 +20,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@templates': path.resolve(__dirname, 'src/templates'),
       '@services': path.resolve(__dirname, 'src/services'),
+      '@config': path.resolve(__dirname, 'src/config'),
     },
   },
   test: {
