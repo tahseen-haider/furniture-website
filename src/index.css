@@ -31,3 +31,13 @@ body {
   color: var(--color-text-secondary);
   background-color: var(--color-surface-300);
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  appearance: textfield;
+}

@@ -10,7 +10,7 @@
         "/images/products/bed-set-1-2.webp"
       ],
       "description": "Premium wooden king-size bed set with high-density foam and handcrafted headboard.",
-      "available": true,
+      "available": "in",
       "sold": 32,
       "createdAt": "2025-01-12"
     },
@@ -24,7 +24,7 @@
         "/images/products/dining-6-2.webp"
       ],
       "description": "Solid oak 6-seater table with scratch-resistant polish.",
-      "available": true,
+      "available": "in",
       "sold": 14,
       "createdAt": "2025-02-01"
     },
@@ -38,7 +38,7 @@
         "/images/products/sofa-2.webp"
       ],
       "description": "Handmade sofa set with velvet fabric and soft cushions.",
-      "available": false,
+      "available": "out",
       "sold": 51,
       "createdAt": "2024-12-15"
     },
@@ -51,7 +51,7 @@
         "/images/products/cushion-1.webp"
       ],
       "description": "Soft-touch microfiber cushion covers with premium filling.",
-      "available": true,
+      "available": "in",
       "sold": 120,
       "createdAt": "2025-02-10"
     },
@@ -65,7 +65,7 @@
         "/images/products/console-frame-2.webp"
       ],
       "description": "A luxury console table paired with a handcrafted mirror frame.",
-      "available": true,
+      "available": "in",
       "sold": 26,
       "createdAt": "2025-01-02"
     },
@@ -78,7 +78,7 @@
         "/images/products/planter-1.webp"
       ],
       "description": "High-quality ceramic planters ideal for indoor and outdoor decoration.",
-      "available": true,
+      "available": "in",
       "sold": 89,
       "createdAt": "2025-03-01"
     },
@@ -91,7 +91,7 @@
         "/images/products/decor-1.webp"
       ],
       "description": "A curated set of decorative pieces for tables, consoles, and shelves.",
-      "available": false,
+      "available": "out",
       "sold": 44,
       "createdAt": "2024-11-19"
     },
@@ -104,7 +104,7 @@
         "/images/products/chest-1.webp"
       ],
       "description": "Hand-carved classical wooden chest with brass handles.",
-      "available": true,
+      "available": "in",
       "sold": 17,
       "createdAt": "2025-02-17"
     },
@@ -117,7 +117,7 @@
         "/images/products/mirror-1.webp"
       ],
       "description": "Antique-style frame with gold leaf detailing.",
-      "available": true,
+      "available": "in",
       "sold": 73,
       "createdAt": "2025-01-28"
     },
@@ -130,7 +130,7 @@
         "/images/products/table-decor-1.webp"
       ],
       "description": "A modern minimalistic decor set suitable for dining or coffee tables.",
-      "available": true,
+      "available": "in",
       "sold": 40,
       "createdAt": "2025-02-22"
     },
@@ -143,7 +143,7 @@
         "/images/products/floor-lamp-1.webp"
       ],
       "description": "Beautiful LED floor lamp with adjustable brightness.",
-      "available": false,
+      "available": "out",
       "sold": 58,
       "createdAt": "2024-12-05"
     },
@@ -156,7 +156,7 @@
         "/images/products/table-lamp-1.webp"
       ],
       "description": "Soft ambient table lamp with a fabric shade.",
-      "available": true,
+      "available": "in",
       "sold": 92,
       "createdAt": "2025-01-09"
     },
@@ -169,7 +169,7 @@
         "/images/products/coffee-table-1.webp"
       ],
       "description": "A sleek round table with tempered glass top.",
-      "available": true,
+      "available": "in",
       "sold": 36,
       "createdAt": "2025-02-20"
     },
@@ -182,7 +182,7 @@
         "/images/products/desk-1.webp"
       ],
       "description": "A compact writing desk perfect for small offices and study rooms.",
-      "available": true,
+      "available": "in",
       "sold": 12,
       "createdAt": "2025-03-02"
     },
@@ -195,7 +195,7 @@
         "/images/products/swing-1.webp"
       ],
       "description": "Suspended indoor swing with premium cushioning and solid wood build.",
-      "available": false,
+      "available": "out",
       "sold": 29,
       "createdAt": "2025-01-16"
     }
