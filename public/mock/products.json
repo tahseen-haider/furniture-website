@@ -1,201 +1,209 @@
-[
-  {
-    "id": 1,
-    "title": "Luxury King Bed Set",
-    "categories": ["Bed Sets"],
-    "priceRange": "95,000 - 120,000",
-    "images": [
-      "/images/products/bed-set-1-1.webp",
-      "/images/products/bed-set-1-2.webp"
-    ],
-    "description": "Premium wooden king-size bed set with high-density foam and handcrafted headboard.",
-    "available": true,
-    "sold": 32,
-    "createdAt": "2025-01-12"
-  },
-  {
-    "id": 2,
-    "title": "Modern Dining Table 6-Seater",
-    "categories": ["Dining Tables", "Table Decor"],
-    "price": 68000,
-    "images": [
-      "/images/products/dining-6-1.webp",
-      "/images/products/dining-6-2.webp"
-    ],
-    "description": "Solid oak 6-seater table with scratch-resistant polish.",
-    "available": true,
-    "sold": 14,
-    "createdAt": "2025-02-01"
-  },
-  {
-    "id": 3,
-    "title": "Premium Sofa Set (3+2+1)",
-    "categories": ["Sofa and Chairs"],
-    "priceRange": "150,000 - 190,000",
-    "images": [
-      "/images/products/sofa-1.webp",
-      "/images/products/sofa-2.webp"
-    ],
-    "description": "Handmade sofa set with velvet fabric and soft cushions.",
-    "available": false,
-    "sold": 51,
-    "createdAt": "2024-12-15"
-  },
-  {
-    "id": 4,
-    "title": "Decorative Cushion Set (Pack of 4)",
-    "categories": ["Cushions", "Home Accessories"],
-    "price": 4500,
-    "images": [
-      "/images/products/cushion-1.webp"
-    ],
-    "description": "Soft-touch microfiber cushion covers with premium filling.",
-    "available": true,
-    "sold": 120,
-    "createdAt": "2025-02-10"
-  },
-  {
-    "id": 5,
-    "title": "Golden Console with Mirror Frame",
-    "categories": ["Consoles & Frames", "Mirror Frames"],
-    "priceRange": "38,000 - 52,000",
-    "images": [
-      "/images/products/console-frame-1.webp",
-      "/images/products/console-frame-2.webp"
-    ],
-    "description": "A luxury console table paired with a handcrafted mirror frame.",
-    "available": true,
-    "sold": 26,
-    "createdAt": "2025-01-02"
-  },
-  {
-    "id": 6,
-    "title": "Ceramic Indoor Planter Set",
-    "categories": ["Planters"],
-    "price": 3200,
-    "images": [
-      "/images/products/planter-1.webp"
-    ],
-    "description": "High-quality ceramic planters ideal for indoor and outdoor decoration.",
-    "available": true,
-    "sold": 89,
-    "createdAt": "2025-03-01"
-  },
-  {
-    "id": 7,
-    "title": "Luxury Home Decor Bundle",
-    "categories": ["Home Accessories", "Table Decor", "Sculptures"],
-    "priceRange": "12,000 - 20,000",
-    "images": [
-      "/images/products/decor-1.webp"
-    ],
-    "description": "A curated set of decorative pieces for tables, consoles, and shelves.",
-    "available": false,
-    "sold": 44,
-    "createdAt": "2024-11-19"
-  },
-  {
-    "id": 8,
-    "title": "Classic Wooden Chest",
-    "categories": ["Chests & Sideboards"],
-    "price": 54000,
-    "images": [
-      "/images/products/chest-1.webp"
-    ],
-    "description": "Hand-carved classical wooden chest with brass handles.",
-    "available": true,
-    "sold": 17,
-    "createdAt": "2025-02-17"
-  },
-  {
-    "id": 9,
-    "title": "Antique Mirror Frame",
-    "categories": ["Mirror Frames"],
-    "priceRange": "14,000 - 18,000",
-    "images": [
-      "/images/products/mirror-1.webp"
-    ],
-    "description": "Antique-style frame with gold leaf detailing.",
-    "available": true,
-    "sold": 73,
-    "createdAt": "2025-01-28"
-  },
-  {
-    "id": 10,
-    "title": "Minimal Table Decor Set",
-    "categories": ["Table Decor", "Home Accessories"],
-    "price": 3500,
-    "images": [
-      "/images/products/table-decor-1.webp"
-    ],
-    "description": "A modern minimalistic decor set suitable for dining or coffee tables.",
-    "available": true,
-    "sold": 40,
-    "createdAt": "2025-02-22"
-  },
-  {
-    "id": 11,
-    "title": "LED Standing Floor Lamp",
-    "categories": ["Lamps & Lights"],
-    "priceRange": "9,000 - 14,000",
-    "images": [
-      "/images/products/floor-lamp-1.webp"
-    ],
-    "description": "Beautiful LED floor lamp with adjustable brightness.",
-    "available": false,
-    "sold": 58,
-    "createdAt": "2024-12-05"
-  },
-  {
-    "id": 12,
-    "title": "Classic Table Lamp",
-    "categories": ["Table Lamps and Lights", "Lamps & Lights"],
-    "price": 6500,
-    "images": [
-      "/images/products/table-lamp-1.webp"
-    ],
-    "description": "Soft ambient table lamp with a fabric shade.",
-    "available": true,
-    "sold": 92,
-    "createdAt": "2025-01-09"
-  },
-  {
-    "id": 13,
-    "title": "Round Coffee Table",
-    "categories": ["Coffee and Center Tables", "Tables"],
-    "priceRange": "20,000 - 28,000",
-    "images": [
-      "/images/products/coffee-table-1.webp"
-    ],
-    "description": "A sleek round table with tempered glass top.",
-    "available": true,
-    "sold": 36,
-    "createdAt": "2025-02-20"
-  },
-  {
-    "id": 14,
-    "title": "Modern Writing Desk",
-    "categories": ["Writing Desks"],
-    "price": 23000,
-    "images": [
-      "/images/products/desk-1.webp"
-    ],
-    "description": "A compact writing desk perfect for small offices and study rooms.",
-    "available": true,
-    "sold": 12,
-    "createdAt": "2025-03-02"
-  },
-  {
-    "id": 15,
-    "title": "Indoor Wooden Swing",
-    "categories": ["Swings"],
-    "priceRange": "45,000 - 60,000",
-    "images": [
-      "/images/products/swing-1.webp"
-    ],
-    "description": "Suspended indoor swing with premium cushioning and solid wood build.",
-    "available": false,
-    "sold": 29,
-    "createdAt": "2025-01-16"
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Luxury King Bed Set",
+      "categories": ["Bed Sets"],
+      "priceRange": "95,000 - 120,000",
+      "images": [
+        "/images/products/bed-set-1-1.webp",
+        "/images/products/bed-set-1-2.webp"
+      ],
+      "description": "Premium wooden king-size bed set with high-density foam and handcrafted headboard.",
+      "available": true,
+      "sold": 32,
+      "createdAt": "2025-01-12"
+    },
+    {
+      "id": 2,
+      "title": "Modern Dining Table 6-Seater",
+      "categories": ["Dining Tables", "Table Decor"],
+      "price": 68000,
+      "images": [
+        "/images/products/dining-6-1.webp",
+        "/images/products/dining-6-2.webp"
+      ],
+      "description": "Solid oak 6-seater table with scratch-resistant polish.",
+      "available": true,
+      "sold": 14,
+      "createdAt": "2025-02-01"
+    },
+    {
+      "id": 3,
+      "title": "Premium Sofa Set (3+2+1)",
+      "categories": ["Sofa and Chairs"],
+      "priceRange": "150,000 - 190,000",
+      "images": [
+        "/images/products/sofa-1.webp",
+        "/images/products/sofa-2.webp"
+      ],
+      "description": "Handmade sofa set with velvet fabric and soft cushions.",
+      "available": false,
+      "sold": 51,
+      "createdAt": "2024-12-15"
+    },
+    {
+      "id": 4,
+      "title": "Decorative Cushion Set (Pack of 4)",
+      "categories": ["Cushions", "Home Accessories"],
+      "price": 4500,
+      "images": [
+        "/images/products/cushion-1.webp"
+      ],
+      "description": "Soft-touch microfiber cushion covers with premium filling.",
+      "available": true,
+      "sold": 120,
+      "createdAt": "2025-02-10"
+    },
+    {
+      "id": 5,
+      "title": "Golden Console with Mirror Frame",
+      "categories": ["Consoles & Frames", "Mirror Frames"],
+      "priceRange": "38,000 - 52,000",
+      "images": [
+        "/images/products/console-frame-1.webp",
+        "/images/products/console-frame-2.webp"
+      ],
+      "description": "A luxury console table paired with a handcrafted mirror frame.",
+      "available": true,
+      "sold": 26,
+      "createdAt": "2025-01-02"
+    },
+    {
+      "id": 6,
+      "title": "Ceramic Indoor Planter Set",
+      "categories": ["Planters"],
+      "price": 3200,
+      "images": [
+        "/images/products/planter-1.webp"
+      ],
+      "description": "High-quality ceramic planters ideal for indoor and outdoor decoration.",
+      "available": true,
+      "sold": 89,
+      "createdAt": "2025-03-01"
+    },
+    {
+      "id": 7,
+      "title": "Luxury Home Decor Bundle",
+      "categories": ["Home Accessories", "Table Decor", "Sculptures"],
+      "priceRange": "12,000 - 20,000",
+      "images": [
+        "/images/products/decor-1.webp"
+      ],
+      "description": "A curated set of decorative pieces for tables, consoles, and shelves.",
+      "available": false,
+      "sold": 44,
+      "createdAt": "2024-11-19"
+    },
+    {
+      "id": 8,
+      "title": "Classic Wooden Chest",
+      "categories": ["Chests & Sideboards"],
+      "price": 54000,
+      "images": [
+        "/images/products/chest-1.webp"
+      ],
+      "description": "Hand-carved classical wooden chest with brass handles.",
+      "available": true,
+      "sold": 17,
+      "createdAt": "2025-02-17"
+    },
+    {
+      "id": 9,
+      "title": "Antique Mirror Frame",
+      "categories": ["Mirror Frames"],
+      "priceRange": "14,000 - 18,000",
+      "images": [
+        "/images/products/mirror-1.webp"
+      ],
+      "description": "Antique-style frame with gold leaf detailing.",
+      "available": true,
+      "sold": 73,
+      "createdAt": "2025-01-28"
+    },
+    {
+      "id": 10,
+      "title": "Minimal Table Decor Set",
+      "categories": ["Table Decor", "Home Accessories"],
+      "price": 3500,
+      "images": [
+        "/images/products/table-decor-1.webp"
+      ],
+      "description": "A modern minimalistic decor set suitable for dining or coffee tables.",
+      "available": true,
+      "sold": 40,
+      "createdAt": "2025-02-22"
+    },
+    {
+      "id": 11,
+      "title": "LED Standing Floor Lamp",
+      "categories": ["Lamps & Lights"],
+      "priceRange": "9,000 - 14,000",
+      "images": [
+        "/images/products/floor-lamp-1.webp"
+      ],
+      "description": "Beautiful LED floor lamp with adjustable brightness.",
+      "available": false,
+      "sold": 58,
+      "createdAt": "2024-12-05"
+    },
+    {
+      "id": 12,
+      "title": "Classic Table Lamp",
+      "categories": ["Table Lamps and Lights", "Lamps & Lights"],
+      "price": 6500,
+      "images": [
+        "/images/products/table-lamp-1.webp"
+      ],
+      "description": "Soft ambient table lamp with a fabric shade.",
+      "available": true,
+      "sold": 92,
+      "createdAt": "2025-01-09"
+    },
+    {
+      "id": 13,
+      "title": "Round Coffee Table",
+      "categories": ["Coffee and Center Tables", "Tables"],
+      "priceRange": "20,000 - 28,000",
+      "images": [
+        "/images/products/coffee-table-1.webp"
+      ],
+      "description": "A sleek round table with tempered glass top.",
+      "available": true,
+      "sold": 36,
+      "createdAt": "2025-02-20"
+    },
+    {
+      "id": 14,
+      "title": "Modern Writing Desk",
+      "categories": ["Writing Desks"],
+      "price": 23000,
+      "images": [
+        "/images/products/desk-1.webp"
+      ],
+      "description": "A compact writing desk perfect for small offices and study rooms.",
+      "available": true,
+      "sold": 12,
+      "createdAt": "2025-03-02"
+    },
+    {
+      "id": 15,
+      "title": "Indoor Wooden Swing",
+      "categories": ["Swings"],
+      "priceRange": "45,000 - 60,000",
+      "images": [
+        "/images/products/swing-1.webp"
+      ],
+      "description": "Suspended indoor swing with premium cushioning and solid wood build.",
+      "available": false,
+      "sold": 29,
+      "createdAt": "2025-01-16"
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 8,
+    "totalItems": 15,
+    "totalPages": 2
   }
-]
+}

@@ -13,3 +13,6 @@ export { default as Navbar } from './Navbar';
 export { default as ImageCard } from './ImageCard';
 export { default as FilterBtn } from './FilterBtn';
 export { default as ProductCardSkeleton } from './ProductCardSkeleton';
+export { default as SideBarOverlay } from './SideBarOverlay';
+export { default as Pagination } from './Pagination';
+export { default as CollectionCardSkeleton } from './CollectionCardSkeleton';

@@ -6,7 +6,7 @@ const underlineOrigin = {
   right: 'origin-right',
 };
 
-const Underline = ({ direction = 'left', thickness = '1px', className = '', marginTop = 6 }) => {
+const Underline = ({ direction = 'left', thickness = '1px', className = '', marginTop = 1 }) => {
   return (
     <span
       className={`

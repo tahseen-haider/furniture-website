@@ -8,3 +8,4 @@ export { default as InstructionSection } from './InstructionSection';
 export { default as ProductCard } from './ProductCard';
 export { default as CollectionCard } from './CollectionCard';
 export { default as ProductsFilter } from './ProductsFilter';
+export { default as ProductsFilterSidebar } from './ProductsFilterSidebar';

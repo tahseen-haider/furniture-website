@@ -1,25 +1,27 @@
-import { CollectionCard, Heading } from '@components';
-import PropTypes from 'prop-types';
+import { CollectionCardSkeleton, CollectionCard, Heading } from '@components';
 
-const CollectionsPageTemplate = ({ collections = [] }) => {
+const CollectionsPageTemplate = ({ collections = [], loading }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-16 w-full">
-      {collections.map((collection) => (
-        <CollectionCard key={collection.id} collection={collection} />
-      ))}
-    </div>
+    <>
+      {loading ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-16 w-full">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <CollectionCardSkeleton key={i} />
+          ))}
+        </div>
+      ) : collections?.length ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-16 w-full">
+          {collections?.map((collection) => (
+            <CollectionCard key={collection.id} collection={collection} />
+          ))}
+        </div>
+      ) : (
+        <Heading level={5} variant="tertiary" className="w-full text-center">
+          No Collections Available
+        </Heading>
+      )}
+    </>
   );
-};
-
-CollectionsPageTemplate.propTypes = {
-  collections: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-      link: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default CollectionsPageTemplate;
