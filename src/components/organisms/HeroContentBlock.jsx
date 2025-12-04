@@ -2,7 +2,7 @@ import { Heading, Paragraph, Button } from '@components';
 
 const HeroContentBlock = () => {
   return (
-    <div className="w-full md:w-1/2 max-w-[643px] h-[500px] sm:h-[443px] bg-(--color-surface-200) rounded-xl relative md:absolute top-0 md:top-1/2 translate-y-0 md:-translate-y-1/2 left-0 md:left-1/2 flex justify-center items-center px-4 sm:px-8">
+    <div className="w-full md:w-1/2 max-w-160 h-125 sm:h-110 bg-(--color-surface-200) rounded-xl relative md:absolute top-0 md:top-1/2 translate-y-0 md:-translate-y-1/2 left-0 md:left-1/2 flex justify-center items-center px-4 sm:px-8">
       <div className="flex flex-col gap-4">
         <Paragraph variant="A" className="text-(--color-text-secondary)">
           New Arrival

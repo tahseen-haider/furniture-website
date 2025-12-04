@@ -2,7 +2,7 @@ import { Image } from '@components';
 
 const InfoImageBlock = () => {
   return (
-    <div className="w-full sm:w-1/2 max-w-[560px]">
+    <div className="w-full sm:w-1/2 max-w-140">
       <div className="relative">
         <Image src="/images/Girl.png" alt="About store" className="relative z-10 w-11/12" />
         <Image

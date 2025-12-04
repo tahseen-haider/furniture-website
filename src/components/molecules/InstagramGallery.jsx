@@ -13,7 +13,7 @@ const InstagramGallery = () => {
             key={num}
             src={`/images/IG-${num}.jpg`}
             alt={`instagram-${num}`}
-            className="w-2/3 sm:w-[150px] xl:w-[175px]"
+            className="w-2/3 sm:w-37 xl:w-43"
           />
         ))}
       </div>
