@@ -8,7 +8,7 @@ const Link = ({ to, children, className = '', underline, ...props }) => {
   return (
     <RouterLink
       to={to}
-      className={`font-semibold text-sm inline-block ${underlineEnabled ? 'group' : ''} ${className}`}
+      className={`font-medium text-sm inline-block ${underlineEnabled ? 'group' : ''} ${className}`}
       {...props}
     >
       <span className="relative inline-block">

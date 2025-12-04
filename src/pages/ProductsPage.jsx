@@ -14,7 +14,7 @@ const ProductsPage = () => {
 
   const filters = {
     category: categoryName,
-    available: params.get('available') === 'true',
+    available: params.get('available') === 'in',
     price_min: params.get('price_min') || '',
     price_max: params.get('price_max') || '',
     sort: params.get('sort') || 'featured',

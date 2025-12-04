@@ -21,6 +21,7 @@ export default defineConfig({
       '@templates': path.resolve(__dirname, 'src/templates'),
       '@services': path.resolve(__dirname, 'src/services'),
       '@config': path.resolve(__dirname, 'src/config'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
     },
   },
   test: {

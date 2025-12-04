@@ -1,4 +1,11 @@
-import { FilterBtn, SideBarOverlay, ProductsFilterSidebar, Paragraph } from '@components';
+import {
+  FilterBtn,
+  SideBarOverlay,
+  ProductsFilterSidebar,
+  PriceFilter,
+  Divider,
+  AvailabilityFilter,
+} from '@components';
 import { productSortFilters } from '@config';
 import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -31,16 +38,20 @@ const ProductsFilter = ({ filters, setParams }) => {
     <>
       <SideBarOverlay isOpen={sideFilterOpen} onClose={() => setSideFilterOpen(false)} side="left">
         <ProductsFilterSidebar
+          onClearParams={() => {
+            const params = new URLSearchParams();
+            setParams(params);
+            setSelectedSortFilter('featured');
+          }}
           onClose={() => {
             setSideFilterOpen(false);
           }}
         >
-          <div className="flex justify-between cursor-pointer group w-full">
-            <Paragraph variant="F" underline="center">
-              Availability
-            </Paragraph>
-            <span className="rotate-90 text-xl">{`>`}</span>
+          <AvailabilityFilter filters={filters} setParams={setParams} />
+          <div className="mb-2">
+            <Divider />
           </div>
+          <PriceFilter filters={filters} setParams={setParams} />
         </ProductsFilterSidebar>
       </SideBarOverlay>
 
