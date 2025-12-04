@@ -7,3 +7,5 @@ export { default as Paragraph } from './Paragraph';
 export { default as Input } from './Input';
 export { default as Icon } from './Icon';
 export { default as Underline } from './Underline';
+export { default as BWButton } from './BWButton';
+export { default as Divider } from './Divider';

@@ -16,3 +16,6 @@ export { default as ProductCardSkeleton } from './ProductCardSkeleton';
 export { default as SideBarOverlay } from './SideBarOverlay';
 export { default as Pagination } from './Pagination';
 export { default as CollectionCardSkeleton } from './CollectionCardSkeleton';
+export { default as SidebarFilterBox } from './SidebarFilterBox';
+export { default as PriceFilter } from './PriceFilter';
+export { default as AvailabilityFilter } from './AvailabilityFilter';
