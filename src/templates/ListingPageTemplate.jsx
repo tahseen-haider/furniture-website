@@ -1,4 +1,6 @@
 import { Heading } from '@components';
+import PropTypes from 'prop-types';
+
 const ListingPageTemplate = ({ children, title }) => {
   return (
     <div className="mx-auto flex flex-col items-center bg-(--color-surface-400)">
@@ -10,6 +12,10 @@ const ListingPageTemplate = ({ children, title }) => {
       </div>
     </div>
   );
+};
+
+ListingPageTemplate.PropTypes = {
+  title: PropTypes.string.isRequired,
 };
 
 export default ListingPageTemplate;
