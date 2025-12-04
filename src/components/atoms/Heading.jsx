@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { Underline } from '@components';
 
 const variants = {
-  primary: 'text-[40px] lg:text-[52px] leading-[65px] font-bold',
-  secondary: 'text-[36px] lg:text-[52px] font-normal',
-  tertiary: 'text-[20px] md:text-[24px] font-semibold',
-  title: 'text-[16px] font-semibold',
+  primary: 'text-4xl lg:text-5xl leading-16 font-bold',
+  secondary: 'text-4xl lg:text-5xl font-normal',
+  tertiary: 'text-xl md:text-2xl font-semibold',
+  title: 'text-base font-semibold',
 };
 
 const Heading = ({

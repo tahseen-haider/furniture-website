@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import { Underline } from '@components';
 
 const variants = {
-  A: 'font-medium text-[16px] sm:text-[18px] leading-[39px]',
-  B: 'font-normal text-[18px] sm:text-[20px] leading-[100%] text-center',
-  C: 'font-normal text-[18px] sm:text-[20px] leading-[39px]',
-  D: 'font-normal text-[16px] sm:text-[18px] leading-[28px] text-center',
-  E: 'font-normal text-[18px] sm:text-[20px] leading-[39px] text-center',
-  F: 'font-normal text-[14px] sm:text-[16px] leading-[32px]',
-  G: 'font-normal text-[20px] sm:text-[28px] leading-[39px]',
-  H: 'font-normal text-[14px] sm:text-[16px] leading-[16px]',
+  A: 'font-medium text-base sm:text-lg leading-4xl',
+  B: 'font-normal text-lg sm:text-xl leading-[100%] text-center',
+  C: 'font-normal text-lg sm:text-xl leading-4xl',
+  D: 'font-normal text-base sm:text-lg leading-3xl text-center',
+  E: 'font-normal text-lg sm:text-xl leading-4xl text-center',
+  F: 'font-normal text-sm sm:text-base leading-3xl',
+  G: 'font-normal text-xl sm:text-3xl leading-4xl',
+  H: 'font-normal text-sm sm:text-base leading-base',
 };
 
 const Paragraph = ({ children, className = '', underline, variant = 'A', maxChars }) => {
@@ -21,7 +21,7 @@ const Paragraph = ({ children, className = '', underline, variant = 'A', maxChar
   }
 
   return (
-    <p className={`${variants[variant]} ${className}`}>
+    <p className={`${variants[variant]} ${className} text-`}>
       <span className="relative inline-block">
         {children}
         {underlineEnabled && <Underline direction={underline} />}
