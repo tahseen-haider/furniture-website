@@ -10,7 +10,7 @@ import {
 const HomeTemplate = () => {
   return (
     <>
-      <section className="relative h-[600px] md:h-[749px] bg-[url(/images/MaskGroup.jpg)] object-cover bg-center flex justify-center items-center p-2">
+      <section className="relative h-150 md:h-187 bg-[url(/images/MaskGroup.jpg)] object-cover bg-center flex justify-center items-center p-2">
         <HeroContentBlock />
       </section>
       <section className="w-full bg-(--color-surface-100)">

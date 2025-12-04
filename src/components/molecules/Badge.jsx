@@ -4,7 +4,7 @@ import { Icon, Heading, Paragraph } from '@components';
 const Badge = ({ icon, title, description }) => {
   return (
     <div className="flex gap-2 items-center">
-      <Icon src={icon} alt={title} className="h-[50px]" />
+      <Icon src={icon} alt={title} className="h-12" />
       <div>
         <Heading level={4} variant="tertiary" className="text-(--color-text-secondary)">
           {title}

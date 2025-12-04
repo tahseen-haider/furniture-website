@@ -20,7 +20,7 @@ const BadgeSection = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 min-h-[150px] p-6 max-w-[1920px] mx-auto">
+    <div className="flex flex-col lg:flex-row items-center justify-between gap-8 min-h-37 p-6 max-w-480 mx-auto">
       {badges.map((b, i) => (
         <Badge key={i} icon={b.icon} title={b.title} description={b.description} />
       ))}

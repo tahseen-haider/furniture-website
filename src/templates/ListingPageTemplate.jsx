@@ -8,7 +8,7 @@ const ListingPageTemplate = ({ children, title }) => {
         {title}
       </Heading>
       <div className="w-full bg-(--color-surface-300) border-b border-gray-300 shadow">
-        <div className="max-w-[1560px] mx-auto px-8 py-12 flex flex-col gap-8">{children}</div>
+        <div className="max-w-390 mx-auto px-8 py-12 flex flex-col gap-8">{children}</div>
       </div>
     </div>
   );

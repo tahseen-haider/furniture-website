@@ -19,7 +19,7 @@ const SidebarOverlay = ({ isOpen, onClose, side = 'left', children }) => {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`
-          fixed top-0 h-full bg-white shadow-xl transition-transform duration-300 w-11/12 min-w-64 max-w-[600px]
+          fixed top-0 h-full bg-white shadow-xl transition-transform duration-300 w-11/12 min-w-64 max-w-150
           ${side === 'left' ? 'left-0' : 'right-0'}
           ${isOpen ? 'translate-x-0' : side === 'left' ? '-translate-x-full' : 'translate-x-full'}
         `}
