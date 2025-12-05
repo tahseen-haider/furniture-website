@@ -11,5 +11,5 @@ export const productAPI = {
     return GET(`/products`);
   },
 
-  fetchById: (id) => GET(`/products/${id}`),
+  fetchById: (id) => GET(`/product`),
 };

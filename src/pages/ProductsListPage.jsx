@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { productAPI } from '@services';
 import { useParams } from 'react-router-dom';
 
-const ProductsPage = () => {
+const ProductsListPage = () => {
   const { categoryName } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -39,9 +39,11 @@ const ProductsPage = () => {
     <ListingPageTemplate
       title={
         categoryName
-          .split('-')
-          .map((word) => word[0].toUpperCase() + word.slice(1, word.length))
-          .join(' ') + ' | Furniture'
+          ? categoryName
+              .split('-')
+              .map((word) => word[0].toUpperCase() + word.slice(1, word.length))
+              .join(' ') + ' | Furniture'
+          : 'Products'
       }
     >
       <ProductsListTemplate
@@ -56,4 +58,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default ProductsListPage;

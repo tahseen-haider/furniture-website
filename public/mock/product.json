@@ -1,0 +1,151 @@
+{
+  "product": {
+    "id": 15,
+    "title": "Indoor Wooden Swing",
+    "slug": "indoor-wooden-swing",
+    "categories": ["Swings", "Furniture"],
+    "generalCategory": "Furniture",
+
+    "description": "Suspended indoor swing with premium cushioning and hand-crafted solid wood build. Includes premium ropes and mounting hardware.",
+    "features": [
+      "Hand-carved Sheesham wood",
+      "Premium soft cushioning",
+      "Durable mounting chain",
+      "Suitable for indoor & covered outdoor use"
+    ],
+
+    "images": [
+      "/images/products/swing-1.webp",
+      "/images/products/swing-2.webp",
+      "/images/products/swing-3.webp",
+      "/images/products/swing-4.webp",
+      "/images/products/swing-5.webp"
+    ],
+
+    "freeShipping": true,
+    "available": "in",
+    "sold": 29,
+    "createdAt": "2025-01-16",
+
+    "variants": [
+      {
+        "id": "SWING-STD",
+        "title": "Standard Size",
+        "price": 45000,
+        "compareAt": 52000,
+        "images": [
+          "/images/products/swing-std-1.webp",
+          "/images/products/swing-std-2.webp"
+        ],
+        "stock": "in"
+      },
+      {
+        "id": "SWING-LRG",
+        "title": "Large Size",
+        "price": 60000,
+        "compareAt": 68000,
+        "images": [
+          "/images/products/swing-large-1.webp",
+          "/images/products/swing-large-2.webp"
+        ],
+        "stock": "in"
+      }
+    ],
+
+    "buyTogether": [
+      {
+        "id": 101,
+        "title": "Cushion Set for Swing (Pack of 4)",
+        "price": 4200,
+        "images": [
+          "/images/products/cushions-1.webp",
+          "/images/products/cushions-2.webp"
+        ]
+      },
+      {
+        "id": 102,
+        "title": "Decorative Hanging Plant",
+        "price": 2500,
+        "images": [
+          "/images/products/plant-1.webp",
+          "/images/products/plant-2.webp"
+        ]
+      }
+    ],
+
+    "relatedProducts": [
+      {
+        "id": 21,
+        "title": "Classic Wooden Chest",
+        "price": 54000,
+        "images": [
+          "/images/products/chest-1.webp",
+          "/images/products/chest-2.webp"
+        ]
+      },
+      {
+        "id": 22,
+        "title": "Antique Mirror Frame",
+        "price": [14000, 18000],
+        "images": [
+          "/images/products/mirror-1.webp",
+          "/images/products/mirror-2.webp"
+        ]
+      },
+      {
+        "id": 23,
+        "title": "Luxury Home Decor Bundle",
+        "price": [12000, 20000],
+        "images": [
+          "/images/products/decor-1.webp",
+          "/images/products/decor-2.webp"
+        ]
+      },
+      {
+        "id": 24,
+        "title": "Classic Table Lamp",
+        "price": 6500,
+        "images": [
+          "/images/products/table-lamp-1.webp",
+          "/images/products/table-lamp-2.webp"
+        ]
+      },
+      {
+        "id": 25,
+        "title": "Modern Dining Table 6-Seater",
+        "price": 68000,
+        "images": [
+          "/images/products/dining-6-1.webp",
+          "/images/products/dining-6-2.webp"
+        ]
+      },
+      {
+        "id": 26,
+        "title": "Premium Sofa Set (3+2+1)",
+        "price": [150000, 190000],
+        "images": [
+          "/images/products/sofa-1.webp",
+          "/images/products/sofa-2.webp"
+        ]
+      },
+      {
+        "id": 27,
+        "title": "Golden Console with Mirror Frame",
+        "price": [38000, 52000],
+        "images": [
+          "/images/products/console-frame-1.webp",
+          "/images/products/console-frame-2.webp"
+        ]
+      },
+      {
+        "id": 28,
+        "title": "Luxury King Bed Set",
+        "price": [95000, 120000],
+        "images": [
+          "/images/products/bed-set-1-1.webp",
+          "/images/products/bed-set-1-2.webp"
+        ]
+      }
+    ]
+  }
+}
