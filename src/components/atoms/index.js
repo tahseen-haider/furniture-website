@@ -9,3 +9,4 @@ export { default as Icon } from './Icon';
 export { default as Underline } from './Underline';
 export { default as BWButton } from './BWButton';
 export { default as Divider } from './Divider';
+export { default as Price } from './Price';

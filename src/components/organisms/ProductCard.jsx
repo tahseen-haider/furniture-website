@@ -1,23 +1,12 @@
 import PropTypes from 'prop-types';
-import { Paragraph, Heading, Image } from '@components';
+import { Paragraph, Heading, Image, Price } from '@components';
+import { slugify } from '@utils';
 import { Link } from 'react-router-dom';
 import { Plus } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
-  const { id, title, price, priceRange, images } = product;
+  const { id, title, price, images } = product;
 
-  function slugify(title) {
-    if (!title) return;
-    return title
-      .toString()
-      .trim()
-      .toLowerCase()
-      .replace(/&/g, 'and')
-      .replace(/[\s\_]+/g, '-')
-      .replace(/[^\w\-]+/g, '')
-      .replace(/\-\-+/g, '-')
-      .replace(/^-+|-+$/g, '');
-  }
   const slug = slugify(title);
 
   return (
@@ -44,7 +33,9 @@ const ProductCard = ({ product }) => {
         <Heading level={3} variant="title" maxChars={38}>
           {title}
         </Heading>
-        <Paragraph variant="H">Rs. {price ?? priceRange}</Paragraph>
+        <Paragraph variant="H">
+          <Price amount={price} />
+        </Paragraph>
       </div>
     </Link>
   );
