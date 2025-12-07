@@ -1,3 +1,5 @@
+import { currencySymbols, exchangeRates } from '@config';
+
 export const rebounce = (fn, delay = 300) => {
   let timeoutId;
 
@@ -20,30 +22,6 @@ export const slugify = (title) => {
     .replace(/[^\w\-]+/g, '')
     .replace(/\-\-+/g, '-')
     .replace(/^-+|-+$/g, '');
-};
-
-export const currencyOptions = [
-  { code: 'PKR', name: 'Pakistan Rupee', flag: '🇵🇰' },
-  { code: 'USD', name: 'US Dollar', flag: '🇺🇸' },
-  { code: 'GBP', name: 'British Pound', flag: '🇬🇧' },
-  { code: 'CAD', name: 'Canadian Dollar', flag: '🇨🇦' },
-  { code: 'EUR', name: 'Euro', flag: '🇪🇺' },
-];
-
-export const currencySymbols = {
-  PKR: 'Rs.',
-  USD: '$',
-  GBP: '£',
-  CAD: 'C$',
-  EUR: '€',
-};
-
-export const exchangeRates = {
-  PKR: 1,
-  USD: 0.0036,
-  GBP: 0.0029,
-  CAD: 0.0047,
-  EUR: 0.0033,
 };
 
 export const formatNumber = (num, locale = 'en') => Number(num).toLocaleString(locale);

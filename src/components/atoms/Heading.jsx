@@ -4,7 +4,9 @@ import { Underline } from '@components';
 const variants = {
   primary: 'text-4xl lg:text-5xl leading-16 font-bold',
   secondary: 'text-4xl lg:text-5xl font-normal',
+  secondaryBold: 'text-3xl lg:text-4xl font-medium',
   tertiary: 'text-xl md:text-2xl font-semibold',
+  medium: 'text-xl font-semibold',
   title: 'text-base font-semibold',
 };
 

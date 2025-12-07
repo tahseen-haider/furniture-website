@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { SidebarFilterBox } from '@components';
+import { Expandable } from '@components';
 import { rebounce } from '@utils';
 
 const PriceFilter = ({ filters, setParams }) => {
@@ -20,7 +20,7 @@ const PriceFilter = ({ filters, setParams }) => {
   }, [min, max]);
 
   return (
-    <SidebarFilterBox title="Price">
+    <Expandable title="Price">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <div className="flex flex-col w-full">
@@ -46,7 +46,7 @@ const PriceFilter = ({ filters, setParams }) => {
           </div>
         </div>
       </div>
-    </SidebarFilterBox>
+    </Expandable>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useGlobal } from '@contexts';
-import { currencyOptions } from '@utils';
+import { currencyOptions } from '@config';
+import { Divider } from '@components';
 
 const CurrencySwitcher = () => {
   const { state, updateState } = useGlobal();
@@ -22,9 +23,9 @@ const CurrencySwitcher = () => {
     <div className="fixed bottom-8 left-8 z-40" ref={ref}>
       <button
         onClick={() => setOpen((p) => !p)}
-        className="flex items-center gap-2 border border-gray-400 px-3 py-1.5 rounded shadow-sm bg-white hover:bg-gray-300 transition text-sm cursor-pointer"
+        className="flex items-center gap-2 border border-gray-300 px-2 py-1 rounded bg-white hover:bg-gray-300 transition text-sm cursor-pointer shadow-[0_0_8px_rgb(255,255,255)]"
       >
-        <span className="text-lg">{current.flag}</span>
+        <span className="text-lg">{current?.flag}</span>
         <span className="font-medium">{current.code}</span>
         <span
           className={`text-gray-500 text-lg transition-all duration-300 ${open ? '-rotate-90' : 'rotate-90'}`}
@@ -35,30 +36,35 @@ const CurrencySwitcher = () => {
         <div
           className="
             absolute bottom-full mb-2 
-            left-full -translate-x-1/2 
-            w-48 bg-white rounded shadow-lg border border-gray-400
-            z-50 animate-fade-up
+            left-0
+            w-48 bg-white shadow-lg border border-gray-300
+            z-40 animate-fade-up rounded
           "
         >
           {currencyOptions.map((item) => (
-            <button
-              key={item.code}
-              onClick={() => {
-                updateState('currency', item.code);
-                setOpen(false);
-              }}
-              className="
-                flex items-center gap-2 w-full
-                px-2 py-2 rounded text-sm
-                hover:bg-gray-300 transition cursor-pointer
-              "
-            >
-              <span className="text-lg">{item.flag}</span>
-              <div className="flex flex-col text-left">
-                <span className="font-medium">{item.name}</span>
-                <span className="text-xs text-gray-500">({item.code})</span>
-              </div>
-            </button>
+            <>
+              <button
+                key={item.code}
+                onClick={() => {
+                  if (item.code === current?.code) return;
+                  updateState('currency', item.code);
+                  setOpen(false);
+                }}
+                className={`
+                  ${item?.code === current?.code ? 'bg-gray-300' : ''}
+                  flex items-center gap-2 w-full
+                  px-2 py-2 text-sm
+                  hover:bg-gray-200 transition cursor-pointer
+                `}
+              >
+                <span className="text-lg">{item?.flag}</span>
+                <div className="flex flex-col text-left">
+                  <span className="font-medium">{item.name}</span>
+                  <span className="text-xs text-gray-500">({item.code})</span>
+                </div>
+              </button>
+              <Divider />
+            </>
           ))}
         </div>
       )}
