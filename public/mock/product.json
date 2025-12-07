@@ -1,149 +1,130 @@
 {
   "product": {
     "id": 15,
-    "title": "Indoor Wooden Swing",
-    "slug": "indoor-wooden-swing",
-    "categories": ["Swings", "Furniture"],
-    "generalCategory": "Furniture",
+    "title": "Luxury King Bed Set",
+    "price": [95000, 120000],
+    "slug": "luxury-king-bed-set",
+    "categories": ["Beds"],
+    "generalCategory": "Home Decor",
+    "vendor": "Vendor Name",
 
-    "description": "Suspended indoor swing with premium cushioning and hand-crafted solid wood build. Includes premium ropes and mounting hardware.",
+    "description": "Premium king-size bed crafted from solid Sheesham wood. Includes comfortable mattress, soft cushioning, and durable frame for long-lasting use.",
     "features": [
-      "Hand-carved Sheesham wood",
-      "Premium soft cushioning",
-      "Durable mounting chain",
-      "Suitable for indoor & covered outdoor use"
+      "Hand-carved Sheesham wood frame",
+      "Premium mattress with soft cushioning",
+      "Sturdy headboard and footboard",
+      "Suitable for master bedroom use"
     ],
 
     "images": [
-      "/images/products/swing-1.webp",
-      "/images/products/swing-2.webp",
-      "/images/products/swing-3.webp",
-      "/images/products/swing-4.webp",
-      "/images/products/swing-5.webp"
+      "https://m.media-amazon.com/images/I/81sPXy691%2BL._AC_SL1500_.jpg",
+      "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1764499845516-2608332c5ebe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1733514432866-6ca2ad63cc3f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1733514432845-728bac382e12?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
 
     "freeShipping": true,
     "available": "in",
-    "sold": 29,
+    "sold": 34,
     "createdAt": "2025-01-16",
 
     "variants": [
       {
-        "id": "SWING-STD",
-        "title": "Standard Size",
-        "price": 45000,
-        "compareAt": 52000,
-        "images": [
-          "/images/products/swing-std-1.webp",
-          "/images/products/swing-std-2.webp"
-        ],
-        "stock": "in"
+        "id": "BED-STD",
+        "title": "Standard King Size",
+        "price": 95000
       },
       {
-        "id": "SWING-LRG",
-        "title": "Large Size",
-        "price": 60000,
-        "compareAt": 68000,
-        "images": [
-          "/images/products/swing-large-1.webp",
-          "/images/products/swing-large-2.webp"
-        ],
-        "stock": "in"
+        "id": "BED-LRG",
+        "title": "Premium King Size",
+        "price": 120000
       }
     ],
 
     "buyTogether": [
       {
         "id": 101,
-        "title": "Cushion Set for Swing (Pack of 4)",
-        "price": 4200,
+        "title": "Premium Bed Linen Set",
+        "price": 8500,
         "images": [
-          "/images/products/cushions-1.webp",
-          "/images/products/cushions-2.webp"
+          "https://plus.unsplash.com/premium_photo-1733514432866-6ca2ad63cc3f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://plus.unsplash.com/premium_photo-1733514432845-728bac382e12?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]
       },
       {
         "id": 102,
-        "title": "Decorative Hanging Plant",
-        "price": 2500,
+        "title": "Memory Foam Pillows (Pack of 2)",
+        "price": 4500,
         "images": [
-          "/images/products/plant-1.webp",
-          "/images/products/plant-2.webp"
+          "https://plus.unsplash.com/premium_photo-1764499845516-2608332c5ebe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]
       }
     ],
 
     "relatedProducts": [
       {
-        "id": 21,
-        "title": "Classic Wooden Chest",
-        "price": 54000,
-        "images": [
-          "/images/products/chest-1.webp",
-          "/images/products/chest-2.webp"
-        ]
-      },
-      {
-        "id": 22,
-        "title": "Antique Mirror Frame",
-        "price": [14000, 18000],
-        "images": [
-          "/images/products/mirror-1.webp",
-          "/images/products/mirror-2.webp"
-        ]
-      },
-      {
-        "id": 23,
-        "title": "Luxury Home Decor Bundle",
-        "price": [12000, 20000],
-        "images": [
-          "/images/products/decor-1.webp",
-          "/images/products/decor-2.webp"
-        ]
-      },
-      {
-        "id": 24,
-        "title": "Classic Table Lamp",
-        "price": 6500,
-        "images": [
-          "/images/products/table-lamp-1.webp",
-          "/images/products/table-lamp-2.webp"
-        ]
-      },
-      {
-        "id": 25,
-        "title": "Modern Dining Table 6-Seater",
-        "price": 68000,
-        "images": [
-          "/images/products/dining-6-1.webp",
-          "/images/products/dining-6-2.webp"
-        ]
-      },
-      {
-        "id": 26,
-        "title": "Premium Sofa Set (3+2+1)",
-        "price": [150000, 190000],
-        "images": [
-          "/images/products/sofa-1.webp",
-          "/images/products/sofa-2.webp"
-        ]
-      },
-      {
-        "id": 27,
+        "id": 5,
         "title": "Golden Console with Mirror Frame",
         "price": [38000, 52000],
         "images": [
-          "/images/products/console-frame-1.webp",
-          "/images/products/console-frame-2.webp"
+          "https://plus.unsplash.com/premium_photo-1664391898455-1f0440785804?q=80&w=835&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://plus.unsplash.com/premium_photo-1733514692259-57cdff0a750f?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]
       },
       {
-        "id": 28,
-        "title": "Luxury King Bed Set",
-        "price": [95000, 120000],
+        "id": 6,
+        "title": "Ceramic Indoor Planter Set",
+        "price": 3200,
         "images": [
-          "/images/products/bed-set-1-1.webp",
-          "/images/products/bed-set-1-2.webp"
+          "https://plus.unsplash.com/premium_photo-1673969608223-4e9bce1e700c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://plus.unsplash.com/premium_photo-1674237294437-01239c443bed?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Luxury Home Decor Bundle",
+        "price": [12000, 20000],
+        "images": [
+          "https://images.pexels.com/photos/279648/pexels-photo-279648.jpeg",
+          "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Classic Wooden Chest",
+        "price": 54000,
+        "images": [
+          "https://images.unsplash.com/photo-1658081973932-faaca64ecfd2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1728939862876-1c7e36d9cdfa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Antique Mirror Frame",
+        "price": [14000, 18000],
+        "images": [
+          "https://images.unsplash.com/photo-1688650963441-a4ce8fa08d50?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1612392549386-b6969764af6f?q=80&w=428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Minimal Table Decor Set",
+        "price": 3500,
+        "images": [
+          "https://plus.unsplash.com/premium_photo-1671718840234-37e7c6c5001c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://plus.unsplash.com/premium_photo-1676838259090-81b78f1c5d11?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "LED Standing Floor Lamp",
+        "price": [9000, 14000],
+        "images": [
+          "https://images.unsplash.com/photo-1673939859210-23d8444237ff?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1600421684846-e7ebc943403b?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]
       }
     ]

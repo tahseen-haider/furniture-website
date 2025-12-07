@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SidebarFilterBox } from '@components';
+import { Expandable } from '@components';
 
 const AvailabilityFilter = ({ filters, setParams }) => {
   const [selected, setSelected] = useState(filters?.available);
@@ -19,7 +19,7 @@ const AvailabilityFilter = ({ filters, setParams }) => {
   };
 
   return (
-    <SidebarFilterBox title="Availability">
+    <Expandable title="Availability">
       <div className="flex flex-col gap-4">
         {options.map((opt) => (
           <label
@@ -46,7 +46,7 @@ const AvailabilityFilter = ({ filters, setParams }) => {
           </label>
         ))}
       </div>
-    </SidebarFilterBox>
+    </Expandable>
   );
 };
 

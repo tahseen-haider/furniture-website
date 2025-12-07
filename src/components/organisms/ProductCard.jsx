@@ -3,28 +3,51 @@ import { Paragraph, Heading, Image, Price } from '@components';
 import { slugify } from '@utils';
 import { Link } from 'react-router-dom';
 import { Plus } from 'lucide-react';
+import { useState } from 'react';
 
 const ProductCard = ({ product }) => {
+  if (!product?.id) return;
   const { id, title, price, images } = product;
+
+  const [hovered, setHovered] = useState(false);
 
   const slug = slugify(title);
 
   return (
     <Link
       to={`/product/${id}/${slug}`}
-      className="overflow-hidden w-full aspect-3/4 flex flex-col gap-3 cursor-pointer group rounded "
+      className="overflow-hidden w-full flex flex-col gap-3 cursor-pointer group rounded "
     >
-      <div className="relative flex-1">
-        <Image src={`${images[0]}`} alt="product-image" className="object-cover h-full" />
+      <div
+        className="relative w-full aspect-3/4"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
+        <Image
+          src={images[0]}
+          alt="product-image-1"
+          className={`object-cover w-full h-full absolute top-0 left-0 transition-opacity duration-500 ${
+            hovered ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
+        {images[1] && (
+          <Image
+            src={images[1]}
+            alt="product-image-2"
+            className={`object-cover w-full h-full absolute top-0 left-0 transition-opacity duration-500 ${
+              hovered ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        )}
         <button
           onClickCapture={(e) => {
             e.preventDefault();
             e.stopPropagation();
           }}
           className="absolute right-2 bottom-2 p-3 
-          bg-gray-950 text-white cursor-pointer opacity-0 pointer-events-none rounded
-          group-hover:opacity-80 group-hover:pointer-events-auto hover:opacity-100
-          transition-opacity duration-300"
+            bg-gray-950 text-white cursor-pointer opacity-0 pointer-events-none rounded
+            group-hover:opacity-80 group-hover:pointer-events-auto hover:opacity-100
+            transition-opacity duration-300"
         >
           <Plus />
         </button>

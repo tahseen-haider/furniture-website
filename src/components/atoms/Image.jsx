@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const Image = ({ src, alt, className = '' }) => {
-  const [imgSrc, setImgSrc] = useState(src);
+const Image = ({ src, alt, className = '', ...props }) => {
+  const [fallback, setFallback] = useState(false);
 
   return (
     <img
-      src={imgSrc || '/images/placeholder.jpg'}
+      {...props}
+      src={fallback ? '/images/placeholder.jpg' : src}
       alt={alt}
-      className={className}
-      onError={() => {
-        setImgSrc('/images/placeholder.jpg');
-      }}
+      className={`${className} object-cover`}
+      onError={() => setFallback(true)}
     />
   );
 };

@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { Paragraph } from '@components';
 
-const SidebarFilterBox = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+const Expandable = ({ title, defaultClose = false, className, children }) => {
+  const [isOpen, setIsOpen] = useState(!defaultClose);
   const contentRef = useRef(null);
   const [maxHeight, setMaxHeight] = useState('0px');
 
@@ -15,7 +15,7 @@ const SidebarFilterBox = ({ title, children }) => {
   }, [isOpen, children]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className={`flex flex-col gap-4 ${className}`}>
       <div className="flex justify-between cursor-pointer group w-full" onClick={toggleOpen}>
         <Paragraph variant="D" underline="center">
           {title}
@@ -40,4 +40,4 @@ const SidebarFilterBox = ({ title, children }) => {
   );
 };
 
-export default SidebarFilterBox;
+export default Expandable;

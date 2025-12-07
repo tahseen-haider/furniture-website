@@ -12,18 +12,19 @@ const variants = {
   H: 'font-normal text-sm sm:text-base leading-base',
 };
 
-const Paragraph = ({ children, className = '', underline, variant = 'A', maxChars }) => {
+const Paragraph = ({ children, className = '', underline, variant = 'A', maxChars, ...props }) => {
   const underlineEnabled = Boolean(underline);
   let text = children;
+  if (!text) return;
 
   if (typeof maxChars === 'number' && text.length > maxChars) {
     text = text.slice(0, maxChars).trimEnd() + '...';
   }
 
   return (
-    <p className={`${variants[variant]} ${className} text-`}>
-      <span className="relative inline-block">
-        {children}
+    <p className={`${variants[variant]} whitespace-pre-line ${className}`} {...props}>
+      <span className="relative inline-block group">
+        {text}
         {underlineEnabled && <Underline direction={underline} />}
       </span>
     </p>

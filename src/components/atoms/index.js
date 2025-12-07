@@ -10,3 +10,5 @@ export { default as Underline } from './Underline';
 export { default as BWButton } from './BWButton';
 export { default as Divider } from './Divider';
 export { default as Price } from './Price';
+export { default as Breadcrumb } from './Breadcrumb';
+export { default as QuantitySelector } from './QuantitySelector';

@@ -1,6 +1,5 @@
-import { Header, Footer } from '@components';
+import { Header, Footer, CurrencySwitcher } from '@components';
 import { Outlet } from 'react-router-dom';
-import CurrencySwitcher from '../components/organisms/CurrencySwitcher';
 
 const MainLayout = () => {
   return (
