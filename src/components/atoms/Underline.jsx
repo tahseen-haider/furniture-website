@@ -7,13 +7,25 @@ const underlineOrigin = {
 };
 
 const Underline = ({ direction = 'left', thickness = '1px', className = '' }) => {
+  const isInverse = direction.includes('inverse');
+
+  const pureDirection = direction.replace('-inverse', '');
+
+  // animation logic
+  const base = isInverse
+    ? 'scale-x-100 opacity-100'
+    : 'scale-x-0 opacity-10 group-hover:opacity-100';
+  const hover = isInverse ? 'group-hover:scale-x-[0.2]' : 'group-hover:scale-x-100';
+
   return (
     <span
       className={`
         absolute left-0 bottom-0 w-full bg-current
-        scale-x-0 transition-all duration-400 ease-out
-        group-hover:scale-x-100  opacity-10 group-hover:opacity-100
-        ${underlineOrigin[direction]}
+        transform transition-all duration-300 ease-out
+        ${base}
+        ${hover}
+        
+        ${underlineOrigin[pureDirection]}
         ${className}
       `}
       style={{ height: thickness }}
@@ -22,7 +34,14 @@ const Underline = ({ direction = 'left', thickness = '1px', className = '' }) =>
 };
 
 Underline.propTypes = {
-  direction: PropTypes.oneOf(['left', 'center', 'right']),
+  direction: PropTypes.oneOf([
+    'left',
+    'center',
+    'right',
+    'left-inverse',
+    'center-inverse',
+    'right-inverse',
+  ]),
   thickness: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,
 };

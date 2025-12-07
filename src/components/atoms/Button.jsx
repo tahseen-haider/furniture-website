@@ -1,11 +1,15 @@
 import PropTypes from 'prop-types';
 
-const Button = ({ children, className = '', rounded = false, ...props }) => {
+const Button = ({ children, className = '', rounded = false, secondary = false, ...props }) => {
   return (
     <button
-      className={`cursor-pointer px-12 min-h-16 ${
-        rounded ? 'rounded-full' : 'rounded'
-      } text-lg font-bold bg-(--color-brand-primary) max-w-fit ${className}`}
+      className={`cursor-pointer px-12 ${rounded ? 'rounded-full' : 'rounded'}
+      ${
+        secondary
+          ? 'text-base font-normal max-w-none bg-(--color-brand-secondary) min-h-11'
+          : 'text-lg font-bold bg-(--color-brand-primary) max-w-fit min-h-16'
+      } text-white 
+        ${className}`}
       {...props}
     >
       {children}

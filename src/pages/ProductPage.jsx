@@ -1,18 +1,29 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { productAPI } from '@services';
+import { ProductPageTemplate } from '@templates';
 
 const ProductPage = () => {
-  const [details, setDetails] = useState(null);
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { productId } = useParams();
 
   useEffect(() => {
-    productAPI.fetchById(productId).then((res) => {
-      setDetails(res?.product);
-    });
-  }, []);
+    setLoading(true);
+    productAPI
+      .fetchById(productId)
+      .then((res) => {
+        setProduct(res?.product);
+      })
+      .catch(() => {
+        setProduct(null);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [productId]);
 
-  return <div>ProductPage</div>;
+  return <ProductPageTemplate product={product} loading={loading} />;
 };
 
 export default ProductPage;
