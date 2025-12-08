@@ -65,7 +65,7 @@ const ProductPageTemplate = ({ product, loading }) => {
       >
         <ProductHeaderOnScroll product={selectedProduct} />
       </div>
-      <div className="max-w-480 w-full p-2 lg:p-8 flex flex-col gap-4 relative">
+      <div className="max-w-480 w-full py-4 px-2 lg:px-8 flex flex-col gap-4 relative">
         <ProductNavbar
           loading={loading}
           category={product?.generalCategory}
