@@ -30,7 +30,7 @@ const ProductDetails = ({ product }) => {
         </Expandable>
         <Divider />
       </div>
-      <div className="w-full md:w-1/2 grid grid-cols-2 gap-8">
+      <div className="w-full md:w-1/2 grid grid-cols-2 gap-2 md:gap-8">
         {buyTogether?.map((prod, i) => (
           <ProductCard key={i} product={prod} />
         ))}

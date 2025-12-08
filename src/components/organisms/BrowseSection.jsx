@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BrowseImageCards, CentralHeading } from '@components';
+import { BrowseImageCards, CentralHeading, Divider } from '@components';
 
 const BrowseSection = ({ title, description }) => {
   const cards = [
@@ -18,10 +18,13 @@ const BrowseSection = ({ title, description }) => {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center gap-4 py-14 px-4 md:px-14 border-b-2 border-gray-200">
-      <CentralHeading title={title} description={description} />
-      <BrowseImageCards cards={cards} />
-    </div>
+    <>
+      <div className="flex flex-col items-center text-center gap-4 py-14 px-4 md:px-14">
+        <CentralHeading title={title} description={description} />
+        <BrowseImageCards cards={cards} />
+      </div>
+      <Divider />
+    </>
   );
 };
 

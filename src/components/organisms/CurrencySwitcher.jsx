@@ -20,7 +20,7 @@ const CurrencySwitcher = () => {
   const current = currencyOptions.find((c) => c.code === state.currency);
 
   return (
-    <div className="fixed bottom-8 left-8 z-40" ref={ref}>
+    <div className="fixed bottom-4 sm:bottom-8 left-8 z-40" ref={ref}>
       <button
         onClick={() => setOpen((p) => !p)}
         className="flex items-center gap-2 border border-gray-300 px-2 py-1 rounded bg-white hover:bg-gray-300 transition text-sm cursor-pointer shadow-[0_0_8px_rgb(255,255,255)]"
