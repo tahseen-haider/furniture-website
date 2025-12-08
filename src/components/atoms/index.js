@@ -12,3 +12,4 @@ export { default as Divider } from './Divider';
 export { default as Price } from './Price';
 export { default as Breadcrumb } from './Breadcrumb';
 export { default as QuantitySelector } from './QuantitySelector';
+export { default as AddToCartButton } from './AddToCartButton';

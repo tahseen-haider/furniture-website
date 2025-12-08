@@ -1,24 +1,37 @@
+const variants = {
+  text: 'h-11 w-full',
+  icon: `w-11 h-11 p-1 sm:p-2 
+         bg-gray-950 text-white cursor-pointer opacity-0 pointer-events-none
+         group-hover:opacity-80 group-hover:pointer-events-auto hover:opacity-100
+         transition-opacity duration-300 flex justify-center items-center`,
+};
+
 const BWButton = ({
   text = 'Button',
+  icon,
   className = '',
   onClick = () => {},
   variant = 'black',
+  type = 'text',
   ...props
 }) => {
+  const variantClasses =
+    variant === 'black'
+      ? 'text-white border border-black hover:bg-white hover:text-black bg-black'
+      : 'text-black border border-black hover:bg-black hover:text-white bg-white';
+
   return (
     <button
       {...props}
       onClick={onClick}
       className={`
-        ${className} ${
-          variant === 'black'
-            ? 'bg-(--color-text-dark) hover:bg-(--color-text-inverse) text-(--color-text-inverse) hover:text-(--color-text-dark) border border-(--color-text-dark)'
-            : 'bg-(--color-text-inverse) hover:bg-(--color-text-dark) text-(--color-text-dark) hover:text-(--color-text-inverse) border border-(--color-text-dark)'
-        }
-        w-full cursor-pointer h-11 font-normal text-[12px] transition-colors duration-300 select-none
+        ${variantClasses}
+        cursor-pointer font-normal text-[12px] transition-colors duration-300 select-none
+        ${type === 'icon' ? variants.icon : variants.text}
+        ${className}
       `}
     >
-      {text}
+      {type === 'text' ? text : icon}
     </button>
   );
 };

@@ -4,21 +4,31 @@ import {
   Price,
   Divider,
   Paragraph,
-  BWButton,
+  AddToCartButton,
   QuantitySelector,
   Button,
   ProductDisplayDetailsSkeleton,
 } from '@components';
 import { useState } from 'react';
 
-const ProductDisplayDetails = ({ product, loading }) => {
+const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProduct }) => {
   if (loading) return <ProductDisplayDetailsSkeleton />;
 
   const { vendor, title, price, id, description, features, variants, freeShipping } = product;
 
   const [openDetails, setOpenDetails] = useState(false);
-  const [selectedVariant, setSelectedVariant] = useState({});
   const [quantity, setQuantity] = useState(1);
+
+  const handleVariantSelect = (variant) => {
+    onVariantChange?.({
+      productId: product.id,
+      variantId: variant?.id || null,
+      title: product.title,
+      variantTitle: variant?.title || null,
+      price: variant?.price || product.price,
+      image: product.images?.[0],
+    });
+  };
 
   return (
     <div className="w-full md:w-2/5 relative md:sticky top-0 md:top-20 flex flex-col gap-4 lg:gap-6">
@@ -31,7 +41,7 @@ const ProductDisplayDetails = ({ product, loading }) => {
           {title}
         </Heading>
         <div className="flex flex-col lg:flex-row gap-1 lg:gap-4 items-start lg:items-center">
-          <Price amount={selectedVariant?.price || price} />{' '}
+          <Price amount={selectedProduct?.price || price} />{' '}
           <span className="text-xs">SHIPPING CALCULATED AT CHECKOUT.</span>
         </div>
         <div className="p-1 px-2 bg-gray-200 w-fit"># {id}</div>
@@ -76,7 +86,7 @@ const ProductDisplayDetails = ({ product, loading }) => {
               SELECTED VARIANT:{' '}
             </Paragraph>{' '}
             <Paragraph variant="H" className="inline font-semibold! ml-2">
-              {selectedVariant?.title || 'N/A'}
+              {selectedProduct?.variantTitle || 'N/A'}
             </Paragraph>
           </div>
 
@@ -85,9 +95,9 @@ const ProductDisplayDetails = ({ product, loading }) => {
               <div
                 key={i}
                 className={`
-                    p-1 px-2 border cursor-pointer 
-                    ${selectedVariant?.title === variant?.title ? 'border-gray-900' : 'border-gray-300'}`}
-                onClick={() => setSelectedVariant(variant)}
+                p-1 px-2 border cursor-pointer 
+                    ${selectedProduct?.variantTitle === variant?.title ? 'border-gray-900' : 'border-gray-300'}`}
+                onClick={() => handleVariantSelect(variant)}
               >
                 {variant?.title}
               </div>
@@ -101,7 +111,7 @@ const ProductDisplayDetails = ({ product, loading }) => {
           <QuantitySelector quantity={quantity} setQuantity={setQuantity} />
         </div>
         <div className="w-full">
-          <BWButton text="ADD TO CART" onClick={() => {}} />
+          <AddToCartButton product={selectedProduct} quantity={quantity} />
         </div>
       </div>
 

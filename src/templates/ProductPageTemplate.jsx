@@ -11,6 +11,29 @@ const ProductPageTemplate = ({ product, loading }) => {
   const detailsRef = useRef(null);
   const [showHeader, setShowHeader] = useState(false);
 
+  const [selectedProduct, setSelectedProduct] = useState({
+    productId: null,
+    variantId: null,
+    title: '',
+    variantTitle: null,
+    price: 0,
+    image: '',
+  });
+
+  useEffect(() => {
+    if (product) {
+      const firstVariant = product.variants?.[0] || null;
+      setSelectedProduct({
+        productId: product.id,
+        variantId: firstVariant?.id || null,
+        title: product.title,
+        variantTitle: firstVariant?.title || null,
+        price: firstVariant?.price || product.price,
+        image: firstVariant?.image || product.images?.[0] || '',
+      });
+    }
+  }, [product]);
+
   useEffect(() => {
     if (!detailsRef.current) return;
 
@@ -32,16 +55,6 @@ const ProductPageTemplate = ({ product, loading }) => {
     return () => observer.disconnect();
   }, []);
 
-  const headerProduct = useMemo(
-    () => ({
-      id: product?.id,
-      title: product?.title,
-      price: product?.price,
-      image: product?.images?.[0],
-    }),
-    [product]
-  );
-
   return (
     <main className="flex flex-col w-full bg-(--color-surface-300) items-center">
       <div
@@ -50,7 +63,7 @@ const ProductPageTemplate = ({ product, loading }) => {
           ${showHeader ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10 pointer-events-none'}
         `}
       >
-        <ProductHeaderOnScroll product={headerProduct} />
+        <ProductHeaderOnScroll product={selectedProduct} />
       </div>
       <div className="max-w-480 w-full p-2 lg:p-8 flex flex-col gap-4 relative">
         <ProductNavbar
@@ -58,7 +71,13 @@ const ProductPageTemplate = ({ product, loading }) => {
           category={product?.generalCategory}
           productName={product?.title}
         />
-        <ProductDisplay loading={loading} product={product} />
+        <ProductDisplay
+          loading={loading}
+          product={product}
+          onVariantChange={setSelectedProduct}
+          selectedProduct={selectedProduct}
+        />
+
         <div ref={detailsRef}>
           <div className="mt-12">
             <ProductDetails product={product} />
