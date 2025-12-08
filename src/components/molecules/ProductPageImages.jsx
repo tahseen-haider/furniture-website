@@ -7,7 +7,7 @@ const ProductPageImages = ({ images, loading }) => {
 
   if (!images || !Array.isArray(images) || images.length === 0) {
     return (
-      <div className="relative md:sticky top-0 md:top-30 h-fit md:h-[calc(100vh-4rem)] lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex items-center justify-center">
+      <div className="relative md:sticky top-0 md:top-26 h-fit md:h-[calc(100vh-4rem)] lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex items-center justify-center">
         <div className="text-center w-full h-full">
           <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
             No images available
@@ -102,7 +102,7 @@ const ProductPageImages = ({ images, loading }) => {
 
   return (
     <>
-      <div className="relative md:sticky top-0 md:top-30 h-fit md:h-[calc(100vh-4rem)] lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex flex-col-reverse lg:flex-row gap-4">
+      <div className="relative md:sticky top-0 md:top-26 h-fit md:h-[calc(100vh-4rem)] lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex flex-col-reverse lg:flex-row gap-4">
         <div
           className="
             flex flex-row lg:flex-col gap-4
@@ -153,11 +153,11 @@ const ProductPageImages = ({ images, loading }) => {
 
       {isFullScreen && (
         <div
-          className="fixed inset-0 bg-(--color-surface-300)/90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-(--color-surface-300)/90 z-50 flex items-center justify-center p-1 md:p-4"
           onClick={closeFullScreen}
         >
           <div
-            className="relative flex items-center justify-center h-full"
+            className="relative flex items-center justify-center h-fit md:h-full w-full md:w-fit"
             onClick={(e) => e.stopPropagation()}
           >
             <div

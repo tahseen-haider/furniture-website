@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Underline } from '@components';
 
 const variants = {
-  primary: 'text-4xl lg:text-5xl leading-16 font-bold',
+  primary: 'text-4xl lg:text-5xl leading-10 lg:leading-16 font-bold',
   secondary: 'text-4xl lg:text-5xl font-normal',
   secondaryBold: 'text-3xl lg:text-4xl font-medium',
   tertiary: 'text-xl md:text-2xl font-semibold',
