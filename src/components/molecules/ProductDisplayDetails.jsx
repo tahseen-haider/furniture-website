@@ -60,7 +60,9 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
                 <span className="">Features:</span>{' '}
                 <div className="ml-4">
                   {features.map((feat, i) => (
-                    <Paragraph variant="H">- {feat}</Paragraph>
+                    <Paragraph key={i} variant="H">
+                      - {feat}
+                    </Paragraph>
                   ))}
                 </div>
               </div>

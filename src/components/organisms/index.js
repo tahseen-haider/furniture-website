@@ -13,3 +13,4 @@ export { default as ProductDisplay } from './ProductDisplay';
 export { default as ProductsCarousal } from './ProductsCarousal';
 export { default as ProductHeaderOnScroll } from './ProductHeaderOnScroll';
 export { default as CurrencySwitcher } from './CurrencySwitcher';
+export { default as CartSidebar } from './CartSidebar';

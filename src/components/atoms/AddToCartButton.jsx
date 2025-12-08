@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { BWButton } from '@components';
 import { Plus } from 'lucide-react';
+import { openCart } from '@store';
+import { useDispatch } from 'react-redux';
 
 const AddToCartButton = ({
   type = 'text',
@@ -9,6 +11,8 @@ const AddToCartButton = ({
   className = '',
   ...props
 }) => {
+  const dispatch = useDispatch();
+
   return (
     <BWButton
       type={type}
@@ -17,6 +21,7 @@ const AddToCartButton = ({
       onClick={(e) => {
         e.stopPropagation();
         e.preventDefault();
+        dispatch(openCart());
         console.log('Add to cart:', product);
         console.log('Quantity:', quantity);
       }}

@@ -102,7 +102,7 @@ const ProductPageImages = ({ images, loading }) => {
 
   return (
     <>
-      <div className="relative md:sticky top-0 md:top-26 h-fit md:h-[calc(100vh-4rem)] lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex flex-col-reverse lg:flex-row gap-4">
+      <div className="relative md:sticky top-0 md:top-26 h-fit lg:h-[calc(100vh-14rem)] w-full md:w-3/5 flex flex-col-reverse lg:flex-row gap-4">
         <div
           className="
             flex flex-row lg:flex-col gap-4

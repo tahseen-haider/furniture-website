@@ -1,10 +1,13 @@
 import { useState, useRef, useEffect } from 'react';
-import { useGlobal } from '@contexts';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrency } from '@store';
 import { currencyOptions } from '@config';
 import { Divider } from '@components';
 
 const CurrencySwitcher = () => {
-  const { state, updateState } = useGlobal();
+  const dispatch = useDispatch();
+  const currency = useSelector((state) => state.global.currency);
+
   const [open, setOpen] = useState(false);
 
   const ref = useRef();
@@ -17,7 +20,7 @@ const CurrencySwitcher = () => {
     return () => document.removeEventListener('click', onClick);
   }, []);
 
-  const current = currencyOptions.find((c) => c.code === state.currency);
+  const current = currencyOptions.find((c) => c.code === currency);
 
   return (
     <div className="fixed bottom-4 sm:bottom-8 left-8 z-40" ref={ref}>
@@ -41,13 +44,13 @@ const CurrencySwitcher = () => {
             z-40 animate-fade-up rounded
           "
         >
-          {currencyOptions.map((item) => (
-            <>
+          {currencyOptions.map((item, i) => (
+            <div key={item.code}>
               <button
                 key={item.code}
                 onClick={() => {
                   if (item.code === current?.code) return;
-                  updateState('currency', item.code);
+                  dispatch(setCurrency(item.code));
                   setOpen(false);
                 }}
                 className={`
@@ -64,7 +67,7 @@ const CurrencySwitcher = () => {
                 </div>
               </button>
               <Divider />
-            </>
+            </div>
           ))}
         </div>
       )}
