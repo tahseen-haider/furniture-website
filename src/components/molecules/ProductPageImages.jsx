@@ -157,7 +157,7 @@ const ProductPageImages = ({ images, loading }) => {
           onClick={closeFullScreen}
         >
           <div
-            className="relative flex items-center justify-center h-fit md:h-full w-full md:w-fit"
+            className="relative flex items-center justify-center h-fit sm:h-full w-full sm:w-fit"
             onClick={(e) => e.stopPropagation()}
           >
             <div

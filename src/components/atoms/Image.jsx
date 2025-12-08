@@ -1,24 +1,19 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-const Image = ({ src, alt, className = '', ...props }) => {
+const Image = ({ src, alt = 'alt text', className = '', ...props }) => {
   const [fallback, setFallback] = useState(false);
+
+  if (!src && !fallback) return null;
 
   return (
     <img
       {...props}
-      src={fallback ? '/images/placeholder.jpg' : src}
+      src={fallback || !src ? '/images/placeholder.jpg' : src}
       alt={alt}
       className={`${className} object-cover`}
       onError={() => setFallback(true)}
     />
   );
-};
-
-Image.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 export default Image;
