@@ -1,7 +1,7 @@
 const variants = {
   text: 'h-11 w-full',
   icon: `w-11 h-11 p-1 sm:p-2 
-         bg-gray-950 text-white cursor-pointer opacity-0 pointer-events-none
+         bg-gray-950 text-white cursor-pointer opacity-0 pointer-events-none rounded
          group-hover:opacity-80 group-hover:pointer-events-auto hover:opacity-100
          transition-opacity duration-300 flex justify-center items-center`,
 };

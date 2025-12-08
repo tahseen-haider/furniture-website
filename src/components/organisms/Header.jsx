@@ -1,4 +1,4 @@
-import { Logo, Navbar, Divider } from '@components';
+import { Logo, Navbar, Divider, CartBtn } from '@components';
 
 const Header = () => {
   const navLinks = [
@@ -11,13 +11,29 @@ const Header = () => {
 
   return (
     <>
-      <div className="h-20 md:h-26" />
+      <div className="h-20 lg:h-26" />
 
-      <header className="w-full h-20 md:h-26 bg-white fixed top-0 left-0 min-w-85 z-50">
-        <div className="w-full h-full px-4 md:px-16 max-w-480 flex gap-10 justify-between items-center mx-auto">
-          <Logo />
+      <header className="w-full h-20 lg:h-26 bg-white fixed top-0 left-0 min-w-85 z-50">
+        <div className="w-full h-full px-4 lg:px-16 max-w-480 flex gap-10 justify-between items-center mx-auto">
+          <div className="lg:hidden">
+            <Logo />
+          </div>
+          <div className="hidden lg:block">
+            <Logo />
+          </div>
 
-          <Navbar links={navLinks} />
+          <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
+            <Navbar links={navLinks} />
+          </div>
+
+          <div className="flex items-center gap-8 ml-auto lg:hidden">
+            <CartBtn />
+            <Navbar links={navLinks} />
+          </div>
+
+          <div className="hidden lg:flex items-center ml-auto">
+            <CartBtn />
+          </div>
         </div>
         <Divider />
       </header>
