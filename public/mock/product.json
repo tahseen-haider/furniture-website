@@ -50,6 +50,10 @@
         "images": [
           "https://plus.unsplash.com/premium_photo-1733514432866-6ca2ad63cc3f?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://plus.unsplash.com/premium_photo-1733514432845-728bac382e12?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "PREMIUM-BED-LINEN-SET-STD", "title": "Standard", "price": 8500 },
+          { "id": "PREMIUM-BED-LINEN-SET-LRG", "title": "Premium", "price": 9350 }
         ]
       },
       {
@@ -59,6 +63,10 @@
         "images": [
           "https://plus.unsplash.com/premium_photo-1764499845516-2608332c5ebe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "MEMORY-FOAM-PILLOWS-(PACK-OF-2)-STD", "title": "Standard", "price": 4500 },
+          { "id": "MEMORY-FOAM-PILLOWS-(PACK-OF-2)-LRG", "title": "Premium", "price": 4950 }
         ]
       }
     ],
@@ -71,6 +79,10 @@
         "images": [
           "https://plus.unsplash.com/premium_photo-1664391898455-1f0440785804?q=80&w=835&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://plus.unsplash.com/premium_photo-1733514692259-57cdff0a750f?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "GOLDEN-CONSOLE-WITH-MIRROR-FRAME-STD", "title": "Standard", "price": 38000 },
+          { "id": "GOLDEN-CONSOLE-WITH-MIRROR-FRAME-LRG", "title": "Premium", "price": 52000 }
         ]
       },
       {
@@ -80,6 +92,10 @@
         "images": [
           "https://plus.unsplash.com/premium_photo-1673969608223-4e9bce1e700c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://plus.unsplash.com/premium_photo-1674237294437-01239c443bed?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "CERAMIC-INDOOR-PLANTER-SET-STD", "title": "Standard", "price": 3200 },
+          { "id": "CERAMIC-INDOOR-PLANTER-SET-LRG", "title": "Premium", "price": 3520 }
         ]
       },
       {
@@ -89,6 +105,10 @@
         "images": [
           "https://images.pexels.com/photos/279648/pexels-photo-279648.jpeg",
           "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "LUXURY-HOME-DECOR-BUNDLE-STD", "title": "Standard", "price": 12000 },
+          { "id": "LUXURY-HOME-DECOR-BUNDLE-LRG", "title": "Premium", "price": 20000 }
         ]
       },
       {
@@ -98,6 +118,10 @@
         "images": [
           "https://images.unsplash.com/photo-1658081973932-faaca64ecfd2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://images.unsplash.com/photo-1728939862876-1c7e36d9cdfa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "CLASSIC-WOODEN-CHEST-STD", "title": "Standard", "price": 54000 },
+          { "id": "CLASSIC-WOODEN-CHEST-LRG", "title": "Premium", "price": 59400 }
         ]
       },
       {
@@ -107,6 +131,10 @@
         "images": [
           "https://images.unsplash.com/photo-1688650963441-a4ce8fa08d50?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://images.unsplash.com/photo-1612392549386-b6969764af6f?q=80&w=428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "ANTIQUE-MIRROR-FRAME-STD", "title": "Standard", "price": 14000 },
+          { "id": "ANTIQUE-MIRROR-FRAME-LRG", "title": "Premium", "price": 18000 }
         ]
       },
       {
@@ -116,6 +144,10 @@
         "images": [
           "https://plus.unsplash.com/premium_photo-1671718840234-37e7c6c5001c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://plus.unsplash.com/premium_photo-1676838259090-81b78f1c5d11?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "MINIMAL-TABLE-DECOR-SET-STD", "title": "Standard", "price": 3500 },
+          { "id": "MINIMAL-TABLE-DECOR-SET-LRG", "title": "Premium", "price": 3850 }
         ]
       },
       {
@@ -125,8 +157,13 @@
         "images": [
           "https://images.unsplash.com/photo-1673939859210-23d8444237ff?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           "https://images.unsplash.com/photo-1600421684846-e7ebc943403b?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "variants": [
+          { "id": "LED-STANDING-FLOOR-LAMP-STD", "title": "Standard", "price": 9000 },
+          { "id": "LED-STANDING-FLOOR-LAMP-LRG", "title": "Premium", "price": 14000 }
         ]
       }
     ]
+
   }
 }
