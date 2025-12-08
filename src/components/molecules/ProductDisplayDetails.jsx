@@ -21,7 +21,7 @@ const ProductDisplayDetails = ({ product, loading }) => {
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="w-full md:w-2/5 relative md:sticky top-0 md:top-20 flex flex-col gap-4 lg:gap-6 px-4 lg:px-0">
+    <div className="w-full md:w-2/5 relative md:sticky top-0 md:top-20 flex flex-col gap-4 lg:gap-6">
       <Link to="/collections" underline="center-inverse" className="font-base! w-fit">
         {vendor}
       </Link>
