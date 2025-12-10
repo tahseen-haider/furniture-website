@@ -1,6 +1,6 @@
 {
   "product": {
-    "id": 15,
+    "id": 1,
     "title": "Luxury King Bed Set",
     "price": [95000, 120000],
     "slug": "luxury-king-bed-set",
@@ -44,7 +44,7 @@
 
     "buyTogether": [
       {
-        "id": 101,
+        "id": 2,
         "title": "Premium Bed Linen Set",
         "price": 8500,
         "images": [
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "id": 102,
+        "id": 3,
         "title": "Memory Foam Pillows (Pack of 2)",
         "price": 4500,
         "images": [
@@ -73,7 +73,7 @@
 
     "relatedProducts": [
       {
-        "id": 5,
+        "id": 4,
         "title": "Golden Console with Mirror Frame",
         "price": [38000, 52000],
         "images": [
@@ -86,7 +86,7 @@
         ]
       },
       {
-        "id": 6,
+        "id": 5,
         "title": "Ceramic Indoor Planter Set",
         "price": 3200,
         "images": [
@@ -99,7 +99,7 @@
         ]
       },
       {
-        "id": 7,
+        "id": 6,
         "title": "Luxury Home Decor Bundle",
         "price": [12000, 20000],
         "images": [
@@ -112,7 +112,7 @@
         ]
       },
       {
-        "id": 8,
+        "id": 7,
         "title": "Classic Wooden Chest",
         "price": 54000,
         "images": [
@@ -125,7 +125,7 @@
         ]
       },
       {
-        "id": 9,
+        "id": 8,
         "title": "Antique Mirror Frame",
         "price": [14000, 18000],
         "images": [
@@ -138,7 +138,7 @@
         ]
       },
       {
-        "id": 10,
+        "id": 9,
         "title": "Minimal Table Decor Set",
         "price": 3500,
         "images": [
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "id": 11,
+        "id": 10,
         "title": "LED Standing Floor Lamp",
         "price": [9000, 14000],
         "images": [
