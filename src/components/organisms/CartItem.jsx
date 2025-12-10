@@ -12,6 +12,10 @@ const CartItem = ({ item }) => {
   const [selectedQuantity, setSelectedQuantity] = useState(quantity);
 
   useEffect(() => {
+    setSelectedQuantity(quantity);
+  }, [quantity]);
+
+  useEffect(() => {
     dispatch(updateQuantity({ id: variantId || productId, quantity: selectedQuantity }));
   }, [selectedQuantity]);
 

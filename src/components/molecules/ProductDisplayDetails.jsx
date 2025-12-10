@@ -12,7 +12,7 @@ import {
 import { useState } from 'react';
 
 const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProduct }) => {
-  if (loading) return <ProductDisplayDetailsSkeleton />;
+  if (loading || !product) return <ProductDisplayDetailsSkeleton />;
 
   const { vendor, title, price, id, description, features, variants, freeShipping } = product;
 
@@ -76,7 +76,7 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
         }}
         variant="H"
         underline="center-inverse"
-        className="cursor-pointer"
+        className="cursor-pointer w-fit"
       >
         READ MORE +
       </Paragraph>

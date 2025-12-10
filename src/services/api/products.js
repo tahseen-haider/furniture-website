@@ -1,4 +1,5 @@
-import { GET, POST, PUT, DELETE } from './';
+import { simulateDelay } from '@services';
+import { GET, POST, PUT, DELETE } from '@services/api';
 
 export const productAPI = {
   fetchAll: (params = {}) => {
@@ -11,5 +12,10 @@ export const productAPI = {
     return GET(`/products`);
   },
 
-  fetchById: (id) => GET(`/product`),
+  fetchById: (id) => {
+    if (id > 0 && id <= 10) {
+      return simulateDelay(GET(`/product/${id}`));
+    }
+    return GET(`/product/1`);
+  },
 };
