@@ -78,7 +78,7 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
         underline="center-inverse"
         className="cursor-pointer w-fit"
       >
-        READ MORE +
+        {!openDetails ? `READ MORE +` : `READ LESS -`}
       </Paragraph>
 
       {variants?.length > 0 && (
