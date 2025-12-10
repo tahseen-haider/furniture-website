@@ -115,7 +115,7 @@ const ProductPageImages = ({ images, loading }) => {
               key={i}
               className={`
                 cursor-pointer border-2 h-fit w-16 md:w-28 shrink-0
-                ${i === currentIndex ? 'border-black' : 'border-transparent'}
+                ${i === currentIndex ? 'border-gray-400' : 'border-transparent'}
               `}
               onClick={() => handleImageChange(i)}
             >
