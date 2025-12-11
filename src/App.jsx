@@ -2,8 +2,19 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { MainLayout } from '@templates';
 import { HomePage, ProductsListPage, CollectionPage, ProductPage, CheckoutPage } from '@pages';
 import { ScrollToTop } from '@components';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setCart } from '@store';
+import { loadCart } from '@utils';
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const loadedCart = loadCart() || {};
+    dispatch(setCart(loadedCart));
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />

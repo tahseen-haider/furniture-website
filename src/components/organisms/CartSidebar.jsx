@@ -2,10 +2,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleCart } from '@store';
 import { SideBarOverlay, Divider, Paragraph, CartItem, Price, BWButton } from '@components';
 import { useNavigate } from 'react-router-dom';
+import { useMemo } from 'react';
 
 const CartSidebar = () => {
   const cartOpen = useSelector((state) => state.global.cartOpen);
-  const { store } = useSelector((state) => state.cart);
+  const { store = {} } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

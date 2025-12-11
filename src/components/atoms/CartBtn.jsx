@@ -1,18 +1,24 @@
 import { ShoppingCart } from 'lucide-react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openCart } from '@store';
 
 const CartBtn = ({ className = '' }) => {
   const dispatch = useDispatch();
+  const { store = {} } = useSelector((state) => state.cart);
+  const totalItems = Object.keys(store).length;
 
   return (
-    <ShoppingCart
-      size={26}
+    <div
+      className="relative cursor-pointer"
       onClick={() => {
         dispatch(openCart());
       }}
-      className={`cursor-pointer ${className}`}
-    />
+    >
+      <div className="absolute -right-2 -top-2 bg-(--color-brand-primary) text-white text-xs aspect-square w-5 h-5 rounded-full flex justify-center items-center">
+        {totalItems}
+      </div>
+      <ShoppingCart size={26} className={`${className}`} />
+    </div>
   );
 };
 

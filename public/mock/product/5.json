@@ -7,7 +7,7 @@
     "categories": ["Home Decor"],
     "generalCategory": "Home Decor",
     "vendor": "Vendor Name",
-    
+
     "description": "Set of stylish ceramic indoor planters, perfect for decorating your living space or office. Durable and elegant design for any interior.",
     "features": [
       "Premium ceramic material",
@@ -15,17 +15,17 @@
       "Includes multiple sizes for versatility",
       "Durable and long-lasting"
     ],
-    
+
     "images": [
       "https://plus.unsplash.com/premium_photo-1673969608223-4e9bce1e700c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1674237294437-01239c443bed?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
-    
+
     "freeShipping": true,
     "available": "in",
     "sold": 0,
     "createdAt": "2025-12-10",
-    
+
     "variants": [
       { "id": "CERAMIC-INDOOR-PLANTER-SET-STD", "title": "Standard", "price": 3200 },
       { "id": "CERAMIC-INDOOR-PLANTER-SET-LRG", "title": "Premium", "price": 3520 }

@@ -7,7 +7,7 @@
     "categories": ["Decor"],
     "generalCategory": "Home Decor",
     "vendor": "Vendor Name",
-    
+
     "description": "A minimalist table decor set perfect for enhancing the elegance of your living space or office desk.",
     "features": [
       "Sleek and minimal design",
@@ -15,17 +15,17 @@
       "Easy to arrange and maintain",
       "Perfect for modern interiors"
     ],
-    
+
     "images": [
       "https://plus.unsplash.com/premium_photo-1671718840234-37e7c6c5001c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1676838259090-81b78f1c5d11?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
-    
+
     "freeShipping": true,
     "available": "in",
     "sold": 0,
     "createdAt": "2025-12-10",
-    
+
     "variants": [
       { "id": "MINIMAL-TABLE-DECOR-SET-STD", "title": "Standard", "price": 3500 },
       { "id": "MINIMAL-TABLE-DECOR-SET-LRG", "title": "Premium", "price": 3850 }

@@ -47,3 +47,5 @@ export const formatPrice = (price, currency = 'PKR') => {
 
   return `${symbol} ${formatNumber(converted)}`;
 };
+
+export * from './localStorage';
