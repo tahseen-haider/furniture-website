@@ -7,7 +7,7 @@
     "categories": ["Furniture"],
     "generalCategory": "Home Decor",
     "vendor": "Vendor Name",
-    
+
     "description": "A timeless wooden chest crafted from high-quality wood. Ideal for storing essentials while adding a classic touch to your living space.",
     "features": [
       "High-quality wood construction",
@@ -15,17 +15,17 @@
       "Classic design complements any decor",
       "Durable and long-lasting"
     ],
-    
+
     "images": [
       "https://images.unsplash.com/photo-1658081973932-faaca64ecfd2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1728939862876-1c7e36d9cdfa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
-    
+
     "freeShipping": true,
     "available": "in",
     "sold": 0,
     "createdAt": "2025-12-10",
-    
+
     "variants": [
       { "id": "CLASSIC-WOODEN-CHEST-STD", "title": "Standard", "price": 54000 },
       { "id": "CLASSIC-WOODEN-CHEST-LRG", "title": "Premium", "price": 59400 }

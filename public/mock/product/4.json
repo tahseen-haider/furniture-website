@@ -7,7 +7,7 @@
     "categories": ["Furniture"],
     "generalCategory": "Home Decor",
     "vendor": "Vendor Name",
-    
+
     "description": "Elegant golden console table with a matching mirror frame. Perfect for hallways or living rooms, adding a touch of luxury and sophistication to your home.",
     "features": [
       "Golden finish with premium craftsmanship",
@@ -15,17 +15,17 @@
       "Stylish addition to any hallway or living room",
       "Durable and long-lasting construction"
     ],
-    
+
     "images": [
       "https://plus.unsplash.com/premium_photo-1664391898455-1f0440785804?q=80&w=835&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1733514692259-57cdff0a750f?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
-    
+
     "freeShipping": true,
     "available": "in",
     "sold": 0,
     "createdAt": "2025-12-10",
-    
+
     "variants": [
       { "id": "GOLDEN-CONSOLE-STD", "title": "Standard", "price": 38000 },
       { "id": "GOLDEN-CONSOLE-LRG", "title": "Premium", "price": 52000 }

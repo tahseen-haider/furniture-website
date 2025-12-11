@@ -7,7 +7,7 @@
     "categories": ["Bedding"],
     "generalCategory": "Home Decor",
     "vendor": "Vendor Name",
-    
+
     "description": "Set of two ergonomically designed memory foam pillows for optimal neck and head support. Soft, breathable, and durable for a restful sleep experience.",
     "features": [
       "Set of 2 memory foam pillows",
@@ -15,17 +15,17 @@
       "Breathable and soft fabric",
       "Durable and long-lasting"
     ],
-    
+
     "images": [
       "https://plus.unsplash.com/premium_photo-1764499845516-2608332c5ebe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     ],
-    
+
     "freeShipping": true,
     "available": "in",
     "sold": 0,
     "createdAt": "2025-12-10",
-    
+
     "variants": [
       { "id": "MEMORY-FOAM-PILLOWS-STD", "title": "Standard", "price": 4500 },
       { "id": "MEMORY-FOAM-PILLOWS-LRG", "title": "Premium", "price": 4950 }
