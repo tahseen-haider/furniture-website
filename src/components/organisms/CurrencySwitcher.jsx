@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrency } from '@store';
 import { currencyOptions } from '@config';
-import { Divider } from '@components';
+import { ChevronRight } from 'lucide-react';
 
 const CurrencySwitcher = () => {
   const dispatch = useDispatch();
@@ -26,13 +26,14 @@ const CurrencySwitcher = () => {
     <div className="fixed bottom-4 sm:bottom-8 left-8 z-40" ref={ref}>
       <button
         onClick={() => setOpen((p) => !p)}
-        className="flex items-center gap-2 border border-gray-300 px-2 py-1 rounded bg-white hover:bg-gray-300 transition text-sm cursor-pointer shadow-[0_0_8px_rgb(255,255,255)]"
+        className="flex items-center gap-1 border border-gray-300 px-1 py-0.5 rounded bg-white hover:bg-gray-300 transition text-xs cursor-pointer shadow-[0_0_8px_rgb(255,255,255)]"
       >
-        <span className="text-lg">{current?.flag}</span>
+        <span className="text-xs">{current?.flag}</span>
         <span className="font-medium">{current.code}</span>
-        <span
+        <ChevronRight
+          size={18}
           className={`text-gray-500 text-lg transition-all duration-300 ${open ? '-rotate-90' : 'rotate-90'}`}
-        >{`>`}</span>
+        />
       </button>
 
       {open && (
@@ -40,7 +41,7 @@ const CurrencySwitcher = () => {
           className="
             absolute bottom-full mb-2 
             left-0
-            w-48 bg-white shadow-lg border border-gray-300
+            w-48 bg-white border border-gray-300
             z-40 animate-fade-up rounded
           "
         >
@@ -66,7 +67,6 @@ const CurrencySwitcher = () => {
                   <span className="text-xs text-gray-500">({item.code})</span>
                 </div>
               </button>
-              <Divider />
             </div>
           ))}
         </div>

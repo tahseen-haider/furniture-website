@@ -18,6 +18,7 @@ const ProductPageTemplate = ({ product, loading }) => {
     variantTitle: null,
     price: 0,
     image: '',
+    freeShipping: true,
   });
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const ProductPageTemplate = ({ product, loading }) => {
         variantTitle: firstVariant?.title || null,
         price: firstVariant?.price || product.price,
         image: firstVariant?.image || product.images?.[0] || '',
+        freeShipping: product?.freeShipping,
       });
     }
   }, [product]);

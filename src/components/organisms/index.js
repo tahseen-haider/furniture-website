@@ -15,3 +15,6 @@ export { default as ProductHeaderOnScroll } from './ProductHeaderOnScroll';
 export { default as CurrencySwitcher } from './CurrencySwitcher';
 export { default as CartSidebar } from './CartSidebar';
 export { default as CartItem } from './CartItem';
+export { default as CheckoutHeader } from './CheckoutHeader';
+export { default as CheckoutForm } from './CheckoutForm';
+export { default as CheckoutDisplay } from './CheckoutDisplay';

@@ -24,6 +24,7 @@
     "freeShipping": true,
     "available": "in",
     "sold": 0,
+    "itemsInStock": 100,
     "createdAt": "2025-12-10",
 
     "variants": [

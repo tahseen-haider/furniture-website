@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Paragraph } from '@components';
+import { ChevronRight } from 'lucide-react';
 
 const Expandable = ({ title, defaultClose = false, className, children }) => {
   const [isOpen, setIsOpen] = useState(!defaultClose);
@@ -20,12 +21,11 @@ const Expandable = ({ title, defaultClose = false, className, children }) => {
         <Paragraph variant="D" underline="center">
           {title}
         </Paragraph>
-        <span
-          className={`text-xl transition-transform duration-300 ${
-            isOpen ? 'rotate-90' : 'rotate-0'
-          }`}
-        >
-          {`>`}
+        <span className={`text-xl`}>
+          <ChevronRight
+            size={18}
+            className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : 'rotate-0'}`}
+          />
         </span>
       </div>
 
