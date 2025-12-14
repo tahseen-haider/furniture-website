@@ -14,3 +14,4 @@ export { default as Breadcrumb } from './Breadcrumb';
 export { default as QuantitySelector } from './QuantitySelector';
 export { default as AddToCartButton } from './AddToCartButton';
 export { default as CartBtn } from './CartBtn';
+export { default as Select } from './Select';

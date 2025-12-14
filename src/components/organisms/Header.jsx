@@ -1,14 +1,7 @@
 import { Logo, Navbar, Divider, CartBtn } from '@components';
+import { mainNavLinks } from '@config';
 
 const Header = () => {
-  const navLinks = [
-    { title: 'Shop', link: '/collections' },
-    { title: 'Spaces', link: '#' },
-    { title: 'Our Services', link: '#' },
-    { title: 'Our Projects', link: '#' },
-    { title: 'Contact', link: '#' },
-  ];
-
   return (
     <>
       <div className="h-20 lg:h-26" />
@@ -23,12 +16,12 @@ const Header = () => {
           </div>
 
           <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
-            <Navbar links={navLinks} />
+            <Navbar links={mainNavLinks} />
           </div>
 
           <div className="flex items-center gap-8 ml-auto lg:hidden">
             <CartBtn />
-            <Navbar links={navLinks} />
+            <Navbar links={mainNavLinks} />
           </div>
 
           <div className="hidden lg:flex items-center ml-auto">

@@ -26,3 +26,7 @@ export { default as ProductPageImagesSkeleton } from './ProductPageImagesSkeleto
 export { default as ProductDetails } from './ProductDetails';
 export { default as ProductDisplayDetailsSkeleton } from './ProductDisplayDetailsSkeleton';
 export { default as ProductNavbarSkeleton } from './ProductNavbarSkeleton';
+export { default as CheckoutItemsList } from './CheckoutItemsList';
+export { default as CheckoutProductCard } from './CheckoutProductCard';
+export { default as CheckoutPaymentSummary } from './CheckoutPaymentSummary';
+export { default as AddressForm } from './AddressForm';

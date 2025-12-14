@@ -12,7 +12,6 @@ const AddToCartButton = ({
   ...props
 }) => {
   const dispatch = useDispatch();
-
   return (
     <BWButton
       type={type}
