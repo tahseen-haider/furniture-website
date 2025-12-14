@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { MainLayout } from '@templates';
+import { MainLayout, CheckoutLayout } from '@templates';
 import { HomePage, ProductsListPage, CollectionPage, ProductPage, CheckoutPage } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect } from 'react';
@@ -27,6 +27,8 @@ const App = () => {
           <Route path="/products" element={<CollectionPage />} />
           <Route path="/products/:categoryName" element={<ProductsListPage />} />
           <Route path="/product/:productId/:productName" element={<ProductPage />} />
+        </Route>
+        <Route element={<CheckoutLayout />}>
           <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
       </Routes>

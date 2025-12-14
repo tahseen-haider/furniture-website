@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCart } from '@store';
 import { SideBarOverlay, Divider, Paragraph, CartItem, Price, BWButton } from '@components';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useMemo } from 'react';
 
 const CartSidebar = () => {
@@ -45,7 +45,7 @@ const CartSidebar = () => {
               </div>
               <Price amount={totalAmount} className="whitespace-nowrap text-xl font-semibold" />
             </div>
-            <div className="flex gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <BWButton
                 variant="white"
                 text="CLOSE CART"
@@ -53,13 +53,14 @@ const CartSidebar = () => {
                   dispatch(toggleCart());
                 }}
               />
-              <BWButton
-                text="CHECKOUT"
-                onClick={() => {
-                  dispatch(toggleCart());
-                  navigate('/checkout');
-                }}
-              />
+              <Link to="/checkout">
+                <BWButton
+                  text="CHECKOUT"
+                  onClick={() => {
+                    dispatch(toggleCart());
+                  }}
+                />
+              </Link>
             </div>
           </div>
         </div>

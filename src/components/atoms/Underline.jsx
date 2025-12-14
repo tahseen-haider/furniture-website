@@ -11,7 +11,6 @@ const Underline = ({ direction = 'left', thickness = '1px', className = '' }) =>
 
   const pureDirection = direction.replace('-inverse', '');
 
-  // animation logic
   const base = isInverse
     ? 'scale-x-100 opacity-100'
     : 'scale-x-0 opacity-10 group-hover:opacity-100';

@@ -9,7 +9,7 @@ const variants = {
   E: 'font-normal text-lg sm:text-xl leading-4xl text-center',
   F: 'font-normal text-sm sm:text-base leading-3xl',
   G: 'font-normal text-xl sm:text-3xl leading-4xl',
-  H: 'font-normal text-sm sm:text-base leading-base',
+  H: 'font-light text-sm sm:text-base leading-base',
 };
 
 const Paragraph = ({ children, className = '', underline, variant = 'A', maxChars, ...props }) => {
@@ -23,7 +23,7 @@ const Paragraph = ({ children, className = '', underline, variant = 'A', maxChar
 
   return (
     <p className={`${variants[variant]} whitespace-pre-line ${className}`} {...props}>
-      <span className="relative inline-block group">
+      <span className="relative inline-block group font-">
         {text}
         {underlineEnabled && <Underline direction={underline} />}
       </span>

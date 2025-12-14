@@ -1,5 +1,7 @@
+import { CheckoutPageLayout } from '@templates';
+
 const CheckoutPage = () => {
-  return <div>CheckoutPage</div>;
+  return <CheckoutPageLayout />;
 };
 
 export default CheckoutPage;

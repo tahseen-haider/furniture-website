@@ -1,4 +1,3 @@
-import { X } from 'lucide-react';
 import { Paragraph, BWButton, Divider } from '@components';
 
 const ProductsFilterSidebar = ({ onClose, onClearParams, children }) => {

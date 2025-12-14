@@ -19,7 +19,7 @@ export const currencyOptions = [
     code: 'PKR',
     name: 'Pakistan Rupee',
     flag: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32">
         <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#173e1b"></rect>
         <path d="M10,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4h5V4Z" fill="#fff"></path>
         <path
@@ -46,7 +46,7 @@ export const currencyOptions = [
     code: 'USD',
     name: 'US Dollar',
     flag: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32">
         <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#fff"></rect>
         <path
           d="M1.638,5.846H30.362c-.711-1.108-1.947-1.846-3.362-1.846H5c-1.414,0-2.65,.738-3.362,1.846Z"
@@ -156,7 +156,7 @@ export const currencyOptions = [
     code: 'GBP',
     name: 'British Pound',
     flag: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32">
         <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#071b65"></rect>
         <path
           d="M5.101,4h-.101c-1.981,0-3.615,1.444-3.933,3.334L26.899,28h.101c1.981,0,3.615-1.444,3.933-3.334L5.101,4Z"
@@ -209,7 +209,7 @@ export const currencyOptions = [
     code: 'CAD',
     name: 'Canadian Dollar',
     flag: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32">
         <path fill="#fff" d="M8 4H24V28H8z"></path>
         <path d="M5,4h4V28H5c-2.208,0-4-1.792-4-4V8c0-2.208,1.792-4,4-4Z" fill="#c53a28"></path>
         <path
@@ -237,7 +237,7 @@ export const currencyOptions = [
     code: 'EUR',
     name: 'Euro',
     flag: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 32 32">
         <rect x="1" y="4" width="30" height="24" rx="4" ry="4" fill="#112f95"></rect>
         <path
           d="M27,4H5c-2.209,0-4,1.791-4,4V24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V8c0-2.209-1.791-4-4-4Zm3,20c0,1.654-1.346,3-3,3H5c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3H27c1.654,0,3,1.346,3,3V24Z"

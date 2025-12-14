@@ -14,7 +14,17 @@ import { useState } from 'react';
 const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProduct }) => {
   if (loading || !product) return <ProductDisplayDetailsSkeleton />;
 
-  const { vendor, title, price, id, description, features, variants, freeShipping } = product;
+  const {
+    vendor,
+    title,
+    price,
+    id,
+    description,
+    features,
+    variants,
+    freeShipping,
+    itemsInStock = 0,
+  } = product;
 
   const [openDetails, setOpenDetails] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -27,6 +37,7 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
       variantTitle: variant?.title || null,
       price: variant?.price || product.price,
       image: product.images?.[0],
+      freeShipping: product?.freeShipping,
     });
   };
 
@@ -44,6 +55,9 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
           <Price amount={selectedProduct?.price || price} />{' '}
           <span className="text-xs">SHIPPING CALCULATED AT CHECKOUT.</span>
         </div>
+        <span className="text-xs">
+          <span className="text-sm underline">{itemsInStock}</span> items in Stock.
+        </span>
         <div className="p-1 px-2 bg-gray-200 w-fit"># {id}</div>
       </div>
 
@@ -122,7 +136,11 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
       </Button>
 
       <div className="flex flex-col gap-2">
-        {freeShipping && <Paragraph variant="H">✓ Free delivery and shipping</Paragraph>}
+        {freeShipping ? (
+          <Paragraph variant="H">✓ Free delivery and shipping</Paragraph>
+        ) : (
+          <Paragraph variant="H">✗ No Free delivery and shipping</Paragraph>
+        )}
         <Paragraph variant="H">✓ Secure online payment</Paragraph>
       </div>
     </div>
