@@ -1,4 +1,4 @@
-import { Logo, Navbar, Divider, CartBtn } from '@components';
+import { Logo, Navbar, Divider, CartBtn, TrackOrderBtn } from '@components';
 import { mainNavLinks } from '@config';
 
 const Header = () => {
@@ -19,12 +19,14 @@ const Header = () => {
             <Navbar links={mainNavLinks} />
           </div>
 
-          <div className="flex items-center gap-8 ml-auto lg:hidden">
+          <div className="flex items-center gap-4 md:gap-8 ml-auto lg:hidden">
+            <TrackOrderBtn />
             <CartBtn />
             <Navbar links={mainNavLinks} />
           </div>
 
-          <div className="hidden lg:flex items-center ml-auto">
+          <div className="hidden lg:flex gap-8 items-center ml-auto">
+            <TrackOrderBtn />
             <CartBtn />
           </div>
         </div>

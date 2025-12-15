@@ -1,6 +1,13 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { MainLayout, CheckoutLayout } from '@templates';
-import { HomePage, ProductsListPage, CollectionPage, ProductPage, CheckoutPage } from '@pages';
+import {
+  HomePage,
+  ProductsListPage,
+  CollectionPage,
+  ProductPage,
+  CheckoutPage,
+  TrackingPage,
+} from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
@@ -30,6 +37,7 @@ const App = () => {
         </Route>
         <Route element={<CheckoutLayout />}>
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/track-order" element={<TrackingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
