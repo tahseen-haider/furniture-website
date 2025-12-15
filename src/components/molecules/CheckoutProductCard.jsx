@@ -13,7 +13,7 @@ const CheckoutProductCard = ({ item }) => {
           <Image src={item?.image} alt={item?.title} className="h-full w-9/12 mx-auto" />
         </Link>
       </div>
-      <div className="flex-1 flex justify-between items-center pl-4">
+      <div className="flex-1 flex justify-between items-center pr-2 pl-4">
         <div className="flex h-full flex-col justify-center">
           <Heading level={3} variant="title" maxChars={38}>
             {item?.title}

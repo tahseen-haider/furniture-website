@@ -18,3 +18,4 @@ export { default as CartItem } from './CartItem';
 export { default as CheckoutHeader } from './CheckoutHeader';
 export { default as CheckoutForm } from './CheckoutForm';
 export { default as CheckoutDisplay } from './CheckoutDisplay';
+export { default as TrackingForm } from './TrackingForm';

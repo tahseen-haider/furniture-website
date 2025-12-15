@@ -10,7 +10,7 @@ const Input = ({
   ...props
 }) => {
   return (
-    <div className={`overflow-hidden relative w-full flex flex-col gap-1 ${className}`}>
+    <div className={` relative w-full flex flex-col gap-1 ${className}`}>
       <label
         className={`z-10 text-sm text-gray-700 absolute left-3  ${value ? 'top-2 opacity-100' : 'top-4 opacity-0'} transition-all duration-300 pointer-events-none text-nowrap`}
       >

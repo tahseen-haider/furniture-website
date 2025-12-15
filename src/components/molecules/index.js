@@ -30,3 +30,8 @@ export { default as CheckoutItemsList } from './CheckoutItemsList';
 export { default as CheckoutProductCard } from './CheckoutProductCard';
 export { default as CheckoutPaymentSummary } from './CheckoutPaymentSummary';
 export { default as AddressForm } from './AddressForm';
+export { default as OrderDetails } from './OrderDetails';
+export { default as AddressCard } from './AddressCard';
+export { default as ProductList } from './ProductList';
+export { default as Timeline } from './Timeline';
+export { default as OrderPaymentSummary } from './OrderPaymentSummary';
