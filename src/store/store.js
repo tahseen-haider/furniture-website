@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { globalReducer, cartReducer } from '@store';
+import { globalReducer, cartReducer, userReducer } from '@store';
 // import logger from 'redux-logger';
 import { saveCart } from '@utils';
 
@@ -7,6 +7,7 @@ export const store = configureStore({
   reducer: {
     global: globalReducer,
     cart: cartReducer,
+    user: userReducer,
   },
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
