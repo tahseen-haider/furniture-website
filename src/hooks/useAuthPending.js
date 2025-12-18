@@ -2,11 +2,11 @@ import { useState } from 'react';
 
 export const useAuthPending = () => {
   const [pending, setPending] = useState(false);
-  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
 
   const start = () => {
     setPending(true);
-    setError('');
+    setMessage('');
   };
 
   const stop = () => {
@@ -15,8 +15,8 @@ export const useAuthPending = () => {
 
   return {
     pending,
-    error,
-    setError,
+    message,
+    setMessage,
     start,
     stop,
   };
