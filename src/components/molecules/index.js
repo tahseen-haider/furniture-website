@@ -35,3 +35,5 @@ export { default as AddressCard } from './AddressCard';
 export { default as ProductList } from './ProductList';
 export { default as Timeline } from './Timeline';
 export { default as OrderPaymentSummary } from './OrderPaymentSummary';
+export { default as HeaderProfileBtn } from './HeaderProfileBtn';
+export { default as HeaderAuthBtn } from './HeaderAuthBtn';

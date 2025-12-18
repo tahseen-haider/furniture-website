@@ -26,7 +26,7 @@ const Header = () => {
             <Navbar links={mainNavLinks} />
           </div>
 
-          <div className="hidden lg:flex gap-8 items-center ml-auto">
+          <div className="hidden lg:flex gap-8 items-center ml-auto ">
             <TrackOrderBtn />
             <CartBtn />
             <UserHeaderBtn />

@@ -1,4 +1,4 @@
-import { Logo, Divider, CartBtn } from '@components';
+import { Logo, Divider, CartBtn, UserHeaderBtn } from '@components';
 
 const CheckoutHeader = () => {
   return (
@@ -7,7 +7,10 @@ const CheckoutHeader = () => {
         <div className="w-full h-full px-4 lg:px-16 max-w-280 flex gap-10 justify-between items-center mx-auto">
           <Logo />
 
-          <CartBtn />
+          <div className="flex gap-8 items-center">
+            <CartBtn />
+            <UserHeaderBtn />
+          </div>
         </div>
         <Divider />
       </header>

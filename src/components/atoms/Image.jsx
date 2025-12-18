@@ -3,8 +3,6 @@ import { useState } from 'react';
 const Image = ({ src, alt = 'alt text', className = '', ...props }) => {
   const [fallback, setFallback] = useState(false);
 
-  if (!src && !fallback) return null;
-
   return (
     <img
       {...props}

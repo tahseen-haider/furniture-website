@@ -11,7 +11,7 @@ const CartBtn = ({ className = '' }) => {
   return (
     <Tooltip text="View Cart">
       <div
-        className="relative cursor-pointer"
+        className="relative cursor-pointer top-1"
         onClick={() => {
           dispatch(openCart());
         }}
