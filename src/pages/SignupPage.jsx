@@ -4,30 +4,36 @@ import { Eye, EyeOff } from 'lucide-react';
 import { AuthLayout } from '@templates';
 import { Input, AuthForm, Paragraph } from '@components';
 import { useAuthPending } from '@hooks';
+import { authAPI } from '@services';
 
 const SignupPage = () => {
-  const { pending, error, setError, start, stop } = useAuthPending();
+  const { pending, message, setMessage, start, stop } = useAuthPending();
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+
+  const [messageType, setMessageType] = useState('error');
 
   const [values, setValues] = useState({
     fullname: '',
     email: '',
     password: '',
+    confirmPassword: '',
   });
 
   const [errors, setErrors] = useState({
     fullname: '',
     email: '',
     password: '',
+    confirmPassword: '',
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const nextErrors = { fullname: '', email: '', password: '' };
+    const nextErrors = { fullname: '', email: '', password: '', confirmPassword: '' };
 
-    if (!values.fullname) nextErrors.fullname = 'fullname is required';
+    if (!values.fullname) nextErrors.fullname = 'Full name is required';
 
     if (!values.email) nextErrors.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
@@ -36,17 +42,31 @@ const SignupPage = () => {
     if (!values.password) nextErrors.password = 'Password is required';
     else if (values.password.length < 8) nextErrors.password = 'Minimum 8 characters';
 
+    if (!values.confirmPassword) nextErrors.confirmPassword = 'Confirm password is required';
+    else if (values.password !== values.confirmPassword)
+      nextErrors.confirmPassword = "Passwords don't match";
+
     if (Object.values(nextErrors).some(Boolean)) {
       setErrors(nextErrors);
       return;
     }
 
+    setMessage('');
+    setMessageType('error');
     start();
 
     try {
-      await new Promise((r) => setTimeout(r, 1500));
-    } catch {
-      setError('Signup failed. Try again.');
+      const res = await authAPI.signup({
+        username: values.fullname,
+        email: values.email,
+        password: values.password,
+      });
+
+      setMessageType('success');
+      setMessage(res.message || 'Account created successfully');
+    } catch (err) {
+      setMessageType('error');
+      setMessage(err.message || 'Signup failed');
     } finally {
       stop();
     }
@@ -67,7 +87,13 @@ const SignupPage = () => {
         </div>
       }
     >
-      <AuthForm onSubmit={handleSubmit} pending={pending} error={error} submitText="Create Account">
+      <AuthForm
+        onSubmit={handleSubmit}
+        messageType={messageType}
+        pending={pending}
+        message={message}
+        submitText="Create Account"
+      >
         <Input
           placeholder="Full Name"
           value={values.fullname}
@@ -110,6 +136,29 @@ const SignupPage = () => {
             className="absolute top-7 -translate-y-1/2 right-4 text-gray-500 hover:text-black"
           >
             {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+          </button>
+        </div>
+
+        <div className="relative">
+          <Input
+            type={showConfirm ? 'text' : 'password'}
+            placeholder="Confirm Password"
+            value={values.confirmPassword}
+            onChange={(v) => {
+              setValues((s) => ({ ...s, confirmPassword: v }));
+              setErrors((e) => ({ ...e, confirmPassword: '' }));
+            }}
+            error={errors.confirmPassword}
+            disabled={pending}
+            inputClassName="pr-12"
+          />
+
+          <button
+            type="button"
+            onClick={() => setShowConfirm((p) => !p)}
+            className="absolute top-7 -translate-y-1/2 right-4 text-gray-500 hover:text-black"
+          >
+            {showConfirm ? <EyeOff size={20} /> : <Eye size={20} />}
           </button>
         </div>
       </AuthForm>

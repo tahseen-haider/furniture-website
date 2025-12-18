@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { AuthLayout } from '@templates';
 import { Input, AuthForm, Paragraph } from '@components';
 import { useAuthPending } from '@hooks';
+import { authAPI } from '@services';
 
 const VerifyEmailPage = () => {
-  const { pending, error, setError, start, stop } = useAuthPending();
+  const { pending, message, setMessage, start, stop } = useAuthPending();
 
+  const [messageType, setMessageType] = useState('error');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
 
@@ -23,12 +25,18 @@ const VerifyEmailPage = () => {
       return;
     }
 
+    setMessage('');
+    setMessageType('error');
     start();
 
     try {
-      await new Promise((r) => setTimeout(r, 1500));
-    } catch {
-      setError('Could not send verification email');
+      const res = await authAPI.sendVerifyEmail(email);
+
+      setMessageType('success');
+      setMessage(res.message || 'Verification email sent');
+    } catch (err) {
+      setMessageType('error');
+      setMessage(err.message || 'Could not send verification email');
     } finally {
       stop();
     }
@@ -52,7 +60,8 @@ const VerifyEmailPage = () => {
       <AuthForm
         onSubmit={handleSubmit}
         pending={pending}
-        error={error}
+        message={message}
+        messageType={messageType}
         submitText="Send Verification Link"
       >
         <Input

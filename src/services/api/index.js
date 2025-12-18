@@ -1,26 +1,36 @@
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || '/mock';
+export async function http(method, url, body, config = {}) {
+  const options = {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      ...config.headers,
+    },
+  };
 
-export async function http(method, endpoint, body) {
-  try {
-    const url = BASE_URL === '/mock' ? `${BASE_URL}${endpoint}.json` : `${BASE_URL}${endpoint}`;
-
-    const options = {
-      method,
-      headers: { 'Content-Type': 'application/json' },
-    };
-
-    if (body) options.body = JSON.stringify(body);
-
-    const res = await fetch(url, options);
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
-
-    return await res.json();
-  } catch (error) {
-    return null;
+  if (body && method !== 'GET') {
+    options.body = JSON.stringify(body);
   }
+
+  const res = await fetch(url, options);
+
+  let data = null;
+  const contentType = res.headers.get('content-type');
+
+  if (contentType?.includes('application/json')) {
+    data = await res.json();
+  }
+
+  if (!res.ok) {
+    const error = new Error(data?.message || 'Request failed');
+    error.status = res.status;
+    error.data = data;
+    throw error;
+  }
+
+  return data;
 }
 
-export const GET = (endpoint, body) => http('GET', endpoint, body);
-export const POST = (endpoint, body) => http('POST', endpoint, body);
-export const PUT = (endpoint, body) => http('PUT', endpoint, body);
-export const DELETE = (endpoint) => http('DELETE', endpoint);
+export const GET = (url, config) => http('GET', url, null, config);
+export const POST = (url, body, config) => http('POST', url, body, config);
+export const PUT = (url, body, config) => http('PUT', url, body, config);
+export const DELETE = (url, config) => http('DELETE', url, null, config);

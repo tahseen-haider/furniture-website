@@ -4,38 +4,53 @@ import { Eye, EyeOff } from 'lucide-react';
 import { AuthLayout } from '@templates';
 import { Input, AuthForm, Paragraph } from '@components';
 import { useAuthPending } from '@hooks';
+import { authAPI } from '@services';
 
 const LoginPage = () => {
-  const { pending, error, setError, start, stop } = useAuthPending();
+  const { pending, message, setMessage, start, stop } = useAuthPending();
 
+  const [messageType, setMessageType] = useState('error');
   const [showPassword, setShowPassword] = useState(false);
-  const [errors, setErrors] = useState({ email: '', password: '' });
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+  });
+
+  const [errors, setErrors] = useState({
+    email: '',
+    password: '',
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const nextErrors = { email: '', password: '' };
 
-    if (!email) nextErrors.email = 'Email is required';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) nextErrors.email = 'Enter a valid email';
+    if (!values.email) nextErrors.email = 'Email is required';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
+      nextErrors.email = 'Enter a valid email';
 
-    if (!password) nextErrors.password = 'Password is required';
-    else if (password.length < 8) nextErrors.password = 'Minimum 8 characters';
+    if (!values.password) nextErrors.password = 'Password is required';
+    else if (values.password.length < 8) nextErrors.password = 'Minimum 8 characters';
 
-    if (nextErrors.email || nextErrors.password) {
+    if (Object.values(nextErrors).some(Boolean)) {
       setErrors(nextErrors);
       return;
     }
 
+    setMessage('');
+    setMessageType('error');
     start();
 
     try {
-      await new Promise((r) => setTimeout(r, 1500));
-    } catch {
-      setError('Invalid email or password');
+      const res = await authAPI.login(values);
+
+      setMessageType('success');
+      setMessage(res.message || 'Logged in successfully');
+    } catch (err) {
+      setMessageType('error');
+      setMessage(err.message || 'Invalid email or password');
     } finally {
       stop();
     }
@@ -55,13 +70,7 @@ const LoginPage = () => {
               Sign Up
             </Link>
           </div>
-          <div className="flex justify-center gap-2">
-            {/* <Link to="/reset-password" className="underline">
-              Forgot password?
-            </Link>
-            <Paragraph variant="H" className="text-gray-400">
-              •
-            </Paragraph> */}
+          <div className="flex justify-center">
             <Link to="/verify-email" className="underline">
               Verify your email address
             </Link>
@@ -69,29 +78,35 @@ const LoginPage = () => {
         </div>
       }
     >
-      <AuthForm onSubmit={handleSubmit} pending={pending} error={error} submitText="Sign In">
+      <AuthForm
+        onSubmit={handleSubmit}
+        pending={pending}
+        message={message}
+        messageType={messageType}
+        submitText="Sign In"
+      >
         <Input
           placeholder="Email address"
-          value={email}
+          value={values.email}
           onChange={(v) => {
-            setEmail(v);
+            setValues((s) => ({ ...s, email: v }));
             setErrors((e) => ({ ...e, email: '' }));
           }}
-          disabled={pending}
           error={errors.email}
+          disabled={pending}
         />
 
         <div className="relative">
           <Input
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
-            value={password}
+            value={values.password}
             onChange={(v) => {
-              setPassword(v);
+              setValues((s) => ({ ...s, password: v }));
               setErrors((e) => ({ ...e, password: '' }));
             }}
-            disabled={pending}
             error={errors.password}
+            disabled={pending}
             inputClassName="pr-12"
           />
 
