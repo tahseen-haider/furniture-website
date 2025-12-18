@@ -13,6 +13,8 @@ const BWButton = ({
   onClick = () => {},
   variant = 'black',
   type = 'text',
+  buttonType = 'button',
+  disabled = false,
   ...props
 }) => {
   const variantClasses =
@@ -24,6 +26,8 @@ const BWButton = ({
     <button
       {...props}
       onClick={onClick}
+      type={buttonType}
+      disabled={disabled}
       className={`
         ${variantClasses}
         cursor-pointer font-normal text-[12px] transition-colors duration-300 select-none
