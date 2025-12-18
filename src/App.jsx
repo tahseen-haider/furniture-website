@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { MainLayout, CheckoutLayout } from '@templates';
+import { MainLayout, CheckoutLayout, AuthPageLayout } from '@templates';
 import {
   HomePage,
   ProductsListPage,
@@ -7,12 +7,15 @@ import {
   ProductPage,
   CheckoutPage,
   TrackingPage,
+  LoginPage,
 } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setCart } from '@store';
 import { loadCart } from '@utils';
+import SignupPage from './pages/SignupPage';
+import VerifyEmailPage from './pages/VerifyEmailPage';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -39,6 +42,12 @@ const App = () => {
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/track-order" element={<TrackingPage />} />
         </Route>
+        <Route element={<AuthPageLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/verify-email" element={<VerifyEmailPage />} />
+        </Route>
+        <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
     </BrowserRouter>
   );
