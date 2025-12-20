@@ -10,4 +10,6 @@ export const authAPI = {
   login: (data) => POST(`${BASE_URL}/login`, data),
   logout: () => POST(`${BASE_URL}/logout`),
   getCurrentUser: () => GET(`${BASE_URL}/me`),
+  requestPasswordSet: (email) => POST(`${BASE_URL}/request-password-set`, { email }),
+  resetPassword: (data) => POST(`${BASE_URL}/reset-password`, data),
 };

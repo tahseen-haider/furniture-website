@@ -75,9 +75,12 @@ const LoginPage = () => {
               Sign Up
             </Link>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <Link to="/verify-email" className="underline">
               Verify your email address
+            </Link>
+            <Link to="/request-password-set" className="underline">
+              Set Password
             </Link>
           </div>
         </div>
