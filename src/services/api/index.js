@@ -5,6 +5,7 @@ export async function http(method, url, body, config = {}) {
       'Content-Type': 'application/json',
       ...config.headers,
     },
+    credentials: 'include',
   };
 
   if (body && method !== 'GET') {
