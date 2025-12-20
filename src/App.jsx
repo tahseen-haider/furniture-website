@@ -24,7 +24,7 @@ const App = () => {
     const loadedCart = loadCart() || {};
     dispatch(setCart(loadedCart));
     dispatch(fetchCurrentUser());
-  }, []);
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
