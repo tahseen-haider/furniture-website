@@ -8,14 +8,16 @@ import {
   CheckoutPage,
   TrackingPage,
   LoginPage,
+  RequestPasswordPage,
+  VerifyEmailPage,
+  SignupPage,
+  ResetPasswordPage,
 } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setCart, fetchCurrentUser } from '@store';
 import { loadCart } from '@utils';
-import SignupPage from './pages/SignupPage';
-import VerifyEmailPage from './pages/VerifyEmailPage';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -47,6 +49,8 @@ const App = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/verify-email" element={<VerifyEmailPage />} />
+          <Route path="/request-password-set" element={<RequestPasswordPage />} />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
         </Route>
         <Route path="*" element={<div>404 Page Not Found</div>} />
       </Routes>
