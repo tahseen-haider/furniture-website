@@ -1,4 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { cartAPI } from '@services';
+
+export const fetchRemoteCart = createAsyncThunk(
+  'cart/fetchRemote',
+  async (_, { rejectWithValue }) => {
+    try {
+      const res = await cartAPI.getCart();
+      return res.cart || {};
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
+export const syncCartToRemote = createAsyncThunk(
+  'cart/syncRemote',
+  async (cart, { rejectWithValue }) => {
+    try {
+      await cartAPI.updateCart(cart);
+      return true;
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
 
 const initialState = {
   store: {},
@@ -10,7 +36,9 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     setCart: (state, action) => {
+      if (typeof action.payload !== 'object' || Array.isArray(action.payload)) return;
       state.store = action.payload;
+      state.totalItems = Object.keys(action.payload).length;
     },
     addToCart: (state, action) => {
       const item = action.payload;
@@ -24,7 +52,6 @@ const cartSlice = createSlice({
         state.totalItems += 1;
       }
     },
-
     removeFromCart: (state, action) => {
       const id = action.payload.id;
       if (state.store[id]) {
@@ -32,7 +59,6 @@ const cartSlice = createSlice({
         state.totalItems -= 1;
       }
     },
-
     updateQuantity: (state, action) => {
       const { id, quantity } = action.payload;
       if (!state.store[id]) return;
