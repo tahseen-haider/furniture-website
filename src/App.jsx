@@ -14,19 +14,52 @@ import {
   ResetPasswordPage,
 } from '@pages';
 import { ScrollToTop } from '@components';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { setCart, fetchCurrentUser } from '@store';
+import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCart, fetchCurrentUser, fetchRemoteCart, syncCartToRemote } from '@store';
 import { loadCart } from '@utils';
 
 const App = () => {
   const dispatch = useDispatch();
+  const { isLoggedIn } = useSelector((state) => state.user);
+
+  const hydratedRef = useRef(false);
 
   useEffect(() => {
-    const loadedCart = loadCart() || {};
-    dispatch(setCart(loadedCart));
+    const localCart = loadCart() || {};
+    dispatch(setCart(localCart));
     dispatch(fetchCurrentUser());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (!isLoggedIn) {
+      hydratedRef.current = false;
+    }
+  }, [isLoggedIn]);
+
+  useEffect(() => {
+    if (!isLoggedIn || hydratedRef.current) return;
+
+    hydratedRef.current = true;
+
+    const localCart = loadCart() || {};
+
+    dispatch(fetchRemoteCart())
+      .unwrap()
+      .then((remoteCart) => {
+        if (remoteCart && Object.keys(remoteCart).length > 0) {
+          dispatch(setCart(remoteCart));
+          saveCart(remoteCart);
+        } else if (Object.keys(localCart).length > 0) {
+          dispatch(syncCartToRemote(localCart));
+        }
+      })
+      .catch(() => {
+        if (Object.keys(localCart).length > 0) {
+          dispatch(syncCartToRemote(localCart));
+        }
+      });
+  }, [isLoggedIn, dispatch]);
 
   return (
     <BrowserRouter>

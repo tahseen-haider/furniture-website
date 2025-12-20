@@ -1,7 +1,28 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, createListenerMiddleware } from '@reduxjs/toolkit';
 import { globalReducer, cartReducer, userReducer } from '@store';
-// import logger from 'redux-logger';
+import { addToCart, removeFromCart, updateQuantity, clearCart, syncCartToRemote } from '@store';
 import { saveCart } from '@utils';
+
+const cartListener = createListenerMiddleware();
+
+cartListener.startListening({
+  matcher: (action) =>
+    addToCart.match(action) ||
+    removeFromCart.match(action) ||
+    updateQuantity.match(action) ||
+    clearCart.match(action),
+
+  effect: async (_, api) => {
+    const state = api.getState();
+    const cart = state.cart.store;
+
+    saveCart(cart);
+
+    if (state.user.isLoggedIn) {
+      api.dispatch(syncCartToRemote(cart));
+    }
+  },
+});
 
 export const store = configureStore({
   reducer: {
@@ -9,14 +30,5 @@ export const store = configureStore({
     cart: cartReducer,
     user: userReducer,
   },
-  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
-});
-
-let prevCartState = null;
-
-store.subscribe(() => {
-  const cartState = store.getState().cart.store;
-  if (cartState === prevCartState) return;
-  saveCart(cartState);
-  prevCartState = cartState;
+  middleware: (getDefault) => getDefault().prepend(cartListener.middleware),
 });
