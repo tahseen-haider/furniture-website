@@ -12,7 +12,7 @@ import {
 import { ScrollToTop } from '@components';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setCart } from '@store';
+import { setCart, fetchCurrentUser } from '@store';
 import { loadCart } from '@utils';
 import SignupPage from './pages/SignupPage';
 import VerifyEmailPage from './pages/VerifyEmailPage';
@@ -23,6 +23,7 @@ const App = () => {
   useEffect(() => {
     const loadedCart = loadCart() || {};
     dispatch(setCart(loadedCart));
+    dispatch(fetchCurrentUser());
   }, []);
 
   return (

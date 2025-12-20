@@ -1,16 +1,21 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 import { AuthLayout } from '@templates';
 import { Input, AuthForm, Paragraph } from '@components';
 import { useAuthPending } from '@hooks';
-import { authAPI } from '@services';
+import { useDispatch } from 'react-redux';
+import { loginThunk } from '@store';
+import { simulateDelay } from '../services';
 
 const LoginPage = () => {
   const { pending, message, setMessage, start, stop } = useAuthPending();
 
   const [messageType, setMessageType] = useState('error');
   const [showPassword, setShowPassword] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [values, setValues] = useState({
     email: '',
@@ -44,10 +49,11 @@ const LoginPage = () => {
     start();
 
     try {
-      const res = await authAPI.login(values);
+      const res = await dispatch(loginThunk(values)).unwrap();
 
       setMessageType('success');
       setMessage(res.message || 'Logged in successfully');
+      simulateDelay(navigate('/'), 1000);
     } catch (err) {
       setMessageType('error');
       setMessage(err.message || 'Invalid email or password');
