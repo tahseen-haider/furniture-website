@@ -6,7 +6,6 @@ import { Input, AuthForm, Paragraph } from '@components';
 import { useAuthPending } from '@hooks';
 import { useDispatch } from 'react-redux';
 import { loginThunk } from '@store';
-import { simulateDelay } from '../services';
 
 const LoginPage = () => {
   const { pending, message, setMessage, start, stop } = useAuthPending();
@@ -53,10 +52,10 @@ const LoginPage = () => {
 
       setMessageType('success');
       setMessage(res.message || 'Logged in successfully');
-      simulateDelay(navigate('/'), 1000);
+      setTimeout(() => navigate('/'), 1000);
     } catch (err) {
       setMessageType('error');
-      setMessage(err.message || 'Invalid email or password');
+      setMessage(err || 'Invalid email or password');
     } finally {
       stop();
     }
