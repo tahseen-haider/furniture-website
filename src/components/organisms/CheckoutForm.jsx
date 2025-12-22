@@ -8,7 +8,11 @@ import {
   CheckoutPaymentSummary,
 } from '@components';
 import { deliveryCountries } from '@config';
+import { AlertCircle } from 'lucide-react';
 import { useRef, useState } from 'react';
+import { ordersAPI } from '@services';
+import { clearCart } from '@store';
+import { useDispatch, useSelector } from 'react-redux';
 
 const emptyAddress = {
   firstName: '',
@@ -28,22 +32,40 @@ const CheckoutForm = () => {
 
   const [shippingErrors, setShippingErrors] = useState({});
   const [billingErrors, setBillingErrors] = useState({});
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('error');
+  const [loading, setLoading] = useState(false);
+
+  const { store } = useSelector((state) => state?.cart);
+  const dispatch = useDispatch();
 
   const formRef = useRef();
 
   const validateAddress = (address) => {
     const errors = {};
+
     if (!address.firstName.trim()) errors.firstName = 'First name is required';
     if (!address.address.trim()) errors.address = 'Address is required';
     if (!address.city.trim()) errors.city = 'City is required';
-    if (address.email && !/^\S+@\S+\.\S+$/.test(address.email))
+
+    if (!address.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^\S+@\S+\.\S+$/.test(address.email)) {
       errors.email = 'Invalid email format';
+    }
+
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage('');
 
+    if (!store || Object.keys(store).length === 0) {
+      setMessageType('error');
+      setMessage('Your cart is empty. Please add items to your cart before placing an order.');
+      return;
+    }
     const shippingErr = validateAddress(shippingAddress);
     const billingErr = billingSameAsShipping ? {} : validateAddress(billingAddress);
 
@@ -59,7 +81,23 @@ const CheckoutForm = () => {
       region,
       shippingAddress,
       billingAddress: billingSameAsShipping ? shippingAddress : billingAddress,
+      billingSameAsShipping,
+      products: store,
     };
+
+    try {
+      setLoading(true);
+      const res = await ordersAPI.placeOrder(payload);
+      if (!res) throw new Error('Failed to place order.');
+      setMessageType('success');
+      setMessage(res?.message || 'Order placed successfully! Check your email for tracking ID.');
+      dispatch(clearCart());
+    } catch (err) {
+      setMessageType('error');
+      setMessage(err.message || 'Failed to place order.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -156,8 +194,20 @@ const CheckoutForm = () => {
         <CheckoutPaymentSummary />
       </div>
       <Divider />
-      <Button type="submit" secondary>
-        Place Order
+      {message && (
+        <div
+          className={`flex items-center gap-2 rounded-md border px-4 py-2 text-sm ${
+            messageType === 'success'
+              ? 'text-green-600 border-green-500 bg-green-50'
+              : 'text-red-600 border-red-500 bg-red-50'
+          }`}
+        >
+          <AlertCircle className="h-4 w-4" />
+          {message}
+        </div>
+      )}
+      <Button type="submit" secondary disable={loading}>
+        {loading ? 'Placing Order...' : 'Place Order'}
       </Button>
     </form>
   );

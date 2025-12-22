@@ -6,10 +6,12 @@ const Button = ({
   rounded = false,
   type = 'button',
   secondary = false,
+  disable = false,
   ...props
 }) => {
   return (
     <button
+      disabled={disable}
       type={type}
       className={`cursor-pointer px-12 ${rounded ? 'rounded-full' : 'rounded-lg'}
       ${

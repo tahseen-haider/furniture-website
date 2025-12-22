@@ -3,12 +3,16 @@ import { useSelector } from 'react-redux';
 
 const OrderPaymentSummary = ({ products = [] }) => {
   const { currency } = useSelector((state) => state.global);
-  const totalItems = products.reduce((sum, item) => sum + item.quantity, 0);
+  const totalItems = products?.length ? products?.reduce((sum, item) => sum + item.quantity, 0) : 0;
 
-  const subtotal = products.reduce((sum, item) => sum + item.quantity * item.price, 0);
+  const subtotal = products?.length
+    ? products.reduce((sum, item) => sum + item.quantity * item.price, 0)
+    : 0;
 
   const baseShippingCost = 5000;
-  const hasNoFreeShipping = products.some((product) => product.freeShipping === false);
+  const hasNoFreeShipping = products?.length
+    ? products.some((product) => product.freeShipping === false)
+    : 0;
   const shippingCost = hasNoFreeShipping ? baseShippingCost : 0;
 
   const finalAmount = subtotal + shippingCost;
