@@ -49,7 +49,6 @@ const App = () => {
       .then((remoteCart) => {
         if (remoteCart && Object.keys(remoteCart).length > 0) {
           dispatch(setCart(remoteCart));
-          saveCart(remoteCart);
         } else if (Object.keys(localCart).length > 0) {
           dispatch(syncCartToRemote(localCart));
         }
