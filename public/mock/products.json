@@ -1,64 +1,51 @@
 {
   "products": [
     {
-      "id": 21,
+      "id": 1,
       "title": "Luxury King Bed Set",
       "price": [95000, 120000],
       "images": [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1724861660385-69f24fc29192?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://m.media-amazon.com/images/I/81sPXy691%2BL._AC_SL1500_.jpg",
+        "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024"
       ],
       "variants": [
-        { "id": "LUXURY-KING-BED-SET-STD", "title": "Standard", "price": 95000 },
-        { "id": "LUXURY-KING-BED-SET-LRG", "title": "Premium", "price": 120000 }
+        { "id": "BED-STD", "title": "Standard", "price": 95000 },
+        { "id": "BED-LRG", "title": "Premium", "price": 120000 }
       ]
     },
     {
-      "id": 22,
-      "title": "Modern Dining Table 6-Seater",
-      "price": 68000,
+      "id": 2,
+      "title": "Premium Bed Linen Set",
+      "price": [8500, 9350],
       "images": [
-        "https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1603111691727-abfc40e13d3f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://plus.unsplash.com/premium_photo-1733514432866-6ca2ad63cc3f?q=80&w=871",
+        "https://plus.unsplash.com/premium_photo-1733514432845-728bac382e12?q=80&w=871"
       ],
       "variants": [
-        { "id": "MODERN-DINING-TABLE-6-SEATER-STD", "title": "Standard", "price": 68000 },
-        { "id": "MODERN-DINING-TABLE-6-SEATER-LRG", "title": "Premium", "price": 75000 }
+        { "id": "PREMIUM-BED-LINEN-SET-STD", "title": "Standard", "price": 8500 },
+        { "id": "PREMIUM-BED-LINEN-SET-LRG", "title": "Premium", "price": 9350 }
       ]
     },
     {
-      "id": 23,
-      "title": "Premium Sofa Set (3+2+1)",
-      "price": [150000, 190000],
+      "id": 3,
+      "title": "Memory Foam Pillows (Pack of 2)",
+      "price": [4500, 4950],
       "images": [
-        "https://images.unsplash.com/photo-1743059199976-b709ec1e35f8?q=80&w=926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1759722668087-efcc63c91ed2?q=80&w=454&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://plus.unsplash.com/premium_photo-1764499845516-2608332c5ebe?q=80&w=800",
+        "https://plus.unsplash.com/premium_photo-1683120772181-a82af8464b62?q=80&w=1024"
       ],
       "variants": [
-        { "id": "PREMIUM-SOFA-SET-(3+2+1)-STD", "title": "Standard", "price": 150000 },
-        { "id": "PREMIUM-SOFA-SET-(3+2+1)-LRG", "title": "Premium", "price": 190000 }
+        { "id": "MEMORY-FOAM-PILLOWS-(PACK-OF-2)-STD", "title": "Standard", "price": 4500 },
+        { "id": "MEMORY-FOAM-PILLOWS-(PACK-OF-2)-LRG", "title": "Premium", "price": 4950 }
       ]
     },
     {
-      "id": 24,
-      "title": "Decorative Cushion Set (Pack of 4)",
-      "price": 4500,
-      "images": [
-        "https://plus.unsplash.com/premium_photo-1763466939994-be797ca6126c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://plus.unsplash.com/premium_photo-1763466939887-5bb4ec673391?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ],
-      "variants": [
-        { "id": "DECORATIVE-CUSHION-SET-(PACK-OF-4)-STD", "title": "Standard", "price": 4500 },
-        { "id": "DECORATIVE-CUSHION-SET-(PACK-OF-4)-LRG", "title": "Premium", "price": 5000 }
-      ]
-    },
-    {
-      "id": 25,
+      "id": 4,
       "title": "Golden Console with Mirror Frame",
       "price": [38000, 52000],
       "images": [
-        "https://plus.unsplash.com/premium_photo-1664391898455-1f0440785804?q=80&w=835&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://plus.unsplash.com/premium_photo-1733514692259-57cdff0a750f?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://plus.unsplash.com/premium_photo-1664391898455-1f0440785804?q=80&w=835",
+        "https://plus.unsplash.com/premium_photo-1733514692259-57cdff0a750f?q=80&w=464"
       ],
       "variants": [
         { "id": "GOLDEN-CONSOLE-WITH-MIRROR-FRAME-STD", "title": "Standard", "price": 38000 },
@@ -66,25 +53,25 @@
       ]
     },
     {
-      "id": 26,
+      "id": 5,
       "title": "Ceramic Indoor Planter Set",
-      "price": 3200,
+      "price": [3200, 3520],
       "images": [
-        "https://plus.unsplash.com/premium_photo-1673969608223-4e9bce1e700c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://plus.unsplash.com/premium_photo-1674237294437-01239c443bed?q=80&w=397&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://plus.unsplash.com/premium_photo-1673969608223-4e9bce1e700c?q=80&w=870",
+        "https://plus.unsplash.com/premium_photo-1674237294437-01239c443bed?q=80&w=397"
       ],
       "variants": [
         { "id": "CERAMIC-INDOOR-PLANTER-SET-STD", "title": "Standard", "price": 3200 },
-        { "id": "CERAMIC-INDOOR-PLANTER-SET-LRG", "title": "Premium", "price": 3500 }
+        { "id": "CERAMIC-INDOOR-PLANTER-SET-LRG", "title": "Premium", "price": 3520 }
       ]
     },
     {
-      "id": 27,
+      "id": 6,
       "title": "Luxury Home Decor Bundle",
       "price": [12000, 20000],
       "images": [
         "https://images.pexels.com/photos/279648/pexels-photo-279648.jpeg",
-        "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=327"
       ],
       "variants": [
         { "id": "LUXURY-HOME-DECOR-BUNDLE-STD", "title": "Standard", "price": 12000 },
@@ -92,12 +79,12 @@
       ]
     },
     {
-      "id": 28,
+      "id": 7,
       "title": "Classic Wooden Chest",
-      "price": 54000,
+      "price": [54000, 59400],
       "images": [
-        "https://images.unsplash.com/photo-1658081973932-faaca64ecfd2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1728939862876-1c7e36d9cdfa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://images.unsplash.com/photo-1658081973932-faaca64ecfd2?q=80&w=870",
+        "https://images.unsplash.com/photo-1728939862876-1c7e36d9cdfa?q=80&w=870"
       ],
       "variants": [
         { "id": "CLASSIC-WOODEN-CHEST-STD", "title": "Standard", "price": 54000 },
@@ -105,12 +92,12 @@
       ]
     },
     {
-      "id": 29,
+      "id": 8,
       "title": "Antique Mirror Frame",
       "price": [14000, 18000],
       "images": [
-        "https://images.unsplash.com/photo-1688650963441-a4ce8fa08d50?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1612392549386-b6969764af6f?q=80&w=428&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://images.unsplash.com/photo-1688650963441-a4ce8fa08d50?q=80&w=465",
+        "https://images.unsplash.com/photo-1612392549386-b6969764af6f?q=80&w=428"
       ],
       "variants": [
         { "id": "ANTIQUE-MIRROR-FRAME-STD", "title": "Standard", "price": 14000 },
@@ -118,12 +105,12 @@
       ]
     },
     {
-      "id": 20,
+      "id": 9,
       "title": "Minimal Table Decor Set",
-      "price": 3500,
+      "price": [3500, 3850],
       "images": [
-        "https://plus.unsplash.com/premium_photo-1671718840234-37e7c6c5001c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://plus.unsplash.com/premium_photo-1676838259090-81b78f1c5d11?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://plus.unsplash.com/premium_photo-1671718840234-37e7c6c5001c?q=80&w=387",
+        "https://plus.unsplash.com/premium_photo-1676838259090-81b78f1c5d11?q=80&w=870"
       ],
       "variants": [
         { "id": "MINIMAL-TABLE-DECOR-SET-STD", "title": "Standard", "price": 3500 },
@@ -131,37 +118,23 @@
       ]
     },
     {
-      "id": 11,
+      "id": 10,
       "title": "LED Standing Floor Lamp",
       "price": [9000, 14000],
       "images": [
-        "https://images.unsplash.com/photo-1673939859210-23d8444237ff?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1600421684846-e7ebc943403b?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "https://images.unsplash.com/photo-1673939859210-23d8444237ff?q=80&w=400",
+        "https://images.unsplash.com/photo-1600421684846-e7ebc943403b?q=80&w=386"
       ],
       "variants": [
         { "id": "LED-STANDING-FLOOR-LAMP-STD", "title": "Standard", "price": 9000 },
         { "id": "LED-STANDING-FLOOR-LAMP-LRG", "title": "Premium", "price": 14000 }
       ]
-    },
-    {
-      "id": 12,
-      "title": "Classic Table Lamp",
-      "price": 6500,
-      "images": [
-        "https://images.unsplash.com/photo-1693329428271-3742bd8220cc?q=80&w=423&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1624878357998-491f177f2cf1?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      ],
-      "variants": [
-        { "id": "CLASSIC-TABLE-LAMP-STD", "title": "Standard", "price": 6500 },
-        { "id": "CLASSIC-TABLE-LAMP-LRG", "title": "Premium", "price": 7150 }
-      ]
     }
   ],
-
   "pagination": {
     "currentPage": 1,
     "pageSize": 12,
-    "totalItems": 15,
-    "totalPages": 2
+    "totalItems": 10,
+    "totalPages": 1
   }
 }
