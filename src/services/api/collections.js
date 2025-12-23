@@ -1,6 +1,5 @@
 import { GET } from '@services/api';
-const BASE_URL = '/mock';
-
+const BASE_URL = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}/api/categories`;
 export const collectionsAPI = {
-  fetchAll: () => GET(`${BASE_URL}/collections.json`),
+  fetchAll: () => GET(`${BASE_URL}/`),
 };
