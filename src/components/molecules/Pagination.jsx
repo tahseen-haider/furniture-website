@@ -3,7 +3,7 @@ const Pagination = ({ pagination, onPageChange, currentPage }) => {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div className="flex items-center justify-center gap-2 my-6 w-full">
+    <div className="flex items-center justify-center gap-2 my-6 w-full flex-wrap">
       <button
         onClick={() => onPageChange(1)}
         disabled={currentPage === 1}
@@ -11,7 +11,6 @@ const Pagination = ({ pagination, onPageChange, currentPage }) => {
       >
         First
       </button>
-
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -41,7 +40,6 @@ const Pagination = ({ pagination, onPageChange, currentPage }) => {
       >
         Next
       </button>
-
       <button
         onClick={() => onPageChange(totalPages)}
         disabled={currentPage === totalPages}

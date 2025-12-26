@@ -7,11 +7,21 @@ const PriceFilter = ({ filters, setParams }) => {
   const [max, setMax] = useState(filters?.price_max || '');
 
   const updateParams = rebounce((minVal, maxVal) => {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams(window.location.search);
 
-    if (minVal) params.set('price_min', minVal);
-    if (maxVal) params.set('price_max', maxVal);
+    if (minVal) {
+      params.set('price_min', minVal);
+    } else {
+      params.delete('price_min');
+    }
 
+    if (maxVal) {
+      params.set('price_max', maxVal);
+    } else {
+      params.delete('price_max');
+    }
+
+    params.set('page', 1);
     setParams(params);
   }, 800);
 
