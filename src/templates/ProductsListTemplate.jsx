@@ -24,7 +24,7 @@ const ProductsListTemplate = ({ pagination, setParams, products, loading, filter
         </Heading>
       )}
 
-      {pagination && (
+      {pagination?.totalPages > 1 && (
         <Pagination
           pagination={pagination}
           currentPage={filters.page}
@@ -40,7 +40,12 @@ const ProductsListTemplate = ({ pagination, setParams, products, loading, filter
 };
 
 ProductsListTemplate.propTypes = {
-  categoryName: PropTypes.string.isRequired,
+  pagination: PropTypes.object,
+  setParams: PropTypes.func.isRequired,
+  products: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
+  filters: PropTypes.object.isRequired,
+  params: PropTypes.object.isRequired,
 };
 
 export default ProductsListTemplate;
