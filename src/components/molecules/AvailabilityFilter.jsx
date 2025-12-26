@@ -10,11 +10,18 @@ const AvailabilityFilter = ({ filters, setParams }) => {
   ];
 
   const handleSelect = (value) => {
-    const newValue = value === selected ? '' : value;
-    setSelected(newValue);
+    if (value === selected) return;
+    setSelected(value);
 
-    const param = new URLSearchParams();
-    if (newValue) param.set('available', newValue);
+    const param = new URLSearchParams(window.location.search);
+
+    if (value) {
+      param.set('available', value);
+    } else {
+      param.delete('available');
+    }
+
+    param.set('page', 1);
     setParams(param);
   };
 
