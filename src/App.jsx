@@ -12,6 +12,7 @@ import {
   VerifyEmailPage,
   SignupPage,
   ResetPasswordPage,
+  PageNotFound,
 } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect, useRef } from 'react';
@@ -84,7 +85,7 @@ const App = () => {
           <Route path="/request-password-set" element={<RequestPasswordPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
         </Route>
-        <Route path="*" element={<div>404 Page Not Found</div>} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

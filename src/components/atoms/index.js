@@ -18,3 +18,4 @@ export { default as Select } from './Select';
 export { default as TrackOrderBtn } from './TrackOrderBtn';
 export { default as Tooltip } from './Tooltip';
 export { default as UserHeaderBtn } from './UserHeaderBtn';
+export { default as Spinner } from './Spinner';
