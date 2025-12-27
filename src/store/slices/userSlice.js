@@ -38,7 +38,8 @@ export const fetchCurrentUser = createAsyncThunk(
 const initialState = {
   userInfo: null,
   isLoggedIn: false,
-  loading: false,
+  authLoading: true,
+  actionLoading: false,
   error: null,
 };
 
@@ -49,36 +50,54 @@ const userSlice = createSlice({
     clearUserInfo(state) {
       state.userInfo = null;
       state.isLoggedIn = false;
+      state.loading = false;
+      state.error = null;
     },
   },
   extraReducers: (builder) => {
     builder
+      .addCase(fetchCurrentUser.pending, (state) => {
+        state.authLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchCurrentUser.fulfilled, (state, action) => {
+        state.authLoading = false;
+
+        if (action.payload?.user) {
+          state.userInfo = action.payload.user;
+          state.isLoggedIn = true;
+        }
+      })
+      .addCase(fetchCurrentUser.rejected, (state) => {
+        state.authLoading = false;
+        state.userInfo = null;
+        state.isLoggedIn = false;
+      })
+
       .addCase(loginThunk.pending, (state) => {
-        state.loading = true;
+        state.actionLoading = true;
         state.error = null;
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
-        state.loading = false;
+        state.actionLoading = false;
         state.userInfo = action.payload.user;
         state.isLoggedIn = true;
       })
       .addCase(loginThunk.rejected, (state, action) => {
-        state.loading = false;
+        state.actionLoading = false;
         state.error = action.payload;
       })
-      .addCase(fetchCurrentUser.fulfilled, (state, action) => {
-        state.userInfo = action.payload.user;
-        state.isLoggedIn = true;
-        state.error = null;
-      })
-      .addCase(fetchCurrentUser.rejected, (state, action) => {
-        state.userInfo = null;
-        state.isLoggedIn = false;
-        state.error = action.payload || 'Failed to load user';
+
+      .addCase(logoutThunk.pending, (state) => {
+        state.actionLoading = true;
       })
       .addCase(logoutThunk.fulfilled, (state) => {
+        state.actionLoading = false;
         state.userInfo = null;
         state.isLoggedIn = false;
+      })
+      .addCase(logoutThunk.rejected, (state) => {
+        state.actionLoading = false;
       });
   },
 });
