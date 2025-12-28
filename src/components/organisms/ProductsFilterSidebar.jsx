@@ -2,9 +2,11 @@ import { Paragraph, BWButton, Divider } from '@components';
 
 const ProductsFilterSidebar = ({ onClose, onClearParams, children }) => {
   return (
-    <div className="flex flex-col gap-4 h-full pb-2 md:pb-5">
-      <Paragraph variant="G">Filter By</Paragraph>
-      <Divider />
+    <div className="flex flex-col gap-6 h-full pb-2 md:pb-5">
+      <div className="flex flex-col gap-2">
+        <Paragraph variant="G">Filter By</Paragraph>
+        <Divider />
+      </div>
       <div className="flex-1 overflow-y-auto w-full px-2 overflow-x-hidden flex flex-col gap-4">
         {children}
       </div>

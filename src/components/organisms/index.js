@@ -20,3 +20,6 @@ export { default as CheckoutForm } from './CheckoutForm';
 export { default as CheckoutDisplay } from './CheckoutDisplay';
 export { default as TrackingForm } from './TrackingForm';
 export { default as AuthForm } from './AuthForm';
+export { default as AdminHeader } from './AdminHeader';
+export { default as AdminSidebar } from './AdminSidebar';
+export { default as AddProductForm } from './AddProductForm';

@@ -8,13 +8,13 @@ Frontend for a furniture shopping platform built with **React**, **Vite**, **Red
 
 This frontend allows users to:
 
-* Browse product categories and listings
-* View product details with variants
-* Add, update, or remove products in the cart
-* Checkout as guest or logged-in user
-* Track orders using a tracking ID
-* User authentication: signup, login, logout, password reset, email verification
-* Currency selection and cart toggle
+- Browse product categories and listings
+- View product details with variants
+- Add, update, or remove products in the cart
+- Checkout as guest or logged-in user
+- Track orders using a tracking ID
+- User authentication: signup, login, logout, password reset, email verification
+- Currency selection and cart toggle
 
 ---
 
@@ -51,9 +51,9 @@ src/
 
 ### Prerequisites
 
-* Node.js 20+
-* npm or yarn
-* Docker (optional, recommended)
+- Node.js 20+
+- npm or yarn
+- Docker (optional, recommended)
 
 ### Local Setup
 
@@ -185,9 +185,9 @@ docker compose up --build
 
 ### Slices
 
-* **userSlice** → handles authentication state (`userInfo`, `isLoggedIn`, `loading`, `error`)
-* **cartSlice** → handles cart state (`store`, `totalItems`) and syncs with localStorage and backend
-* **globalSlice** → global state (`currency`, `cartOpen`)
+- **userSlice** → handles authentication state (`userInfo`, `isLoggedIn`, `loading`, `error`)
+- **cartSlice** → handles cart state (`store`, `totalItems`) and syncs with localStorage and backend
+- **globalSlice** → global state (`currency`, `cartOpen`)
 
 **Cart listener** automatically saves cart to localStorage and syncs with backend if logged in.
 
@@ -195,26 +195,26 @@ docker compose up --build
 
 ## 🔧 Utilities
 
-* **localStorage** helpers: `loadCart`, `saveCart`
-* **Price & currency**: `formatPrice`, `convertPrice`
-* **Slugify**: `slugify(title)` → URL-friendly string
-* **Debounce**: `rebounce(fn, delay)`
+- **localStorage** helpers: `loadCart`, `saveCart`
+- **Price & currency**: `formatPrice`, `convertPrice`
+- **Slugify**: `slugify(title)` → URL-friendly string
+- **Debounce**: `rebounce(fn, delay)`
 
 ---
 
 ## 🎨 Styling
 
-* Tailwind CSS with JIT mode
-* Global CSS imported in `index.css`
-* Component-level utility classes used
+- Tailwind CSS with JIT mode
+- Global CSS imported in `index.css`
+- Component-level utility classes used
 
 ---
 
 ## 🧪 Testing
 
-* Vitest used for unit and component tests
-* Jest DOM for DOM assertions
-* Run tests:
+- Vitest used for unit and component tests
+- Jest DOM for DOM assertions
+- Run tests:
 
 ```bash
 npm run test

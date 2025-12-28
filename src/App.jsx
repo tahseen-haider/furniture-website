@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { MainLayout, CheckoutLayout, AuthPageLayout } from '@templates';
+import { MainLayout, CheckoutLayout, AuthPageLayout, AdminLayout } from '@templates';
 import {
   HomePage,
   ProductsListPage,
@@ -13,12 +13,14 @@ import {
   SignupPage,
   ResetPasswordPage,
   PageNotFound,
+  DashboardPage,
 } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCart, fetchCurrentUser, fetchRemoteCart, syncCartToRemote } from '@store';
 import { loadCart } from '@utils';
+import { AdminCollectionsPage, AdminOrdersPage, AdminProductsPage, AdminUsersPage } from './pages';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -84,6 +86,13 @@ const App = () => {
           <Route path="/verify-email" element={<VerifyEmailPage />} />
           <Route path="/request-password-set" element={<RequestPasswordPage />} />
           <Route path="/reset-password" element={<ResetPasswordPage />} />
+        </Route>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="collections" element={<AdminCollectionsPage />} />
+          <Route path="orders" element={<AdminOrdersPage />} />
+          <Route path="products" element={<AdminProductsPage />} />
+          <Route path="users" element={<AdminUsersPage />} />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
