@@ -8,3 +8,5 @@ export { default as CheckoutLayout } from './CheckoutLayout';
 export { default as CheckoutPageLayout } from './CheckoutPageLayout';
 export { default as AuthLayout } from './AuthLayout';
 export { default as AuthPageLayout } from './AuthPageLayout';
+export { default as AdminLayout } from './AdminLayout';
+export { default as AdminListLayout } from './AdminListLayout';

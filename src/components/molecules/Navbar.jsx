@@ -34,7 +34,7 @@ const Navbar = ({ links }) => {
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 z-50 lg:hidden
         ${open ? 'translate-x-0' : 'translate-x-full'}  whitespace-nowrap`}
       >
-        <div className="px-4 pt-7 pb-6 flex justify-between items-center border-gray-200">
+        <div className="px-4 pt-7 pb-6 h-20 flex justify-between items-center border-gray-200">
           <Heading variant="tertiary" className="text-lg font-semibold">
             Menu
           </Heading>
@@ -43,10 +43,15 @@ const Navbar = ({ links }) => {
           </button>
         </div>
         <Divider />
-        <ul className="flex flex-col gap-6 p-6">
+        <ul className="flex flex-col gap-1">
           {links.map((link, i) => (
             <li key={i}>
-              <Link to={link.link} underline="left" onClick={() => setOpen(false)}>
+              <Link
+                to={link.link}
+                underline="left"
+                onClick={() => setOpen(false)}
+                className="w-full p-4"
+              >
                 {link.title}
               </Link>
             </li>

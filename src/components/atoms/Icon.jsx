@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-const Icon = ({ src, alt, className = '' }) => {
-  return <img src={src} alt={alt} className={className} />;
+const Icon = ({ src, alt, className = '', size, ...props }) => {
+  return <img src={src} alt={alt} className={`w-${size} h-${size} ${className}`} {...props} />;
 };
 
 Icon.propTypes = {

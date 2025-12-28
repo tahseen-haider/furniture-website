@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 const AuthPageLayout = () => {
   return (
     <div className="min-w-85 flex flex-col">
-      <header className="w-full h-20 lg:h-26 bg-white fixed top-0 left-0 min-w-85 z-50">
+      <header className="w-full h-20 lg:h-22 bg-white fixed top-0 left-0 min-w-85 z-50">
         <div className="w-full h-full px-4 lg:px-16 max-w-480 flex gap-10 justify-between items-center mx-auto">
           <Logo />
 
@@ -12,7 +12,7 @@ const AuthPageLayout = () => {
         </div>
         <Divider />
       </header>
-      <div className="h-20 lg:h-26" />
+      <div className="h-20 lg:h-22" />
       <main className="w-full mx-auto">
         <Outlet />
       </main>
