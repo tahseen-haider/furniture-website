@@ -4,9 +4,9 @@ import { mainNavLinks } from '@config';
 const Header = () => {
   return (
     <>
-      <div className="h-20 lg:h-26" />
+      <div className="h-20 lg:h-22" />
 
-      <header className="w-full h-20 lg:h-26 bg-white fixed top-0 left-0 min-w-85 z-50">
+      <header className="w-full h-20 lg:h-22 bg-white fixed top-0 left-0 min-w-85 z-50">
         <div className="w-full h-full px-4 lg:px-16 max-w-480 flex gap-10 justify-between items-center mx-auto">
           <div className="lg:hidden">
             <Logo />

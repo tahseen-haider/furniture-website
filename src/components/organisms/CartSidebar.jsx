@@ -22,11 +22,13 @@ const CartSidebar = () => {
   return (
     <SideBarOverlay isOpen={cartOpen} side="right" onClose={() => dispatch(toggleCart())}>
       <div className="flex flex-col gap-4 h-full pb-2 md:pb-5">
-        <div className="flex gap-2">
-          <Paragraph variant="G">Your Cart</Paragraph>
-          <span>{totalItems}</span>
+        <div className="flex flex-col gap-2">
+          <div className="flex gap-2">
+            <Paragraph variant="G">Your Cart</Paragraph>
+            <span>{totalItems}</span>
+          </div>
+          <Divider />
         </div>
-        <Divider />
         <div className="flex flex-col h-[calc(100vh-7rem)] md:h-[calc(100vh-8rem)] justify-between">
           <div className="overflow-y-auto scrollbar-thin pr-2">
             <div className="flex flex-col gap-4 pb-4">

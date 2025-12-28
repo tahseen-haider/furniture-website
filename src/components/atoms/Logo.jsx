@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <Tooltip text="Home">
       <Link to="/">
-        <div className="text-(--color-brand-primary) font-semibold text-xl sm:text-4xl">
+        <div className="text-(--color-brand-primary) font-semibold text-2xl sm:text-4xl">
           Furniture
         </div>
       </Link>
