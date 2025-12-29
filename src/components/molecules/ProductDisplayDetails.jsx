@@ -22,6 +22,7 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
     description,
     features,
     variants,
+    categories = [],
     freeShipping,
     itemsInStock = 0,
   } = product;
@@ -40,7 +41,6 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
       freeShipping: product?.freeShipping,
     });
   };
-
   return (
     <div className="w-full md:w-2/5 relative md:sticky top-0 md:top-20 flex flex-col gap-4 lg:gap-6">
       <Link to="/collections" underline="center-inverse" className="font-base! w-fit">
@@ -52,12 +52,27 @@ const ProductDisplayDetails = ({ product, loading, onVariantChange, selectedProd
           {title}
         </Heading>
         <div className="flex flex-col lg:flex-row gap-1 lg:gap-4 items-start lg:items-center">
-          <Price amount={selectedProduct?.price || price} />{' '}
+          <Price amount={selectedProduct?.price || price} className="text-xl font-medium" />{' '}
           <span className="text-xs">SHIPPING CALCULATED AT CHECKOUT.</span>
         </div>
         <span className="text-xs">
           <span className="text-sm underline">{itemsInStock}</span> items in Stock.
         </span>
+        <div className="flex gap-4 items-center">
+          <span className="text-sm">Tags:</span>
+          <div className="flex flex-wrap gap-2 text-xs">
+            {categories.map((cat, i) => (
+              <Link
+                key={i}
+                underline="center"
+                to={`/collections/${cat}`}
+                className="p-1 bg-gray-200"
+              >
+                {cat.split('-').join(' ')}
+              </Link>
+            ))}
+          </div>
+        </div>
         <div className="p-1 px-2 bg-gray-200 w-fit"># {id}</div>
       </div>
 

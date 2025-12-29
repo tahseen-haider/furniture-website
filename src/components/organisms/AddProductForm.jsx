@@ -96,9 +96,11 @@ const AddProductForm = ({ onSubmit, onClose }) => {
         const resProducts = await adminAPI.products.fetchAll();
         const resCategories = await adminAPI.categories.fetchAll();
         setProductsList(
-          (resProducts?.products || []).map((p) => ({ label: p.title, value: String(p.id) }))
+          (resProducts?.data?.products || []).map((p) => ({ label: p.title, value: String(p.id) }))
         );
-        setCategoriesList((resCategories || []).map((c) => ({ label: c.title, value: c.slug })));
+        setCategoriesList(
+          (resCategories?.data?.categories || []).map((c) => ({ label: c.title, value: c.slug }))
+        );
       } finally {
         setDataLoading(false);
       }

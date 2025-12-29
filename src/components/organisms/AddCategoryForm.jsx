@@ -52,7 +52,7 @@ const AddCategoryForm = ({ onSubmit, onClose }) => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl h-[calc(100vh-6rem)] p-4 flex flex-col gap-6 overflow-y-auto"
+      className="w-full max-w-2xl max-h-[calc(100vh-6rem)] p-4 flex flex-col gap-6 overflow-y-auto"
     >
       <Heading variant="title">Category Information</Heading>
 
