@@ -20,3 +20,4 @@ export { default as Tooltip } from './Tooltip';
 export { default as UserHeaderBtn } from './UserHeaderBtn';
 export { default as Spinner } from './Spinner';
 export { default as Textarea } from './Textarea';
+export { default as AuthLoader } from './AuthLoader';
