@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { adminAPI } from '@services';
 import { Select, StatCard, Price } from '@components';
-import { Users, Package, ShoppingCart } from 'lucide-react';
+import { Users, Package, ShoppingCart, CircleDollarSignIcon } from 'lucide-react';
 import { AdminProductsPage, AdminOrdersPage, AdminUsersPage, AdminCollectionsPage } from '@pages';
 
 const DASHBOARD_OPTIONS = [
@@ -52,7 +52,7 @@ const AdminDashboardPage = () => {
             <StatCard
               title="Total Revenue"
               value={<Price amount={stats.totalRevenue} />}
-              icon={ShoppingCart}
+              icon={CircleDollarSignIcon}
             />
           </>
         )}
