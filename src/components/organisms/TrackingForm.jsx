@@ -17,8 +17,10 @@ const TrackingForm = ({ setOrder, setError }) => {
 
     try {
       const res = await ordersAPI.trackOrderById(trackingId);
-      if (!res) throw new Error('Tracking info not found.');
-      setOrder(res);
+
+      if (!res?.success) throw new Error(res?.message || 'Tracking info not found.');
+
+      setOrder(res.data.order);
       setTrackingId('');
     } catch (err) {
       setError(err.message || 'Failed to fetch tracking info.');

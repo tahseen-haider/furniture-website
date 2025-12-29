@@ -13,22 +13,28 @@ export async function http(method, url, body, config = {}) {
   }
 
   const res = await fetch(url, options);
+  let json = null;
 
-  let data = null;
   const contentType = res.headers.get('content-type');
-
   if (contentType?.includes('application/json')) {
-    data = await res.json();
+    json = await res.json();
   }
 
   if (!res.ok) {
-    const error = new Error(data?.message || 'Request failed');
+    const error = new Error(json?.message || 'Request failed');
     error.status = res.status;
-    error.data = data;
+    error.data = json || {};
     throw error;
   }
 
-  return data;
+  if (json && json.success === false) {
+    const error = new Error(json.message || 'Request failed');
+    error.status = res.status;
+    error.data = json;
+    throw error;
+  }
+
+  return json ?? {};
 }
 
 export const GET = (url, config) => http('GET', url, null, config);

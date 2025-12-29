@@ -63,12 +63,12 @@ const CheckoutForm = () => {
 
     if (!store || Object.keys(store).length === 0) {
       setMessageType('error');
-      setMessage('Your cart is empty. Please add items to your cart before placing an order.');
+      setMessage('Your cart is empty. Please add items before placing an order.');
       return;
     }
+
     const shippingErr = validateAddress(shippingAddress);
     const billingErr = billingSameAsShipping ? {} : validateAddress(billingAddress);
-
     setShippingErrors(shippingErr);
     setBillingErrors(billingErr);
 
@@ -88,9 +88,11 @@ const CheckoutForm = () => {
     try {
       setLoading(true);
       const res = await ordersAPI.placeOrder(payload);
-      if (!res) throw new Error('Failed to place order.');
+
+      if (!res?.success) throw new Error(res?.message || 'Failed to place order.');
+
       setMessageType('success');
-      setMessage(res?.message || 'Order placed successfully! Check your email for tracking ID.');
+      setMessage(res.message);
       dispatch(clearCart());
     } catch (err) {
       setMessageType('error');

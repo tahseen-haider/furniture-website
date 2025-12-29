@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Heading, Divider } from '@components';
+import { Plus, X } from 'lucide-react';
 
-const AdminListLayout = ({ title, apiFetch, renderItem, addForm: AddFormComponent }) => {
+const AdminListLayout = ({
+  title,
+  apiFetch,
+  renderItem,
+  addForm: AddFormComponent,
+  refreshKey,
+  refreshCallback,
+}) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [pagination, setPagination] = useState({ totalPages: 1 });
@@ -11,21 +19,67 @@ const AdminListLayout = ({ title, apiFetch, renderItem, addForm: AddFormComponen
 
   const filters = Object.fromEntries([...params]);
 
-  useEffect(() => {
+  const fetchItems = async () => {
     setLoading(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    apiFetch(filters)
-      .then((res) => {
-        setItems(res.products || res);
-        setPagination(res.pagination || { totalPages: 1 });
-      })
-      .finally(() => setLoading(false));
+    try {
+      const res = await apiFetch.fetchAll(filters);
+      setItems(
+        res?.data?.items ||
+          res?.data?.products ||
+          res?.data?.categories ||
+          res?.data?.users ||
+          res?.data?.orders
+      );
+      setPagination(res.pagination || { totalPages: 1 });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchItems();
   }, [params.toString()]);
+
+  useEffect(() => {
+    fetchItems();
+  }, [refreshKey]);
 
   const handlePageChange = (page) => {
     const newParams = new URLSearchParams(params);
     newParams.set('page', page);
     setParams(newParams);
+  };
+
+  const handleAddSubmit = async (payload, helpers, createAPI) => {
+    const { setErrors, setMessage } = helpers;
+
+    try {
+      setErrors({});
+      setMessage('');
+
+      await createAPI(payload);
+
+      if (typeof refreshCallback === 'function') refreshCallback();
+
+      return true;
+    } catch (err) {
+      const backend = err?.data;
+
+      if (backend?.errors && Array.isArray(backend.errors)) {
+        const backendErrors = {};
+        backend.errors.forEach((e) => {
+          const [field] = e.split(' is ');
+          backendErrors[field] = e;
+        });
+        setErrors(backendErrors);
+        setMessage(backend.message || 'Validation failed');
+      } else {
+        setMessage(backend?.message || err.message || 'Failed to create item');
+      }
+
+      return false;
+    }
   };
 
   return (
@@ -36,10 +90,10 @@ const AdminListLayout = ({ title, apiFetch, renderItem, addForm: AddFormComponen
         </Heading>
         {AddFormComponent && (
           <button
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 cursor-pointer"
             onClick={() => setShowAdd(true)}
           >
-            Add New
+            <Plus />
           </button>
         )}
       </div>
@@ -74,15 +128,25 @@ const AdminListLayout = ({ title, apiFetch, renderItem, addForm: AddFormComponen
       )}
 
       {AddFormComponent && showAdd && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-30 p-4">
-          <div className="bg-white rounded p-6 max-w-lg w-full relative">
-            <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-black"
-              onClick={() => setShowAdd(false)}
-            >
-              ✕
-            </button>
-            <AddFormComponent onClose={() => setShowAdd(false)} />
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={() => setShowAdd(false)}
+        >
+          <div
+            className="bg-white rounded max-w-lg max-h-[calc(100vh-2rem)] w-full relative overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex w-full justify-between mb-4 px-6 pt-4">
+              <Heading variant="medium">Add {title}</Heading>
+              <button className="text-gray-500 hover:text-black" onClick={() => setShowAdd(false)}>
+                <X />
+              </button>
+            </div>
+            <Divider />
+            <AddFormComponent
+              onClose={() => setShowAdd(false)}
+              onSubmit={(payload, helpers) => handleAddSubmit(payload, helpers, apiFetch.create)}
+            />
           </div>
         </div>
       )}

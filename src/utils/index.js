@@ -30,6 +30,7 @@ export const convertPrice = (price, currency = 'PKR') => {
   const rate = exchangeRates[currency] || 1;
 
   if (Array.isArray(price)) {
+    if (price[0] === price[1]) return price[0] * rate;
     return [price[0] * rate, price[1] * rate];
   }
 

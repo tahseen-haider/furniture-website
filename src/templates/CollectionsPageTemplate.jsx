@@ -1,6 +1,14 @@
-import { CollectionCardSkeleton, CollectionCard, Heading } from '@components';
+import { CollectionCardSkeleton, CollectionCard, Heading, Paragraph } from '@components';
 
-const CollectionsPageTemplate = ({ collections = [], loading }) => {
+const CollectionsPageTemplate = ({ collections = [], loading, error }) => {
+  if (error) {
+    return (
+      <Heading level={5} variant="tertiary" className="w-full text-center text-red-500">
+        {error}
+      </Heading>
+    );
+  }
+
   return (
     <>
       {loading ? (
@@ -11,7 +19,7 @@ const CollectionsPageTemplate = ({ collections = [], loading }) => {
         </div>
       ) : collections?.length ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-16 w-full">
-          {collections?.map((collection) => (
+          {collections.map((collection) => (
             <CollectionCard key={collection.id} collection={collection} />
           ))}
         </div>

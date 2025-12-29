@@ -13,14 +13,17 @@ import {
   SignupPage,
   ResetPasswordPage,
   PageNotFound,
-  DashboardPage,
+  AdminDashboardPage,
+  AdminCollectionsPage,
+  AdminOrdersPage,
+  AdminProductsPage,
+  AdminUsersPage,
 } from '@pages';
 import { ScrollToTop } from '@components';
 import { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCart, fetchCurrentUser, fetchRemoteCart, syncCartToRemote } from '@store';
 import { loadCart } from '@utils';
-import { AdminCollectionsPage, AdminOrdersPage, AdminProductsPage, AdminUsersPage } from './pages';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -88,7 +91,7 @@ const App = () => {
           <Route path="/reset-password" element={<ResetPasswordPage />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="dashboard" element={<AdminDashboardPage />} />
           <Route path="collections" element={<AdminCollectionsPage />} />
           <Route path="orders" element={<AdminOrdersPage />} />
           <Route path="products" element={<AdminProductsPage />} />

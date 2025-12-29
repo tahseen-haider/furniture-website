@@ -6,8 +6,8 @@ export const fetchRemoteCart = createAsyncThunk(
   'cart/fetchRemote',
   async (_, { rejectWithValue }) => {
     try {
-      const res = await cartAPI.getCart();
-      return res.cart || {};
+      const data = await cartAPI.getCart();
+      return data.cart || {};
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -18,8 +18,8 @@ export const syncCartToRemote = createAsyncThunk(
   'cart/syncRemote',
   async (cart, { rejectWithValue }) => {
     try {
-      await cartAPI.updateCart(cart);
-      return true;
+      const data = await cartAPI.updateCart(cart);
+      return data.cart || {};
     } catch (err) {
       return rejectWithValue(err.message);
     }
