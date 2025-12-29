@@ -3,11 +3,18 @@ import { useEffect, useState } from 'react';
 import { useSearchParams, useParams } from 'react-router-dom';
 import { productAPI } from '@services';
 
+const defaultPagination = {
+  currentPage: 1,
+  pageSize: 12,
+  totalItems: 0,
+  totalPages: 1,
+};
+
 const ProductsListPage = () => {
   const { categoryName } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pagination, setPagination] = useState(null);
+  const [pagination, setPagination] = useState(defaultPagination);
   const [params, setParams] = useSearchParams();
 
   const filters = {
@@ -27,11 +34,11 @@ const ProductsListPage = () => {
       .fetchByCategory(categoryName, filters)
       .then((res) => {
         setProducts(res?.data?.products || []);
-        setPagination(res?.data?.pagination || { totalPages: 1 });
+        setPagination(res?.data?.pagination || pagination);
       })
       .catch(() => {
         setProducts([]);
-        setPagination({ totalPages: 1 });
+        setPagination(pagination);
       })
       .finally(() => setLoading(false));
   }, [categoryName, params.toString()]);
