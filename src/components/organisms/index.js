@@ -23,3 +23,4 @@ export { default as AuthForm } from './AuthForm';
 export { default as AdminHeader } from './AdminHeader';
 export { default as AdminSidebar } from './AdminSidebar';
 export { default as AddProductForm } from './AddProductForm';
+export { default as AddCategoryForm } from './AddCategoryForm';

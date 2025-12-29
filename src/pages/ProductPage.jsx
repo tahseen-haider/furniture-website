@@ -13,7 +13,7 @@ const ProductPage = () => {
     productAPI
       .fetchById(productId)
       .then((res) => {
-        setProduct(res?.product);
+        setProduct(res?.data?.product || null);
       })
       .catch(() => {
         setProduct(null);

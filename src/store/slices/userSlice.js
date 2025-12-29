@@ -7,7 +7,7 @@ export const loginThunk = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       const res = await authAPI.login(credentials);
-      return res;
+      return res.data;
     } catch (err) {
       return rejectWithValue(err.message || 'Login failed');
     }
@@ -28,7 +28,7 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await authAPI.getCurrentUser();
-      return res;
+      return res.data;
     } catch (err) {
       return rejectWithValue(err.message || 'Fetch current user failed');
     }

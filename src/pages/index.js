@@ -10,7 +10,7 @@ export { default as VerifyEmailPage } from './VerifyEmailPage';
 export { default as RequestPasswordPage } from './RequestPasswordPage';
 export { default as ResetPasswordPage } from './ResetPasswordPage';
 export { default as PageNotFound } from './PageNotFound';
-export { default as DashboardPage } from './DashboardPage';
+export { default as AdminDashboardPage } from './AdminDashboardPage';
 export { default as AdminOrdersPage } from './AdminOrdersPage';
 export { default as AdminProductsPage } from './AdminProductsPage';
 export { default as AdminCollectionsPage } from './AdminCollectionsPage';

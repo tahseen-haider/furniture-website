@@ -37,3 +37,4 @@ export { default as Timeline } from './Timeline';
 export { default as OrderPaymentSummary } from './OrderPaymentSummary';
 export { default as HeaderProfileBtn } from './HeaderProfileBtn';
 export { default as HeaderAuthBtn } from './HeaderAuthBtn';
+export { default as StatCard } from './StatCard';

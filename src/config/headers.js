@@ -9,8 +9,8 @@ export const mainNavLinks = [
 
 export const adminNavLinks = [
   { title: 'Dashboard', link: '/admin/dashboard', icon: LayoutDashboard },
-  { title: 'Orders', link: '/admin/orders', icon: Package },
   { title: 'Products', link: '/admin/products', icon: BedDouble },
   { title: 'Collections', link: '/admin/collections', icon: LucideSwatchBook },
   { title: 'Users', link: '/admin/users', icon: Users },
+  { title: 'Orders', link: '/admin/orders', icon: Package },
 ];
