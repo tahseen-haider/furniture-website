@@ -26,8 +26,12 @@ const ProductsListPage = () => {
     productAPI
       .fetchByCategory(categoryName, filters)
       .then((res) => {
-        setProducts(res?.products || []);
-        setPagination(res?.pagination || { totalPages: 1 });
+        setProducts(res?.data?.products || []);
+        setPagination(res?.data?.pagination || { totalPages: 1 });
+      })
+      .catch(() => {
+        setProducts([]);
+        setPagination({ totalPages: 1 });
       })
       .finally(() => setLoading(false));
   }, [categoryName, params.toString()]);

@@ -1,14 +1,27 @@
 import { AdminListLayout } from '@templates';
 import { adminAPI } from '@services';
-import { AddProductForm, Price } from '@components';
-import { Edit2, Trash2, Image, CheckCircle, XCircle } from 'lucide-react';
+import { AddProductForm, Price, Image } from '@components';
+import { Trash2, CheckCircle, XCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const AdminProductsPage = () => {
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const handleDelete = async (id) => {
+    try {
+      await adminAPI.products.remove(id);
+      setRefreshKey((prev) => prev + 1);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <AdminListLayout
+      key={refreshKey}
+      refreshKey={refreshKey}
       title="Products"
-      apiFetch={adminAPI.products.fetchAll}
+      apiFetch={adminAPI.products}
       addForm={AddProductForm}
       renderItem={{
         header: (
@@ -29,7 +42,7 @@ const AdminProductsPage = () => {
             <td className="p-3">
               {item.image ? (
                 <Link target="_blank" to={`/product/${item.id}/${item.slug}`}>
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
                     className="h-12 w-12 object-cover rounded"
@@ -54,10 +67,10 @@ const AdminProductsPage = () => {
             </td>
             <td className="p-3">
               <div className="flex justify-center gap-4">
-                <button className="flex items-center gap-1 text-blue-600 hover:text-blue-800 cursor-pointer">
-                  <Edit2 size={20} />
-                </button>
-                <button className="flex items-center gap-1 text-red-600 hover:text-red-800 cursor-pointer">
+                <button
+                  onClick={() => handleDelete(item.id)}
+                  className="flex items-center gap-1 text-red-600 hover:text-red-800 cursor-pointer"
+                >
                   <Trash2 size={20} />
                 </button>
               </div>
