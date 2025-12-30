@@ -5,17 +5,17 @@ const BadgeSection = () => {
     {
       icon: '/icons/Truck.svg',
       title: 'Free Delivery',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Fast and reliable delivery on all orders, straight to your doorstep.',
     },
     {
       icon: '/icons/24.svg',
       title: 'Support 24/7',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Our support team is always available to help you before and after purchase.',
     },
     {
       icon: '/icons/Shield.svg',
       title: '100% Authentic',
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Premium quality furniture made from genuine materials you can trust.',
     },
   ];
 

@@ -11,11 +11,11 @@ const HeroContentBlock = () => {
           New Arrival
         </Paragraph>
         <Heading variant="primary" className="text-(--color-brand-primary)">
-          Discover Our New Collection
+          Discover Our Latest Furniture Collection
         </Heading>
         <Paragraph variant="F" maxChars={140}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-          ullamcorper mattis.
+          Crafted with precision and designed for comfort, our new arrivals bring timeless style and
+          modern elegance to your home.
         </Paragraph>
         <Button
           onClick={() => {

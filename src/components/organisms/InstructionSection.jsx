@@ -5,17 +5,17 @@ const InstructionSection = ({ title, description }) => {
   const cards = [
     {
       title: 'Purchase Securely',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      desc: 'Shop with confidence using our safe and trusted payment method.',
       src: '/images/Purchase.png',
     },
     {
       title: 'Ships From Warehouse',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      desc: 'Your order is carefully packed and shipped directly from our warehouse.',
       src: '/images/Ship.png',
     },
     {
       title: 'Style Your Room',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      desc: 'Enjoy your new furniture and transform your space effortlessly.',
       src: '/images/Style.png',
     },
   ];

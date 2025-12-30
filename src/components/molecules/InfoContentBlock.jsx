@@ -7,8 +7,8 @@ const InfoContentBlock = () => {
         Beautify Your Space
       </Heading>
       <Paragraph variant="C" className="text-(--color-text-tertiary)">
-        Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris.
+        Upgrade your home with furniture that blends comfort, durability, and modern design —
+        perfect for every lifestyle.
       </Paragraph>
       <Button rounded className="text-white">
         LEARN MORE

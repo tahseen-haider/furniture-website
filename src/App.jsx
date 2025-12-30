@@ -80,11 +80,9 @@ const App = () => {
           <Route path="/products/:categoryName" element={<ProductsListPage />} />
           <Route path="/product/:productId/:productName" element={<ProductPage />} />
         </Route>
-        <Route element={<RequireAuth />}>
-          <Route element={<CheckoutLayout />}>
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/track-order" element={<TrackingPage />} />
-          </Route>
+        <Route element={<CheckoutLayout />}>
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/track-order" element={<TrackingPage />} />
         </Route>
         <Route element={<RequireGuest />}>
           <Route element={<AuthPageLayout />}>
