@@ -8,13 +8,16 @@ const FooterInfoBlock = () => {
       </Heading>
 
       <Paragraph variant="F" className="text-(--color-text-inverse) mt-8 mb-4">
-        Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-        nostrud exercitation ullamco laboris.
+        We create furniture that combines quality craftsmanship, modern design, and everyday comfort
+        for your home.
       </Paragraph>
 
       <Heading level={4} variant="tertiary">
         Follow Us
       </Heading>
+      <Paragraph variant="F" className="text-(--color-text-inverse) mt-2 mb-4">
+        Get inspired daily by our latest designs and real customer homes.
+      </Paragraph>
     </div>
   );
 };

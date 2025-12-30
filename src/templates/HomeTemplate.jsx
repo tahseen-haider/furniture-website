@@ -18,7 +18,7 @@ const HomeTemplate = () => {
       </section>
       <InspirationCard
         title="Inspiration Collection"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description="Find design inspiration that transforms your living space into something truly special."
         imgSrc="/images/Insp.png"
         imgAlt="Inspiration Collection"
       />
@@ -27,7 +27,7 @@ const HomeTemplate = () => {
       </section>
       <BrowseSection
         title="Browse The Range"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description="Explore furniture crafted for every room in your home."
       />
       <InstructionSection
         title="How It Works"
