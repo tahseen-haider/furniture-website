@@ -8,13 +8,13 @@ Frontend for a furniture shopping platform built with **React**, **Vite**, **Red
 
 This frontend allows users to:
 
-- Browse product categories and listings
-- View product details with variants
-- Add, update, or remove products in the cart
-- Checkout as guest or logged-in user
-- Track orders using a tracking ID
-- User authentication: signup, login, logout, password reset, email verification
-- Currency selection and cart toggle
+* Browse product categories and listings
+* View product details with variants
+* Add, update, or remove products in the cart
+* Checkout as guest or logged-in user
+* Track orders using a tracking ID
+* User authentication: signup, login, logout, password reset, email verification
+* Currency selection and cart toggle
 
 ---
 
@@ -51,9 +51,9 @@ src/
 
 ### Prerequisites
 
-- Node.js 20+
-- npm or yarn
-- Docker (optional, recommended)
+* Node.js 20+
+* npm or yarn
+* Docker (optional, recommended)
 
 ### Local Setup
 
@@ -185,9 +185,9 @@ docker compose up --build
 
 ### Slices
 
-- **userSlice** → handles authentication state (`userInfo`, `isLoggedIn`, `loading`, `error`)
-- **cartSlice** → handles cart state (`store`, `totalItems`) and syncs with localStorage and backend
-- **globalSlice** → global state (`currency`, `cartOpen`)
+* **userSlice** → handles authentication state (`userInfo`, `isLoggedIn`, `loading`, `error`)
+* **cartSlice** → handles cart state (`store`, `totalItems`) and syncs with localStorage and backend
+* **globalSlice** → global state (`currency`, `cartOpen`)
 
 **Cart listener** automatically saves cart to localStorage and syncs with backend if logged in.
 
@@ -195,26 +195,26 @@ docker compose up --build
 
 ## 🔧 Utilities
 
-- **localStorage** helpers: `loadCart`, `saveCart`
-- **Price & currency**: `formatPrice`, `convertPrice`
-- **Slugify**: `slugify(title)` → URL-friendly string
-- **Debounce**: `rebounce(fn, delay)`
+* **localStorage** helpers: `loadCart`, `saveCart`
+* **Price & currency**: `formatPrice`, `convertPrice`
+* **Slugify**: `slugify(title)` → URL-friendly string
+* **Debounce**: `rebounce(fn, delay)`
 
 ---
 
 ## 🎨 Styling
 
-- Tailwind CSS with JIT mode
-- Global CSS imported in `index.css`
-- Component-level utility classes used
+* Tailwind CSS with JIT mode
+* Global CSS imported in `index.css`
+* Component-level utility classes used
 
 ---
 
 ## 🧪 Testing
 
-- Vitest used for unit and component tests
-- Jest DOM for DOM assertions
-- Run tests:
+* Vitest used for unit and component tests
+* Jest DOM for DOM assertions
+* Run tests:
 
 ```bash
 npm run test
@@ -272,3 +272,141 @@ services:
 ## 👨‍💻 Author
 
 **Tahsin Haider**
+
+---
+
+## 🧭 Routing & Layout Architecture
+
+The application uses **React Router v6** with a clear separation of **public**, **guest-only**, **authenticated**, and **role-protected (admin)** routes.
+
+### Route Guards
+
+* **`RequireAuth`** → Allows access only to authenticated users
+* **`RequireGuest`** → Allows access only to non-authenticated users
+* **`RequireRole`** → Restricts access based on user roles (e.g. `admin`)
+
+### Layouts
+
+* **MainLayout** → Public storefront pages (home, products, collections)
+* **CheckoutLayout** → Checkout & order tracking (auth required)
+* **AuthPageLayout** → Login, signup, verification, password flows (guest only)
+* **AdminLayout** → Admin dashboard and management pages (admin only)
+
+### Defined Routes
+
+| Path                               | Access | Description                  |
+| ---------------------------------- | ------ | ---------------------------- |
+| `/`                                | Public | Home page                    |
+| `/collections`                     | Public | All collections              |
+| `/collections/:categoryName`       | Public | Products by category         |
+| `/products/:categoryName`          | Public | Products by category (alias) |
+| `/product/:productId/:productName` | Public | Product details page         |
+| `/checkout`                        | Auth   | Checkout flow                |
+| `/track-order`                     | Auth   | Order tracking               |
+| `/login`                           | Guest  | Login page                   |
+| `/signup`                          | Guest  | Signup page                  |
+| `/verify-email`                    | Guest  | Email verification           |
+| `/request-password-set`            | Guest  | Request password setup/reset |
+| `/reset-password`                  | Guest  | Reset password               |
+| `/admin/*`                         | Admin  | Admin dashboard & management |
+| `*`                                | Public | 404 page                     |
+
+---
+
+## 🔄 App Hydration & Cart Sync Flow
+
+On initial load, the app performs a **two-phase hydration process** to ensure cart consistency:
+
+1. Load cart from **localStorage** and set it in Redux
+2. Fetch the **current authenticated user**
+3. If the user is logged in:
+
+   * Fetch remote cart from backend
+   * Prefer remote cart if it exists
+   * Otherwise, sync local cart to backend
+
+This guarantees:
+
+* Guest users retain cart locally
+* Logged-in users have a single source of truth
+* Cart state survives refresh, login, and logout
+
+---
+
+## 🛡 Admin Panel (Role: `admin`)
+
+Admin routes are protected via `RequireAuth` + `RequireRole`.
+
+### Admin Pages
+
+* **Dashboard** → Overall stats & KPIs
+* **Products** → CRUD products & variants
+* **Collections** → Manage categories
+* **Orders** → View and manage orders
+* **Users** → View registered users
+
+---
+
+## 🔗 Admin API Layer
+
+All admin requests are scoped under:
+
+```
+/api/admin
+```
+
+### Dashboard
+
+| Endpoint           | Method | Description      |
+| ------------------ | ------ | ---------------- |
+| `/dashboard/stats` | GET    | Admin statistics |
+
+### Products
+
+| Endpoint        | Method | Description                              |
+| --------------- | ------ | ---------------------------------------- |
+| `/products`     | GET    | Fetch all products (filters, pagination) |
+| `/products`     | POST   | Create product                           |
+| `/products/:id` | PUT    | Update product                           |
+| `/products/:id` | DELETE | Remove product                           |
+
+### Categories
+
+| Endpoint          | Method | Description          |
+| ----------------- | ------ | -------------------- |
+| `/categories`     | GET    | Fetch all categories |
+| `/categories`     | POST   | Create category      |
+| `/categories/:id` | PUT    | Update category      |
+| `/categories/:id` | DELETE | Remove category      |
+
+### Orders
+
+| Endpoint              | Method | Description                |
+| --------------------- | ------ | -------------------------- |
+| `/orders`             | GET    | Fetch all orders           |
+| `/orders/:trackingId` | GET    | Fetch order by tracking ID |
+
+### Users
+
+| Endpoint         | Method | Description      |
+| ---------------- | ------ | ---------------- |
+| `/users`         | GET    | Fetch all users  |
+| `/users/:userId` | GET    | Fetch user by ID |
+
+---
+
+## 📐 Frontend–Backend Contract Notes
+
+* All requests use **JSON** payloads
+* Auth is handled via **HTTP-only cookies / tokens** (backend-driven)
+* Admin endpoints require **role validation**
+* Pagination, sorting, and filtering are handled via query params
+
+---
+
+## ✅ Production Notes
+
+* App is built using **Vite** for fast builds
+* Served via **Nginx** in production
+* Environment variables are injected at build time
+* Fully compatible with Docker & CI pipelines
